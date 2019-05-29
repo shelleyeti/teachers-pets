@@ -1,0 +1,282 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Shelley",
+      "lastName": "Arnold",
+      "userName": "shelley-arnold",
+      "email": "dogs4life@mymail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "firstName": "Emily",
+      "lastName": "Loggins",
+      "userName": "emily-loggins",
+      "email": "fishtea@mymail.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "firstName": "Ellie",
+      "lastName": "Ash",
+      "userName": "ellie-ash",
+      "email": "ellie.ash@mymail.com",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "firstName": "Heather",
+      "lastName": "Cleland",
+      "userName": "heather-cleland",
+      "email": "i-love-dogs@mymail.com",
+      "password": "123456"
+    },
+    {
+      "firstName": "tester",
+      "lastName": "lastname",
+      "userName": "1234SH",
+      "email": "shell@DSG.COM",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "firstName": "Sister",
+      "lastName": "Last",
+      "userName": "username1",
+      "email": "email@email.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "firstName": "hood",
+      "lastName": "hood",
+      "userName": "hood",
+      "email": "hood@hood.com",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "firstName": "newName",
+      "lastName": "newLast",
+      "userName": "newName1",
+      "email": "newnew@new.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "firstName": "Corey",
+      "lastName": "Arnold",
+      "userName": "corey-arnold",
+      "email": "corey@corey.com",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "firstName": "Arnold",
+      "lastName": "Arnold",
+      "userName": "arnold-arnold",
+      "email": "arnold@arnold.com",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "firstName": "12345",
+      "lastName": "12345",
+      "userName": "123456",
+      "email": "12345@12345.com",
+      "password": "123456",
+      "id": 11
+    },
+    {
+      "firstName": "newest",
+      "lastName": "newest",
+      "userName": "newnewest",
+      "email": "newnewest@yes.com",
+      "password": "123456",
+      "id": 12
+    },
+    {
+      "firstName": "123test",
+      "lastName": "4556test",
+      "userName": "lsdfkc",
+      "email": "slfgjh@sldkfjgh.com",
+      "password": "123456",
+      "id": 13
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "message": "hello world",
+      "dateTime": "5/13/2019"
+    },
+    {
+      "userId": 1,
+      "message": "This is a test",
+      "id": 2,
+      "dateTime": "5/13/2019"
+    },
+    {
+      "userId": 2,
+      "message": "Now the box will clear",
+      "id": 3,
+      "dateTime": "5/13/2019"
+    },
+    {
+      "userId": 1,
+      "message": "Sweet",
+      "id": 4,
+      "dateTime": "5/13/2019"
+    },
+    {
+      "userId": 3,
+      "message": "Totes",
+      "id": 5,
+      "dateTime": "5/13/2019"
+    },
+    {
+      "userId": 1,
+      "message": "hello class",
+      "id": 6
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "currentUserId": 1,
+      "friendId": 1
+    }
+  ],
+  "news": [
+    {
+      "title": "cjehfjefhc",
+      "synopsis": " ",
+      "url": "",
+      "dateTime": "Tue May 14 2019 11:52:54 GMT-0500 (Central Daylight Time)",
+      "id": 1
+    },
+    {
+      "title": "cjehfjefhc",
+      "synopsis": " ",
+      "url": "www.google.com",
+      "dateTime": "Tue May 14 2019 11:54:33 GMT-0500 (Central Daylight Time)",
+      "id": 2
+    },
+    {
+      "title": "real link",
+      "synopsis": " ",
+      "url": "https://stackoverflow.com/questions/12196885/text-flowing-out-of-div",
+      "dateTime": "Tue May 14 2019 11:55:01 GMT-0500 (Central Daylight Time)",
+      "id": 3
+    },
+    {
+      "title": "new article ",
+      "synopsis": " yayayayayay",
+      "url": "https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg",
+      "dateTime": "Tue May 14 2019 13:31:09 GMT-0500 (Central Daylight Time)",
+      "id": 4
+    }
+  ],
+  "tasks": [
+    {
+      "id": 3,
+      "userId": 3,
+      "task": "Don't forget the groceries!!! Toilet paper, ketchup, lettuce, detergent",
+      "taskCompleted": true,
+      "dueDate": "5/12/19",
+      "priorityLevel": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "task": "Beat up Shelley",
+      "taskCompleted": true,
+      "dueDate": "5/17/19",
+      "priorityLevel": 3
+    },
+    {
+      "task": "Pick up Ellie, Heather, and Shelley from school",
+      "dueDate": "5/14/19 3:30 pm",
+      "priorityLevel": "2",
+      "taskCompleted": false,
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "task": "I pledge allegiance to the Flag of the United States of America, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all.",
+      "dueDate": "7/4/19",
+      "priorityLevel": "1",
+      "taskCompleted": false,
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "task": "Work on daily journals 1-100",
+      "dueDate": "end of the week",
+      "priorityLevel": "2",
+      "taskCompleted": true,
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "task": "hey girl - lets do it",
+      "dueDate": "right now",
+      "priorityLevel": "1",
+      "taskCompleted": true,
+      "userId": 1,
+      "id": 9
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Working on Code 2",
+      "eventDate": "2019-05-09",
+      "description": "Group projects make us better coders."
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "Learning More About Flexbox",
+      "eventDate": "2019-05-16",
+      "description": "Making beautiful backgrounds with CSS."
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "title": "The darkside of Bootstrap",
+      "eventDate": "2019-06-01",
+      "description": "Learning about the ways Bootstrap doesn't always place nice."
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "title": "Put a Button on It and Call it Art",
+      "eventDate": "2019-06-08",
+      "description": "All the ways buttons and event listeners are best friends."
+    },
+    {
+      "title": "A Moment in Time",
+      "eventDate": "2019-05-24",
+      "description": "Using Moment Js to make your dates more attractive so you can throw away your beer goggles.",
+      "id": 5
+    },
+    {
+      "title": "Tester",
+      "eventDate": "2019-05-13",
+      "description": "I hit MVP",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "title": "New Event",
+      "eventDate": "2019-05-14",
+      "description": "Here and Now",
+      "userId": 1,
+      "id": 7
+    }
+  ]
+}
