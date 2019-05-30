@@ -210,7 +210,7 @@ class ApplicationViews extends Component {
             .then(News.getAllNews).then(news => { newState.news = news })
             .then(Tasks.getAllTasks).then(tasks => { newState.tasks = tasks })
             .then(Users.getAllUsers).then(users => { newState.users = users })
-            .then(Messages.getAllMessage).then(messages => { newState.messages = messages })
+            .then(Messages.getAllMessages).then(messages => { newState.messages = messages })
             .then(() =>
                 this.setState(newState))
     };
@@ -262,3 +262,6 @@ class ApplicationViews extends Component {
             </>
         )
     }
+}
+
+export default ApplicationViews

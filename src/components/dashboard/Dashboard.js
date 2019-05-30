@@ -5,11 +5,11 @@ class Dashboard extends Component {
   render() {
         return (
     <React.Fragment>
-    {
+    {/* {
         this.props.users.map((item) => {
             return <DashHeader key={item.id} user={item} />
         })
-    }
+    } */}
     </React.Fragment>
         );
     };
