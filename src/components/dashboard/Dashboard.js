@@ -1,11 +1,18 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
+import DashHeader from './DashHeader'
 
-export default class Dashboard extends Component {
-    render() {
+class Dashboard extends Component {
+  render() {
         return (
-            <div>
-                <h1>User Dashboard</h1>
-            </div>
-        )
+    <React.Fragment>
+    {
+        this.props.users.map((item) => {
+            return <DashHeader key={item.id} user={item} />
+        })
     }
-}
+    </React.Fragment>
+        );
+    };
+};
+
+export default Dashboard;
