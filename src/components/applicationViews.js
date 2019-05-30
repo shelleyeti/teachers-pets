@@ -11,104 +11,103 @@ import SignIn from '../components/landing/SignIn'
 import LogIn from '../components/auth/LogIn'
 import Dashboard from '../components/dashboard/Dashboard'
 import TaskApp from './tasks/TasksApp'
-import MessageContainer from './messages/messagesContainer';
-import NewsList from './news/NewsList'
+import MessageContainer from "./messages/messagesContainer";
 
+import NewsList from "./news/NewsList";
+import NewsForm from "./news/NewsForm";
 
 class ApplicationViews extends Component {
-
     state = {
         messages: [],
         events: [],
         friends: [],
         news: [],
         tasks: [],
-        users: [],
-        loggedIn: false
-    }
+        users: []
+    };
     //calls
-    deleteChatMessages = (id) => {
+    deleteChatMessages = id => {
         const newState = {};
         Messages.deleteMessage(id)
             .then(Messages.getAllMessages)
-            .then(chatMessages => newState.messages = chatMessages)
+            .then(chatMessages => (newState.messages = chatMessages))
             .then(() => {
-                this.props.history.push("/messages")
-                this.setState(newState)
-            })
+                this.props.history.push("/messages");
+                this.setState(newState);
+            });
     };
 
-    addChatMessages = (message) => {
+    addChatMessages = message => {
         const newState = {};
         return Messages.postMessage(message)
-            .then((chatMessages) => Messages.getAllMessages())
-            .then(chatMessages => newState.messages = chatMessages)
-            .then((chatMessages) => {
-                this.props.history.push("/messages")
-                this.setState(newState)
+            .then(chatMessages => Messages.getAllMessages())
+            .then(chatMessages => (newState.messages = chatMessages))
+            .then(chatMessages => {
+                this.props.history.push("/messages");
+                this.setState(newState);
                 //return chatMessagess so it can be used in the form
                 return chatMessages;
             });
     };
 
-    updateChatMessages = (editedMessageObject) => {
+    updateChatMessages = editedMessageObject => {
         const newState = {};
         Messages.editMessage(editedMessageObject)
             .then(() => Messages.getAllMessages())
-            .then(chatMessages => newState.chatMessages = chatMessages)
+            .then(chatMessages => (newState.chatMessages = chatMessages))
             .then(() => {
-                this.props.history.push("/messages")
-                this.setState(newState)
+                this.props.history.push("/messages");
+                this.setState(newState);
             });
     };
 
-    deleteEvents = (id) => {
+    deleteEvents = id => {
         const newState = {};
         Events.deleteEvent(id)
             .then(Events.getAllEvents)
-            .then(events => newState.events = events)
+            .then(events => (newState.events = events))
             .then(() => {
-                this.props.history.push("/events")
-                this.setState(newState)
-            })
+                this.props.history.push("/events");
+                this.setState(newState);
+            });
     };
 
-    addEvents = (event) => {
+    addEvents = event => {
         const newState = {};
         return Events.postEvent(event)
-            .then((events) => Events.getAllEvents())
-            .then(events => newState.events = events)
-            .then((events) => {
-                this.props.history.push("/events")
-                this.setState(newState)
+            .then(events => Events.getAllEvents())
+            .then(events => (newState.events = events))
+            .then(events => {
+                this.props.history.push("/events");
+                this.setState(newState);
                 //return events so it can be used in the form
                 return events;
             });
     };
 
-    updateEvents = (editedEventObject) => {
+    updateEvents = editedEventObject => {
         const newState = {};
         Events.editEvent(editedEventObject)
             .then(() => Events.getAllEvents())
-            .then(events => newState.events = events)
+            .then(events => (newState.events = events))
             .then(() => {
-                this.props.history.push("/events")
-                this.setState(newState)
+                this.props.history.push("/events");
+                this.setState(newState);
             });
     };
 
-    deleteTasks = (id) => {
+    deleteTasks = id => {
         const newState = {};
         Tasks.deleteTask(id)
             .then(Tasks.getAllTasks)
-            .then(tasks => newState.tasks = tasks)
+            .then(tasks => (newState.tasks = tasks))
             .then(() => {
-                this.props.history.push("/tasks")
-                this.setState(newState)
-            })
+                this.props.history.push("/tasks");
+                this.setState(newState);
+            });
     };
 
-    addTasks = (task) => {
+    addTasks = task => {
         const newState = {};
         return Tasks.postTask(task)
             .then((tasks) => Tasks.getAllTasks())
@@ -121,35 +120,36 @@ class ApplicationViews extends Component {
             });
     };
 
-    updateTasks = (editedEventObject) => {
+    updateTasks = editedEventObject => {
         const newState = {};
         Tasks.editTask(editedEventObject)
             .then(() => Tasks.getAllTasks())
-            .then(tasks => newState.tasks = tasks)
+            .then(tasks => (newState.tasks = tasks))
             .then(() => {
-                this.props.history.push("/tasks")
-                this.setState(newState)
+                this.props.history.push("/tasks");
+                this.setState(newState);
             });
     };
 
-    deleteUser = (id) => {
+    deleteUser = id => {
         const newState = {};
         Users.deleteUser(id)
             .then(Users.getAllUsers)
-            .then(allUsers => newState.users = allUsers)
+            .then(allUsers => (newState.users = allUsers))
             .then(() => {
-                this.props.history.push("/users")
-                this.setState(newState)
-            })
+                this.props.history.push("/users");
+                this.setState(newState);
+            });
     };
-    addUser = (event) => {
+
+    addUser = event => {
         const newState = {};
         return Users.postUser(event)
-            .then(() => Users.getAllUsers())
-            .then(users => newState.users = users)
-            .then((users) => {
-                this.props.history.push("/users")
-                this.setState(newState)
+            .then(users => users.getAllUsers())
+            .then(users => (newState.users = users))
+            .then(users => {
+                this.props.history.push("/users");
+                this.setState(newState);
                 //return tasks so it can be used in the form
                 return users;
             });
@@ -168,37 +168,37 @@ class ApplicationViews extends Component {
     deleteNews = id => {
         const newState = {};
         News.deleteNews(id)
-          .then(News.getAllNews)
-          .then(articles => (newState.news = articles))
-          .then(() => {
-            this.props.history.push("/news");
-            this.setState(newState);
-          });
-      };
-      
-      addNews = article => {
+            .then(News.getAllNews)
+            .then(articles => (newState.news = articles))
+            .then(() => {
+                this.props.history.push("/news");
+                this.setState(newState);
+            });
+    };
+
+    addNews = article => {
         const newState = {};
         return News.postNews(article)
-          .then(articles => News.getAllNews())
-          .then(articles => (newState.news = articles))
-          .then(article => {
-            this.props.history.push("/news");
-            this.setState(newState);
-            //return animals so it can be used in the form
-            return article;
-          });
-      };
-      
-      editNews = editedArticle => {
+            .then(articles => News.getAllNews())
+            .then(articles => (newState.news = articles))
+            .then(article => {
+                this.props.history.push("/news");
+                this.setState(newState);
+
+                return article;
+            });
+    };
+
+    editNews = editedArticle => {
         const newState = {};
         News.editNews(editedArticle)
-          .then(() => News.getAllNews())
-          .then(articles => (newState.news = articles))
-          .then(() => {
-            this.props.history.push("/news");
-            this.setState(newState);
-          });
-      };
+            .then(() => News.getAllNews())
+            .then(articles => (newState.news = articles))
+            .then(() => {
+                this.props.history.push("/news");
+                this.setState(newState);
+            });
+    };
 
 
     componentDidMount() {
@@ -213,7 +213,7 @@ class ApplicationViews extends Component {
             .then(() =>
                 this.setState(newState))
     };
-    
+
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
     render() {
@@ -224,46 +224,56 @@ class ApplicationViews extends Component {
                         addUser={this.addUser} />
                 }} />
                 <Route path="/login" component={LogIn} />
-                <Route exact path="/dashboard" 
-                    users={this.state.users} 
+                <Route exact path="/dashboard"
+                    users={this.state.users}
                     render={props => {
-                    if (this.isAuthenticated()) {
-                        return <Dashboard />
-                    } else {
-                        return <Redirect to="/login" />
-                    }
-                 }} />
-                
-                <Route exact path="/tasks" render={(props) => {
-                   return <TaskApp 
-                        initItems={this.state.tasks} 
-                        addTask={this.addTasks}
-                        deleteTask={this.deleteTasks} 
-                        markDone={this.updateTasks}
-                   />
-               }} />
-        
-        <Route
-          exact
-          path="/messages"
-          render={props => {
-            return (
-              <MessageContainer
-                messages={this.state.messages}
-                {...props}
-                deleteTask={this.deleteTask}
-              />
-            );
-          }}
-        />
+                        if (this.isAuthenticated()) {
+                            return <Dashboard />
+                        } else {
+                            return <Redirect to="/login" />
+                        }
+                    }} />
 
-                <Route exact path="/news" render={(props) => {
-                    return <NewsList
-                        {...props}
-                        news={this.state.news} />
+                <Route exact path="/tasks" render={(props) => {
+                    return <TaskApp
+                        initItems={this.state.tasks}
+                        addTask={this.addTasks}
+                        deleteTask={this.deleteTasks}
+                        markDone={this.updateTasks}
+                    />
+                }} />
+
+                <Route
+                    exact
+                    path="/messages"
+                    render={props => {
+                        return (
+                            <MessageContainer
+                                messages={this.state.messages}
+                                {...props}
+                                deleteTask={this.deleteTask}
+                            />
+                        );
+                    }}
+                />
+                <Route
+                    exact path="/news"
+                    render={props => {
+                        return <NewsList
+                            {...props}
+                            news={this.state.news}
+                            deleteNews={this.deleteNews}
+                        />;
+                    }}
+                />
+                <Route path="/news/new" render={(props) => {
+
+                    //route for add news form
+                    return <NewsForm {...props}
+                        addNews={this.addNews} />
                 }} />
             </>
-        )
+        );
     }
 }
 export default withRouter(ApplicationViews)
