@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-getNews(id) {
+  getNews(id) {
     return fetch(`${remoteURL}/news/${id}`).then(e => e.json())
   },
   getAllNews() {
