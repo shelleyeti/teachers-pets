@@ -20,7 +20,7 @@
     margin-left: 15px;
 } */
 
-
+/* media query to go mobile first */
   
   h1 {
     margin: 20px 0 15px 0;  
@@ -64,4 +64,8 @@
 
   .form-todo-container {
     margin-top: 20px;
+}
+
+#edit {
+  padding-right: 20px;
 }

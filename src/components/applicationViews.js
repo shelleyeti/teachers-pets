@@ -110,11 +110,11 @@ class ApplicationViews extends Component {
     addTasks = task => {
         const newState = {};
         return Tasks.postTask(task)
-            .then(tasks => tasks.getAllTasks())
-            .then(tasks => (newState.tasks = tasks))
-            .then(tasks => {
-                this.props.history.push("/tasks");
-                this.setState(newState);
+            .then((tasks) => Tasks.getAllTasks())
+            .then(tasks => newState.tasks = tasks)
+            .then((tasks) => {
+                this.props.history.push("/tasks")
+                this.setState(newState)
                 //return tasks so it can be used in the form
                 return tasks;
             });
@@ -164,7 +164,6 @@ class ApplicationViews extends Component {
                 this.setState(newState)
             });
     };
-
 
     deleteNews = id => {
         const newState = {};
@@ -217,7 +216,6 @@ class ApplicationViews extends Component {
 
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
-
     render() {
         return (
             <>
@@ -226,17 +224,22 @@ class ApplicationViews extends Component {
                         addUser={this.addUser} />
                 }} />
                 <Route path="/login" component={LogIn} />
-                <Route exact path="/dashboard" users={this.state.users} render={props => {
-                    if (this.isAuthenticated()) {
-                        return <Dashboard />
-                    } else {
-                        return <Redirect to="/login" />
-                    }
-                }} />
+                <Route exact path="/dashboard"
+                    users={this.state.users}
+                    render={props => {
+                        if (this.isAuthenticated()) {
+                            return <Dashboard />
+                        } else {
+                            return <Redirect to="/login" />
+                        }
+                    }} />
 
                 <Route exact path="/tasks" render={(props) => {
-                    return <TaskApp initItems={this.state.tasks} addTask={this.addTasks}
-                        deleteTask={this.deleteTask} markDone={this.updateTasks}
+                    return <TaskApp
+                        initItems={this.state.tasks}
+                        addTask={this.addTasks}
+                        deleteTask={this.deleteTasks}
+                        markDone={this.updateTasks}
                     />
                 }} />
 
@@ -273,5 +276,4 @@ class ApplicationViews extends Component {
         );
     }
 }
-
 export default withRouter(ApplicationViews)
