@@ -8,15 +8,11 @@ import News from '../modules/newsManager'
 import Tasks from '../modules/tasksManager'
 import Users from '../modules/usersManager'
 import SignIn from '../components/landing/SignIn'
-<<<<<<< HEAD
 import LogIn from '../components/auth/LogIn'
 import Dashboard from '../components/dashboard/Dashboard'
-=======
-import LogIn from '../components/landing/LogIn'
 import TaskApp from './tasks/TasksApp'
 
 import NewsList from './news/NewsList'
->>>>>>> master
 
 import NewsList from './news/NewsList'
 
