@@ -3,13 +3,14 @@ import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'react
 import Welcome from "../landing/Welcome"
 import "../landing/SignIn.css"
 import { withRouter} from 'react-router-dom';
+import UserManager from '../../modules/usersManager'
 
 
 class LogIn extends React.Component {
 
     state = {
       userName: "",
-      password: ""
+      password: "",
     };
   
   handleFieldChange = (evt) => {
@@ -19,16 +20,21 @@ class LogIn extends React.Component {
   }
 
   handleLogin = (e) => {
-      e.preventDefault()
+    e.preventDefault()
 
-      sessionStorage.setItem(
-          "credentials",
-            JSON.stringify({
-              userName: this.state.userName,
-              password: this.state.password
-          })
-      )
-      .then(() => this.props.history.push("/dashboard"));
+    if (!this.state.userName || !this.state.password) {
+        return alert("Please fill out required fields.")
+    }
+
+    UserManager.getUser(this.state.userName)
+        .then(user => {
+            sessionStorage.setItem(
+                "credentials",
+                  JSON.stringify(user)
+            )
+            this.props.setUser(user)
+        })
+        this.history.push("/dashboard")
   }
 
   SignUp = () => {

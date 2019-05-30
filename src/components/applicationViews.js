@@ -24,7 +24,6 @@ class ApplicationViews extends Component {
         news: [],
         tasks: [],
         users: [],
-        loggedIn: false
     }
     //calls
     deleteChatMessages = (id) => {
@@ -215,7 +214,11 @@ class ApplicationViews extends Component {
                 this.setState(newState))
     };
     
+
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+       
+
+    
 
 
     render() {
@@ -225,10 +228,12 @@ class ApplicationViews extends Component {
                     return <SignIn
                         addUser={this.addUser} />
                 }} />
-                <Route path="/login" component={LogIn} />
-                <Route exact path="/dashboard" users={this.state.users} render={props => {
+                <Route path="/login" render={(props) => {
+                return <LogIn {...props} setUser={this.props.setUser} /> }}
+                />
+                <Route exact path="/dashboard" render={props => {
                     if (this.isAuthenticated()) {
-                        return <Dashboard />
+                        return <Dashboard activeUser={this.props.activeUser} />
                     } else {
                         return <Redirect to="/login" />
                     }
