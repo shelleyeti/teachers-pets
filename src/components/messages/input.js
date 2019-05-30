@@ -3,17 +3,17 @@ import React from "react";
 
 class Input extends Component {
   state = {
-    text: ""
+    body: ""
   }
 
   onChange(e) {
-    this.setState({text: e.target.value});
+    this.setState({body: e.target.value});
   }
 
   onSubmit(e) {
     e.preventDefault();
-    this.setState({text: ""});
-    this.props.onSendMessage(this.state.text);
+    this.setState({body: ""});
+    // this.props.onSendMessage(this.state.text);
   }
 
   render() {
@@ -22,7 +22,7 @@ class Input extends Component {
         <form onSubmit={e => this.onSubmit(e)}>
           <input
             onChange={e => this.onChange(e)}
-            value={this.state.text}
+            value={this.state.body}
             type="text"
             placeholder="Enter your message and press Submit"
             autoFocus={true}

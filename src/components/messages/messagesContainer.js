@@ -6,12 +6,12 @@ import "./messages.css";
 export default class MessagesContainer extends React.Component {
   render() {
     return (
-      <section className="messageSection">
+      <section className="messagesSection">
         <div className="messageContainer">
-          <MessageList messages={this.props.messages} />
+          <MessageList {...this.props} messages={this.props.messages} />
         </div>
         <div className="messageInput">
-          <Input onSendMessage={this.onSendMessage} />
+          <Input {...this.props} onSendMessage={this.onSendMessage} />
         </div>
       </section>
     );

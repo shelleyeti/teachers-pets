@@ -13,18 +13,14 @@ class MessageItem extends Component {
     this.props.deleteMessage(this.props.message.id);
   };
 
-  handleClickDetails = event => {
-    this.setState({
-      saveDisabled: true
-    });
-  };
-
   render() {
     return (
       <div>
         <div className="cardBody">
           <div className="card-body">
-            <p>{this.props.message.userName}: {this.props.message.message}</p>
+            <p>
+              {this.props.message.userName}: {this.props.message.message}
+            </p>
           </div>
           <div>
             <button
@@ -32,7 +28,7 @@ class MessageItem extends Component {
               className="btn btn-outline-primary btn-sm"
               onClick={() => {
                 this.props.history.push(
-                  `/messages/${this.props.messages.id}/edit`
+                  `/messages/${this.props.message.id}/edit`
                 );
               }}
             >

@@ -25,7 +25,7 @@ class ApplicationViews extends Component {
     loggedIn: false
   };
   //calls
-  deleteChatMessages = id => {
+  deleteMessage = id => {
     const newState = {};
     Messages.deleteMessage(id)
       .then(Messages.getAllMessages)
@@ -36,7 +36,7 @@ class ApplicationViews extends Component {
       });
   };
 
-  addChatMessages = message => {
+  addMessage = message => {
     const newState = {};
     return Messages.postMessage(message)
       .then(chatMessages => Messages.getAllMessages())
@@ -49,7 +49,7 @@ class ApplicationViews extends Component {
       });
   };
 
-  updateChatMessages = editedMessageObject => {
+  updateMessage = editedMessageObject => {
     const newState = {};
     Messages.editMessage(editedMessageObject)
       .then(() => Messages.getAllMessages())
@@ -84,7 +84,7 @@ class ApplicationViews extends Component {
       });
   };
 
-  updateEvents = editedEventObject => {
+  updateEvent = editedEventObject => {
     const newState = {};
     Events.editEvent(editedEventObject)
       .then(() => Events.getAllEvents())
@@ -95,7 +95,7 @@ class ApplicationViews extends Component {
       });
   };
 
-  deleteTasks = id => {
+  deleteTask = id => {
     const newState = {};
     Tasks.deleteTask(id)
       .then(Tasks.getAllTasks)
@@ -106,10 +106,10 @@ class ApplicationViews extends Component {
       });
   };
 
-  addTasks = task => {
+  addTask = task => {
     const newState = {};
     return Tasks.postTask(task)
-      .then(tasks => tasks.getAllTasks())
+      .then(() => Tasks.getAllTasks())
       .then(tasks => (newState.tasks = tasks))
       .then(tasks => {
         this.props.history.push("/tasks");
@@ -119,7 +119,7 @@ class ApplicationViews extends Component {
       });
   };
 
-  updateTasks = editedEventObject => {
+  updateTask = editedEventObject => {
     const newState = {};
     Tasks.editTask(editedEventObject)
       .then(() => Tasks.getAllTasks())
@@ -220,7 +220,7 @@ class ApplicationViews extends Component {
       .then(users => {
         newState.users = users;
       })
-      .then(Messages.getAllMessage)
+      .then(Messages.getAllMessages)
       .then(messages => {
         newState.messages = messages;
       })
@@ -259,6 +259,7 @@ class ApplicationViews extends Component {
           render={props => {
             return (
               <TaskApp
+                {...props}
                 initItems={this.state.tasks}
                 addTask={this.addTasks}
                 deleteTask={this.deleteTask}
@@ -276,7 +277,9 @@ class ApplicationViews extends Component {
               <MessageContainer
                 messages={this.state.messages}
                 {...props}
-                deleteTask={this.deleteTask}
+                deleteMessage={this.deleteMessage}
+                addMessage={this.addMessage}
+                updateMessage={this.updateMessage}
               />
             );
           }}
