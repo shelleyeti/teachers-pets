@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-getEvent(id) {
+  getEvent(id) {
     return fetch(`${remoteURL}/events/${id}`).then(e => e.json())
   },
   getAllEvents() {
