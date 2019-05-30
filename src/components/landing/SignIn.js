@@ -31,17 +31,16 @@ class SignIn extends React.Component {
         password: this.state.password,
         email: this.state.email
       };
-      if (state.value === "") {
-        this.props.history.push("/")
-      } else {
+     
       this.props.addUser(user)
       .then(() => this.props.history.push("/dashboard"));
-    }
+    
     }
 
     renderLogIn = () => {
       this.props.history.push("/login")
     }
+
 
   render() {
     return (
