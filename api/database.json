@@ -181,13 +181,6 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 3,
-      "body": "Move in with Heather",
-      "complete": false,
-      "dueDate": "5/12/19"
-    },
-    {
       "id": 2,
       "userId": 2,
       "body": "Beat up Shelley",
@@ -210,9 +203,15 @@
     },
     {
       "userId": 1,
-      "body": "yeah",
+      "body": "Work on stuff",
       "complete": false,
       "id": 6
+    },
+    {
+      "userId": 1,
+      "body": "Listen to the adults",
+      "complete": false,
+      "id": 7
     }
   ],
   "events": [
