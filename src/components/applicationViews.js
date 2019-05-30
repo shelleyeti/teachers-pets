@@ -8,7 +8,8 @@ import News from '../modules/newsManager'
 import Tasks from '../modules/tasksManager'
 import Users from '../modules/usersManager'
 import SignIn from '../components/landing/SignIn'
-import LogIn from '../components/landing/LogIn'
+import LogIn from '../components/auth/LogIn'
+import Dashboard from '../components/dashboard/Dashboard'
 
 class ApplicationViews extends Component {
 
@@ -18,7 +19,8 @@ class ApplicationViews extends Component {
         friends: [],
         news: [],
         tasks: [],
-        users: []
+        users: [],
+        loggedIn: false
     }
     //calls
     deleteChatMessages = (id) => {
@@ -140,7 +142,7 @@ class ApplicationViews extends Component {
     addUser = (event) => {
         const newState = {};
         return Users.postUser(event)
-            .then((users) => users.getAllUsers())
+            .then((Users) => Users.getAllUsers())
             .then(users => newState.users = users)
             .then((users) => {
                 this.props.history.push("/users")
@@ -210,6 +212,9 @@ class ApplicationViews extends Component {
             .then(() => 
             this.setState(newState))
     };
+    
+    isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+
 
     render () {
         return (
@@ -219,6 +224,13 @@ class ApplicationViews extends Component {
                     addUser={this.addUser} />
                 }} />
                 <Route path="/login" component={LogIn} />
+                <Route exact path="/dashboard" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <Dashboard />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
+                }} />
             </>
         )
     }

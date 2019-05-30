@@ -3,7 +3,7 @@ import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'react
 import "./SignIn.css"
 import Welcome from "./Welcome"
 import TimeOut from "./TimeOut"
-import LogIn from "./LogIn"
+import LogIn from "../auth/LogIn"
 import ReactDOM from 'react'
 import { withRouter} from 'react-router-dom';
 
@@ -27,12 +27,16 @@ class SignIn extends React.Component {
       const user = {
         firstName: this.state.firstName,
         lastName: this.state.lastName,
-        userName: this.value.state.userName,
-        password: this.value.state.password,
+        userName: this.state.userName,
+        password: this.state.password,
         email: this.state.email
       };
+      if (state.value === "") {
+        this.props.history.push("/")
+      } else {
       this.props.addUser(user)
       .then(() => this.props.history.push("/dashboard"));
+    }
     }
 
     renderLogIn = () => {
@@ -58,7 +62,7 @@ class SignIn extends React.Component {
           <Col md={6}>
             <FormGroup>
               <Label for="userName">Username</Label>
-              <Input type="username" name="userName" id="userName" placeholder="Username" />
+              <Input type="userName" name="userName" id="userName" placeholder="Username" onChange={this.handleFieldChange} />
             </FormGroup>
           </Col>
           <Col md={6}>
@@ -76,7 +80,8 @@ class SignIn extends React.Component {
         </FormGroup>
 
         <Button className="landing-buttons" onClick={this.constructNewUser}>Sign up</Button>
-        <Button className="landing-buttons" onClick={this.renderLogIn}>Log in</Button>
+        <Button onClick={this.renderLogIn} color="link">Already have an account?</Button>
+
       </Form>
       </React.Fragment>
     );
