@@ -11,7 +11,7 @@ import SignIn from '../components/landing/SignIn'
 import LogIn from '../components/auth/LogIn'
 import Dashboard from '../components/dashboard/Dashboard'
 import TaskApp from './tasks/TasksApp'
-import MessageContainer from "./messages/messagesContainer";
+import MessageContainer from './messages/messagesContainer';
 import NewsList from './news/NewsList'
 
 
@@ -165,7 +165,6 @@ class ApplicationViews extends Component {
             });
     };
 
-
     deleteNews = id => {
         const newState = {};
         News.deleteNews(id)
@@ -217,7 +216,6 @@ class ApplicationViews extends Component {
     
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
-
     render() {
         return (
             <>
@@ -240,8 +238,8 @@ class ApplicationViews extends Component {
                    return <TaskApp 
                         initItems={this.state.tasks} 
                         addTask={this.addTasks}
-                       deleteTask={this.deleteTasks} 
-                       markDone={this.updateTasks}
+                        deleteTask={this.deleteTasks} 
+                        markDone={this.updateTasks}
                    />
                }} />
         

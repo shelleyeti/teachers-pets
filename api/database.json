@@ -276,24 +276,6 @@
       "body": "Listen to the adults",
       "complete": false,
       "id": 7
-    },
-    {
-      "userId": 1,
-      "body": "ok9",
-      "complete": false,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "body": "ok60",
-      "complete": false,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "body": "thank you",
-      "complete": false,
-      "id": 11
     }
   ],
   "events": [
