@@ -184,36 +184,35 @@
       "id": 1,
       "userId": 3,
       "body": "Move in with Heather",
-      "complete": true,
+      "complete": false,
       "dueDate": "5/12/19"
     },
     {
       "id": 2,
       "userId": 2,
       "body": "Beat up Shelley",
-      "complete": true,
-      "dueDate": "5/17/19"
-    },
-    {
-      "body": "Pick up Ellie, Heather, and Shelley from school",
-      "dueDate": "5/14/19 3:30 pm",
       "complete": false,
-      "userId": 2,
-      "id": 3
+      "dueDate": "5/17/19"
     },
     {
       "body": "Adopt Eliot",
       "dueDate": "end of the week",
-      "complete": true,
+      "complete": false,
       "userId": 2,
       "id": 4
     },
     {
       "body": "Build the sister wife compound",
       "dueDate": "right now",
-      "complete": true,
+      "complete": false,
       "userId": 1,
       "id": 5
+    },
+    {
+      "userId": 1,
+      "body": "yeah",
+      "complete": false,
+      "id": 6
     }
   ],
   "events": [
