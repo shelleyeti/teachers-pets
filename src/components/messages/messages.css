@@ -1,9 +1,10 @@
 .messageContainer {
     border: 1px black solid;
     width: 80%;
-    display: flex;
+    margin-left: 20px;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .cardBody {
@@ -12,6 +13,13 @@
     padding: 10px;
     margin: 10px;
     background-color: lightgreen;
+}
+
+.messageSection {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-content: center;
 }
 
 .chatMessage {

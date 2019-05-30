@@ -6,7 +6,7 @@ import "./messages.css";
 export default class MessagesContainer extends React.Component {
   render() {
     return (
-      <section>
+      <section className="messageSection">
         <div className="messageContainer">
           <MessageList messages={this.props.messages} />
         </div>
