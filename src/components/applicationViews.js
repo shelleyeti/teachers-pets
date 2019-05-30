@@ -13,6 +13,7 @@ import TaskApp from "./tasks/TasksApp";
 import MessageContainer from "./messages/messagesContainer";
 
 import NewsList from "./news/NewsList";
+import NewsForm from "./news/NewsForm";
 
 class ApplicationViews extends Component {
     state = {
@@ -277,6 +278,12 @@ class ApplicationViews extends Component {
                         />;
                     }}
                 />
+                <Route path="/news/new" render={(props) => {
+
+                    //route for add news form
+                    return <NewsForm {...props}
+                        addOwner={this.addNews} />
+                }} />
             </>
         );
     }
