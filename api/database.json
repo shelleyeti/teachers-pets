@@ -109,37 +109,37 @@
     {
       "id": 1,
       "userId": 1,
+      "userName": "addam.joor",
       "message": "hello world",
       "dateTime": "5/13/2019"
     },
     {
       "userId": 1,
       "message": "This is a test",
+      "userName": "addam.joor",
       "id": 2,
       "dateTime": "5/13/2019"
     },
     {
       "userId": 2,
       "message": "Now the box will clear",
+      "userName": "addam.joor",
       "id": 3,
       "dateTime": "5/13/2019"
     },
     {
       "userId": 1,
       "message": "Sweet",
+      "userName": "addam.joor",
       "id": 4,
       "dateTime": "5/13/2019"
     },
     {
       "userId": 3,
       "message": "Totes",
+      "userName": "addam.joor",
       "id": 5,
       "dateTime": "5/13/2019"
-    },
-    {
-      "userId": 1,
-      "message": "hello class",
-      "id": 6
     }
   ],
   "friends": [
