@@ -26,7 +26,7 @@ export default {
   },
   editEvent(editedEvent) {
     return fetch(`${remoteURL}/events/${editedEvent.id}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },
