@@ -13,6 +13,8 @@ import TaskApp from './tasks/TasksApp'
 
 import NewsList from './news/NewsList'
 
+import NewsList from './news/NewsList'
+
 class ApplicationViews extends Component {
 
     state = {
@@ -228,6 +230,7 @@ class ApplicationViews extends Component {
                        deleteTask={this.deleteTask} markDone={this.updateTasks}
                    />
                }} />
+
 
                 <Route exact path="/news" render={(props) => {
                     return <NewsList
