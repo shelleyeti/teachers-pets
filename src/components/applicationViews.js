@@ -13,8 +13,6 @@ import TaskApp from './tasks/TasksApp'
 
 import NewsList from './news/NewsList'
 
-import NewsList from './news/NewsList'
-
 class ApplicationViews extends Component {
 
     state = {
@@ -170,37 +168,37 @@ class ApplicationViews extends Component {
     deleteNews = id => {
         const newState = {};
         News.deleteNews(id)
-          .then(News.getAllNews)
-          .then(articles => (newState.news = articles))
-          .then(() => {
-            this.props.history.push("/news");
-            this.setState(newState);
-          });
-      };
-      
-      addNews = article => {
+            .then(News.getAllNews)
+            .then(articles => (newState.news = articles))
+            .then(() => {
+                this.props.history.push("/news");
+                this.setState(newState);
+            });
+    };
+
+    addNews = article => {
         const newState = {};
         return News.postNews(article)
-          .then(articles => News.getAllNews())
-          .then(articles => (newState.news = articles))
-          .then(article => {
-            this.props.history.push("/news");
-            this.setState(newState);
-            //return animals so it can be used in the form
-            return article;
-          });
-      };
-      
-      editNews = editedArticle => {
+            .then(articles => News.getAllNews())
+            .then(articles => (newState.news = articles))
+            .then(article => {
+                this.props.history.push("/news");
+                this.setState(newState);
+                //return animals so it can be used in the form
+                return article;
+            });
+    };
+
+    editNews = editedArticle => {
         const newState = {};
         News.editNews(editedArticle)
-          .then(() => News.getAllNews())
-          .then(articles => (newState.news = articles))
-          .then(() => {
-            this.props.history.push("/news");
-            this.setState(newState);
-          });
-      };
+            .then(() => News.getAllNews())
+            .then(articles => (newState.news = articles))
+            .then(() => {
+                this.props.history.push("/news");
+                this.setState(newState);
+            });
+    };
 
 
     componentDidMount() {
@@ -224,12 +222,12 @@ class ApplicationViews extends Component {
                         addUser={this.addUser} />
                 }} />
                 <Route path="/login" component={LogIn} />
-                
+
                 <Route exact path="/tasks" render={(props) => {
-                   return <TaskApp initItems={this.state.tasks} addTask={this.addTasks}
-                       deleteTask={this.deleteTask} markDone={this.updateTasks}
-                   />
-               }} />
+                    return <TaskApp initItems={this.state.tasks} addTask={this.addTasks}
+                        deleteTask={this.deleteTask} markDone={this.updateTasks}
+                    />
+                }} />
 
 
                 <Route exact path="/news" render={(props) => {
