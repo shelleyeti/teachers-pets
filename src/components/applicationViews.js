@@ -1,12 +1,13 @@
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
 import { withRouter } from 'react-router'
-import Messages from './modules/messagesManager'
-import Events from './modules/eventsManager'
-import Friends from './modules/friendsManager'
-import News from './modules/newsManager'
-import Tasks from './modules/taskManager'
-import Users from './modules/userManager'
+import Messages from '../modules/messagesManager'
+import Events from '../modules/eventsManager'
+import Friends from '../modules/friendsManager'
+import News from '../modules/newsManager'
+import Tasks from '../modules/tasksManager'
+import Users from '../modules/usersManager'
+import SignIn from '../components/landing/SignIn'
 
 class ApplicationViews extends Component {
 
@@ -196,9 +197,9 @@ class ApplicationViews extends Component {
       };
 
 
-    componentDidMount() {
+      componentDidMount() {
         const newState = {};
-        Events.getAll()
+        Events.getAllEvents()
             .then(events => { newState.events = events })
             .then(Friends.getAll).then(friends => { newState.friends = friends })
             .then(News.getAll).then(news => { newState.news = news })
@@ -209,6 +210,15 @@ class ApplicationViews extends Component {
             this.setState(newState))
     };
 
+    render () {
+        return (
+            <React.Fragment>
+                <Route exact path="/" render={(props) => {
+                    return <SignIn />
+                }} />
+            </React.Fragment>
+        )
+    }
     // render() {
     //     return (
     //         <React.Fragment>
