@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { Form, Input } from 'reactstrap';
+import {
+  Form,
+  Input,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  Button
+} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default class NewsForm extends Component {
 
@@ -19,41 +28,63 @@ export default class NewsForm extends Component {
     this.setState(stateToChange);
   };
 
+  constructNewNews = evt => {
+
+    let today = new Date();
+    let formatTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds());
+    let formattedTime = formatTime.toLocaleString("en-US", { hour12: true });
+
+    const article = {
+      title: this.state.title,
+      synopsis: this.state.synopsis,
+      url: this.state.url,
+      dateTime: formattedTime
+    }
+
+    this.props.addNews(article);
+  }
+
+
+
 
   render() {
     return (
       <React.Fragment>
-        <form className="ownerForm">
-          <div className="form-group">
-            <label htmlFor="ownerName">Owner Name</label>
-            <input
-              type="text"
+        <Form>
+          <InputGroup className="m-2">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>Article Title</InputGroupText>
+            </InputGroupAddon>
+            <Input type="text"
               required
-              className="form-control"
+              id="title"
               onChange={this.handleFieldChange}
-              id="name"
-              placeholder="Owner Name"
             />
-          </div>
-          <div className="form-group">
-            <label htmlFor="phoneNumber">Phone Number</label>
-            <input
-              type="text"
+          </InputGroup>
+
+          <InputGroup className="m-2">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>Synopsis</InputGroupText>
+            </InputGroupAddon>
+            <Input type="text"
               required
-              className="form-control"
-              onChange={this.handleFieldChange}
-              id="phoneNumber"
-              placeholder="Phone Number"
-            />
-          </div>
-          <button
-            type="button"
-            onClick={this.constructNewOwner}
-            className="btn btn-primary"
-          >
-            Submit
-          </button>
-        </form >
+              id="synopsis"
+              onChange={this.handleFieldChange} />
+          </InputGroup>
+
+          <InputGroup className="m-2">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>url</InputGroupText>
+            </InputGroupAddon>
+            <Input type="text"
+              required
+              id="url"
+              onChange={this.handleFieldChange} />
+          </InputGroup>
+
+          {/* //* maybe a checkbox that asks if youd like to favorite it and some sort of designation in your own news list? */}
+          <Button className="btn btn-outline-primary" size="sm" onClick={this.constructNewNews}>Submit</Button>
+        </Form>
       </React.Fragment >
     );
   }

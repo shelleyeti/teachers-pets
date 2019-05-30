@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
-  CardSubtitle, CardBody
+  CardSubtitle, CardBody, ButtonGroup
 } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class NewsItem extends Component {
 
@@ -59,10 +60,12 @@ class NewsItem extends Component {
         {/* <CardImg top width="100%" src="" alt="Card image cap" /> */}
         <CardBody>
           <CardTitle>{this.props.article.title}</CardTitle>
-          <CardSubtitle>{this.props.synopsis}</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <a>link to article</a>
-          <Button>Button</Button>
+          <CardText>{this.props.article.synopsis}</CardText>
+          <a className="nav-link" href={`${this.props.article.url}`} target="_blank" rel="noopener noreferrer" >Link to Article</a>
+          <ButtonGroup className="btn-group ml-1" size="sm">
+            <Button className="btn btn-outline-success">Edit</Button>
+            <Button className="btn btn-outline-danger">Delete</Button>
+          </ButtonGroup>
         </CardBody>
       </Card>
 

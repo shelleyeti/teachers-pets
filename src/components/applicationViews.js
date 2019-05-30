@@ -1,15 +1,16 @@
-import { Route, Redirect } from "react-router-dom";
-import React, { Component } from "react";
-import { withRouter } from "react-router";
-import Messages from "../modules/messagesManager";
-import Events from "../modules/eventsManager";
-import Friends from "../modules/friendsManager";
-import News from "../modules/newsManager";
-import Tasks from "../modules/tasksManager";
-import Users from "../modules/usersManager";
-import SignIn from "../components/landing/SignIn";
-import LogIn from "../components/landing/LogIn";
-import TaskApp from "./tasks/TasksApp";
+import { Route, Redirect } from 'react-router-dom'
+import React, { Component } from "react"
+import { withRouter } from 'react-router'
+import Messages from '../modules/messagesManager'
+import Events from '../modules/eventsManager'
+import Friends from '../modules/friendsManager'
+import News from '../modules/newsManager'
+import Tasks from '../modules/tasksManager'
+import Users from '../modules/usersManager'
+import SignIn from '../components/landing/SignIn'
+import LogIn from '../components/auth/LogIn'
+import Dashboard from '../components/dashboard/Dashboard'
+import TaskApp from './tasks/TasksApp'
 import MessageContainer from "./messages/messagesContainer";
 
 import NewsList from "./news/NewsList";
@@ -153,17 +154,17 @@ class ApplicationViews extends Component {
                 return users;
             });
     };
-
-    updateUser = editedUser => {
+    updateUser = (editedUser) => {
         const newState = {};
         Users.editUser(editedUser)
             .then(() => Users.getAllUsers())
-            .then(Users => (newState.Users = Users))
+            .then(Users => newState.Users = Users)
             .then(() => {
-                this.props.history.push("/users");
-                this.setState(newState);
+                this.props.history.push("/users")
+                this.setState(newState)
             });
     };
+
 
     deleteNews = id => {
         const newState = {};
@@ -184,7 +185,7 @@ class ApplicationViews extends Component {
             .then(article => {
                 this.props.history.push("/news");
                 this.setState(newState);
-                //return animals so it can be used in the form
+
                 return article;
             });
     };
@@ -200,61 +201,45 @@ class ApplicationViews extends Component {
             });
     };
 
+
     componentDidMount() {
         const newState = {};
         Events.getAllEvents()
-            .then(events => {
-                newState.events = events;
-            })
-            .then(Friends.getAllFriends)
-            .then(friends => {
-                newState.friends = friends;
-            })
-            .then(News.getAllNews)
-            .then(news => {
-                newState.news = news;
-            })
-            .then(Tasks.getAllTasks)
-            .then(tasks => {
-                newState.tasks = tasks;
-            })
-            .then(Users.getAllUsers)
-            .then(users => {
-                newState.users = users;
-            })
-            .then(Messages.getAllMessages)
-            .then(messages => {
-                newState.messages = messages;
-            })
-            .then(() => this.setState(newState));
-    }
+            .then(events => { newState.events = events })
+            .then(Friends.getAllFriends).then(friends => { newState.friends = friends })
+            .then(News.getAllNews).then(news => { newState.news = news })
+            .then(Tasks.getAllTasks).then(tasks => { newState.tasks = tasks })
+            .then(Users.getAllUsers).then(users => { newState.users = users })
+            .then(Messages.getAllMessages).then(messages => { newState.messages = messages })
+            .then(() =>
+                this.setState(newState))
+    };
+
+    isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+
 
     render() {
         return (
             <>
-                <Route
-                    exact
-                    path="/"
-                    render={props => {
-                        return <SignIn addUser={this.addUser} />;
-                    }}
-                />
+                <Route exact path="/" render={(props) => {
+                    return <SignIn
+                        addUser={this.addUser} />
+                }} />
                 <Route path="/login" component={LogIn} />
+                <Route exact path="/dashboard" users={this.state.users} render={props => {
+                    if (this.isAuthenticated()) {
+                        return <Dashboard />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
+                }} />
 
-                <Route
-                    exact
-                    path="/tasks"
-                    render={props => {
-                        return (
-                            <TaskApp
-                                initItems={this.state.tasks}
-                                addTask={this.addTasks}
-                                deleteTask={this.deleteTask}
-                                markDone={this.updateTasks}
-                            />
-                        );
-                    }}
-                />
+                <Route exact path="/tasks" render={(props) => {
+                    return <TaskApp initItems={this.state.tasks} addTask={this.addTasks}
+                        deleteTask={this.deleteTask} markDone={this.updateTasks}
+                    />
+                }} />
+
                 <Route
                     exact
                     path="/messages"
@@ -282,11 +267,11 @@ class ApplicationViews extends Component {
 
                     //route for add news form
                     return <NewsForm {...props}
-                        addOwner={this.addNews} />
+                        addNews={this.addNews} />
                 }} />
             </>
         );
     }
 }
 
-export default withRouter(ApplicationViews);
+export default withRouter(ApplicationViews)
