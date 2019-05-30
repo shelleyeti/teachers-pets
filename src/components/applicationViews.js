@@ -11,7 +11,7 @@ import SignIn from '../components/landing/SignIn'
 import LogIn from '../components/auth/LogIn'
 import Dashboard from '../components/dashboard/Dashboard'
 import TaskApp from './tasks/TasksApp'
-import MessageContainer from "./messages/messagesContainer";
+import MessageContainer from './messages/messagesContainer';
 import NewsList from './news/NewsList'
 
 
@@ -111,7 +111,7 @@ class ApplicationViews extends Component {
     addTasks = (task) => {
         const newState = {};
         return Tasks.postTask(task)
-            .then((tasks) => tasks.getAllTasks())
+            .then((tasks) => Tasks.getAllTasks())
             .then(tasks => newState.tasks = tasks)
             .then((tasks) => {
                 this.props.history.push("/tasks")
@@ -165,7 +165,6 @@ class ApplicationViews extends Component {
             });
     };
 
-
     deleteNews = id => {
         const newState = {};
         News.deleteNews(id)
@@ -210,13 +209,12 @@ class ApplicationViews extends Component {
             .then(News.getAllNews).then(news => { newState.news = news })
             .then(Tasks.getAllTasks).then(tasks => { newState.tasks = tasks })
             .then(Users.getAllUsers).then(users => { newState.users = users })
-            .then(Messages.getAllMessage).then(messages => { newState.messages = messages })
+            .then(Messages.getAllMessages).then(messages => { newState.messages = messages })
             .then(() =>
                 this.setState(newState))
     };
 
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
-
 
     render() {
         return (
@@ -226,17 +224,22 @@ class ApplicationViews extends Component {
                         addUser={this.addUser} />
                 }} />
                 <Route path="/login" component={LogIn} />
-                <Route exact path="/dashboard" users={this.state.users} render={props => {
-                    if (this.isAuthenticated()) {
-                        return <Dashboard />
-                    } else {
-                        return <Redirect to="/login" />
-                    }
-                }} />
+                <Route exact path="/dashboard"
+                    users={this.state.users}
+                    render={props => {
+                        if (this.isAuthenticated()) {
+                            return <Dashboard />
+                        } else {
+                            return <Redirect to="/login" />
+                        }
+                    }} />
 
                 <Route exact path="/tasks" render={(props) => {
-                    return <TaskApp initItems={this.state.tasks} addTask={this.addTasks}
-                        deleteTask={this.deleteTask} markDone={this.updateTasks}
+                    return <TaskApp
+                        initItems={this.state.tasks}
+                        addTask={this.addTasks}
+                        deleteTask={this.deleteTasks}
+                        markDone={this.updateTasks}
                     />
                 }} />
 
@@ -263,5 +266,4 @@ class ApplicationViews extends Component {
         )
     }
 }
-
 export default withRouter(ApplicationViews)
