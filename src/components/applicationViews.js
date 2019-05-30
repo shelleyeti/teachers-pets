@@ -11,6 +11,8 @@ import SignIn from '../components/landing/SignIn'
 import LogIn from '../components/landing/LogIn'
 import TaskApp from './tasks/TasksApp'
 
+import NewsList from './news/NewsList'
+
 class ApplicationViews extends Component {
 
     state = {
@@ -199,33 +201,41 @@ class ApplicationViews extends Component {
       };
 
 
-      componentDidMount() {
+    componentDidMount() {
         const newState = {};
         Events.getAllEvents()
             .then(events => { newState.events = events })
-            .then(Friends.getAll).then(friends => { newState.friends = friends })
-            .then(News.getAll).then(news => { newState.news = news })
-            .then(Tasks.getAll).then(tasks => { newState.tasks = tasks })
-            .then(Users.getAll).then(users => { newState.users = users })
-            .then(Messages.getAll).then(messages => { newState.messages = messages })
-            .then(() => 
-            this.setState(newState))
+            .then(Friends.getAllFriends).then(friends => { newState.friends = friends })
+            .then(News.getAllNews).then(news => { newState.news = news })
+            .then(Tasks.getAllTasks).then(tasks => { newState.tasks = tasks })
+            .then(Users.getAllUsers).then(users => { newState.users = users })
+            .then(Messages.getAllMessage).then(messages => { newState.messages = messages })
+            .then(() =>
+                this.setState(newState))
     };
 
-    render () {
+    render() {
         return (
             <>
                 <Route exact path="/" render={(props) => {
                     return <SignIn
-                    addUser={this.addUser} />
+                        addUser={this.addUser} />
                 }} />
                 <Route path="/login" component={LogIn} />
+                  
                 
                 <Route exact path="/tasks" render={(props) => {
                         return <TaskApp tasks={this.state.tasks}
                             deleteTask={this.deleteTask}
                         />
                     }} />
+
+                <Route exact path="/news" render={(props) => {
+                    return <NewsList
+                        {...props}
+                        news={this.state.news} />
+                }} />
+
             </>
         )
     }
@@ -246,7 +256,7 @@ class ApplicationViews extends Component {
     //                 if (!location) {
     //                     location = { id: 404, name: "404", address: "Address not found" }
     //                 }
-                    
+
     //                 // If current location details is in the employeeLocations joined table, adds to an array called employeeLocationsId
     //                 let employeeLocationsIds = this.state.employeeLocations.filter(locationJoin => {
     //                     let locationId = 0
@@ -270,7 +280,7 @@ class ApplicationViews extends Component {
     //                 });
 
     //                 return <LocationDetail location={location}
-    //                     deleteLocation={this.deleteLocation} 
+    //                     deleteLocation={this.deleteLocation}
     //                     employeeLocations={employeeLocations}
     //                     />
     //             }} />
