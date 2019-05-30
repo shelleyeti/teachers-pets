@@ -9,6 +9,7 @@ import Tasks from '../modules/tasksManager'
 import Users from '../modules/usersManager'
 import SignIn from '../components/landing/SignIn'
 import LogIn from '../components/landing/LogIn'
+import TaskApp from '../components/tasks/taskApp'
 
 class ApplicationViews extends Component {
 
@@ -220,6 +221,11 @@ class ApplicationViews extends Component {
                 }} />
                 <Route path="/login" component={LogIn} />
             </>
+            <Route exact path="/tasks" render={(props) => {
+                    return <TaskApp tasks={this.state.tasks}
+                        deleteTask={this.deleteTask}
+                    />
+                }} />
         )
     }
     // render() {
