@@ -160,7 +160,7 @@ class ApplicationViews extends Component {
       .then(() => {
         this.props.history.push("/users");
         this.setState(newState);
-      });
+      });}
 
     deleteNews = id => {
       const newState = {};
@@ -170,8 +170,7 @@ class ApplicationViews extends Component {
         .then(() => {
           this.props.history.push("/news");
           this.setState(newState);
-        });
-    };
+        });}
 
     addNews = article => {
       const newState = {};
@@ -194,9 +193,7 @@ class ApplicationViews extends Component {
         .then(() => {
           this.props.history.push("/news");
           this.setState(newState);
-        });
-    };
-  };
+        });}
 
   componentDidMount() {
     const newState = {};
