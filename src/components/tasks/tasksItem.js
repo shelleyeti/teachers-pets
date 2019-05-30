@@ -24,9 +24,8 @@ class TaskItem extends Component {
         return (
             <div className="cardtask-card d-inline-flex col-md-2">
                 <div className="card-body">
-                    <div className="card-title">
+                    <div className="card-title task-item">
                     <h5>{this.props.task.body}</h5>
-                    </div>
                     <p className="d-flex justify-content-center">
                         {this.props.task.complete}
                     </p>
@@ -41,12 +40,7 @@ class TaskItem extends Component {
                         }}>
                         Edit Task
                         </button>
-                        <button 
-                        className="btn btn-outline-primarytask-delete-btn btn-sm" 
-                        disabled={ this.state.saveDisabled } 
-                        onClick={this.handleClickDelete}>
-                        Delete Task
-                        </button>
+                    </div>
                     </div>
                 </div>
             </div>

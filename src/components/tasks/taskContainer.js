@@ -8,7 +8,7 @@ export default class TaskContainerRow extends React.Component {
     return (
         <div className='rowC'>
             <TaskList tasks={this.props.tasks} />
-            <TaskCompleteList />
+            <TaskCompleteList tasks={this.props.tasks} />
         </div>
     );
     }

@@ -6,7 +6,19 @@ class TaskList extends Component {
 
     render() {
         return (
-            <section className="Tasks">
+            <div>
+            <div className="tasks">
+                <h1>Task To Do List</h1>
+                <div className="d-flex justify-content-center row">
+                {
+                    this.props.tasks.map(item => {
+                        if(item.complete == false)
+                        return <TaskItem key={item.id} task={item} {...this.props}
+                            deleteTask={this.props.deleteTask} />
+                    })
+                }
+                </div>
+            </div>
                 <div className="TaskButton">
                     <button type="button" className="btn btn-outline-success"
                             onClick={() => {
@@ -15,16 +27,7 @@ class TaskList extends Component {
                             Add Task
                             </button>
                 </div>
-                <h1>Task To Do List</h1>
-                <div className="d-flex justify-content-center row">
-                {
-                    this.props.tasks.map(item => {
-                        return <TaskItem key={item.id} task={item} {...this.props}
-                            deleteTask={this.props.deleteTask} />
-                    })
-                }
-                </div>
-            </section>
+            </div>
         )
     }
 }

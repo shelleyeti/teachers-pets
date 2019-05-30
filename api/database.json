@@ -181,52 +181,39 @@
   ],
   "tasks": [
     {
-      "id": 3,
+      "id": 1,
       "userId": 3,
-      "task": "Don't forget the groceries!!! Toilet paper, ketchup, lettuce, detergent",
-      "taskCompleted": true,
-      "dueDate": "5/12/19",
-      "priorityLevel": 1
+      "body": "Move in with Heather",
+      "complete": true,
+      "dueDate": "5/12/19"
     },
     {
       "id": 2,
       "userId": 2,
-      "task": "Beat up Shelley",
-      "taskCompleted": true,
-      "dueDate": "5/17/19",
-      "priorityLevel": 3
+      "body": "Beat up Shelley",
+      "complete": true,
+      "dueDate": "5/17/19"
     },
     {
-      "task": "Pick up Ellie, Heather, and Shelley from school",
+      "body": "Pick up Ellie, Heather, and Shelley from school",
       "dueDate": "5/14/19 3:30 pm",
-      "priorityLevel": "2",
-      "taskCompleted": false,
+      "complete": false,
       "userId": 2,
-      "id": 5
+      "id": 3
     },
     {
-      "task": "I pledge allegiance to the Flag of the United States of America, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all.",
-      "dueDate": "7/4/19",
-      "priorityLevel": "1",
-      "taskCompleted": false,
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "task": "Work on daily journals 1-100",
+      "body": "Adopt Eliot",
       "dueDate": "end of the week",
-      "priorityLevel": "2",
-      "taskCompleted": true,
+      "complete": true,
       "userId": 2,
-      "id": 8
+      "id": 4
     },
     {
-      "task": "hey girl - lets do it",
+      "body": "Build the sister wife compound",
       "dueDate": "right now",
-      "priorityLevel": "1",
-      "taskCompleted": true,
+      "complete": true,
       "userId": 1,
-      "id": 9
+      "id": 5
     }
   ],
   "events": [
@@ -261,6 +248,7 @@
     {
       "title": "A Moment in Time",
       "eventDate": "2019-05-24",
+      "userId": 1,
       "description": "Using Moment Js to make your dates more attractive so you can throw away your beer goggles.",
       "id": 5
     },
