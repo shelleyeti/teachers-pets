@@ -13,13 +13,13 @@ class NewsList extends Component {
     return (
       <section className="News">
         <div className="AddNewsButton">
-          <button type="button" className="btn btn-outline-success"
+          <Button type="button" className="btn btn-outline-success"
             onClick={() => {
               this.props.history.push("/news/new")
             }
             }>
             Add Article
-            </button>
+            </Button>
         </div>
         <h1>Your News</h1>
         <CardColumns>

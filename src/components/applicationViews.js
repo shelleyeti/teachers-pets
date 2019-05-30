@@ -13,6 +13,8 @@ import Dashboard from "../components/dashboard/Dashboard";
 import TaskApp from "./tasks/TasksApp";
 import MessageContainer from "./messages/messagesContainer";
 import NewsList from "./news/NewsList";
+// import NewsList from "./news/NewsList";
+import NewsForm from "./news/NewsForm";
 
 class ApplicationViews extends Component {
   state = {
@@ -218,6 +220,41 @@ class ApplicationViews extends Component {
       .then(() => this.setState(newState));
   }
 
+  deleteNews = id => {
+    const newState = {};
+    News.deleteNews(id)
+      .then(News.getAllNews)
+      .then(articles => (newState.news = articles))
+      .then(() => {
+        this.props.history.push("/news");
+        this.setState(newState);
+      });
+  };
+
+  addNews = article => {
+    const newState = {};
+    return News.postNews(article)
+      .then(articles => News.getAllNews())
+      .then(articles => (newState.news = articles))
+      .then(article => {
+        this.props.history.push("/news");
+        this.setState(newState);
+
+        return article;
+      });
+  };
+
+  editNews = editedArticle => {
+    const newState = {};
+    News.editNews(editedArticle)
+      .then(() => News.getAllNews())
+      .then(articles => (newState.news = articles))
+      .then(() => {
+        this.props.history.push("/news");
+        this.setState(newState);
+      });
+  };
+
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
   render() {
@@ -286,4 +323,6 @@ class ApplicationViews extends Component {
     );
   }
 }
+// isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+
 export default withRouter(ApplicationViews);
