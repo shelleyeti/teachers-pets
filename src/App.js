@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import './App.css';
-import Navbar from './compoments/navbar/navbar'
-import ApplicationViews from './compoments/applicationViews'
+import Navbar from './components/navbar/navbar'
+import ApplicationViews from './components/applicationViews'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
