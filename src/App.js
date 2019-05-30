@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import './App.css';
-import Navbar from './compoments/navbar/navbar'
-import ApplicationViews from './compoments/applicationViews'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/navbar/navbar'
+import ApplicationViews from './components/applicationViews'
+import './components/navbar/node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   render() {
