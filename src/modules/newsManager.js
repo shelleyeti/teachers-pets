@@ -1,13 +1,13 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-getNewsArticle(id) {
+  getNews(id) {
     return fetch(`${remoteURL}/news/${id}`).then(e => e.json())
   },
   getAllNews() {
     return fetch(`${remoteURL}/news`).then(e => e.json())
   },
-  deleteNewsArticle(id) {
+  deleteNews(id) {
     return fetch(`${remoteURL}/news/${id}`, {
       method: "DELETE",
       headers: {
@@ -15,7 +15,7 @@ getNewsArticle(id) {
       }
     }).then(e => e.json())
   },
-  postNewsArticle(obj) {
+  postNews(obj) {
     return fetch(`${remoteURL}/news`, {
       method: "POST",
       headers: {
@@ -24,7 +24,7 @@ getNewsArticle(id) {
       body: JSON.stringify(obj)
     }).then(e => e.json())
   },
-  editNewsArticle(editedArticle) {
+  editNews(editedArticle) {
     return fetch(`${remoteURL}/news/${editedArticle.id}`, {
       method: "PUT",
       headers: {
