@@ -8,6 +8,7 @@ import News from '../modules/newsManager'
 import Tasks from '../modules/tasksManager'
 import Users from '../modules/usersManager'
 import SignIn from '../components/landing/SignIn'
+import LogIn from '../components/landing/LogIn'
 
 class ApplicationViews extends Component {
 
@@ -139,7 +140,7 @@ class ApplicationViews extends Component {
     addUser = (event) => {
         const newState = {};
         return Users.postUser(event)
-            .then((users) => users.getAll())
+            .then((users) => users.getAllUsers())
             .then(users => newState.users = users)
             .then((users) => {
                 this.props.history.push("/users")
@@ -212,11 +213,13 @@ class ApplicationViews extends Component {
 
     render () {
         return (
-            <React.Fragment>
+            <>
                 <Route exact path="/" render={(props) => {
-                    return <SignIn />
+                    return <SignIn
+                    addUser={this.addUser} />
                 }} />
-            </React.Fragment>
+                <Route path="/login" component={LogIn} />
+            </>
         )
     }
     // render() {
