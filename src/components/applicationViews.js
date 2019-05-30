@@ -119,14 +119,16 @@ class ApplicationViews extends Component {
       });
   };
 
-  updateTask = editedEventObject => {
+  addTasks = task => {
     const newState = {};
-    Tasks.editTask(editedEventObject)
-      .then(() => Tasks.getAllTasks())
+    return Tasks.postTask(task)
+      .then(tasks => Tasks.getAllTasks())
       .then(tasks => (newState.tasks = tasks))
-      .then(() => {
+      .then(tasks => {
         this.props.history.push("/tasks");
         this.setState(newState);
+        //return tasks so it can be used in the form
+        return tasks;
       });
   };
 
@@ -159,6 +161,17 @@ class ApplicationViews extends Component {
       .then(Users => (newState.Users = Users))
       .then(() => {
         this.props.history.push("/users");
+        this.setState(newState);
+      });
+  };
+
+  deleteNews = id => {
+    const newState = {};
+    News.deleteNews(id)
+      .then(News.getAllNews)
+      .then(articles => (newState.news = articles))
+      .then(() => {
+        this.props.history.push("/news");
         this.setState(newState);
       });
   };
@@ -259,10 +272,9 @@ class ApplicationViews extends Component {
           render={props => {
             return (
               <TaskApp
-                {...props}
                 initItems={this.state.tasks}
                 addTask={this.addTasks}
-                deleteTask={this.deleteTask}
+                deleteTask={this.deleteTasks}
                 markDone={this.updateTasks}
               />
             );
@@ -296,5 +308,4 @@ class ApplicationViews extends Component {
     );
   }
 }
-
 export default withRouter(ApplicationViews);
