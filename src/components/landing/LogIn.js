@@ -2,8 +2,10 @@ import React from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Welcome from "./Welcome"
 import "./SignIn.css"
+import { withRouter} from 'react-router-dom';
 
-export default class LogIn extends React.Component {
+
+class LogIn extends React.Component {
   constructor(props) {
     super(props);
 
@@ -30,6 +32,10 @@ export default class LogIn extends React.Component {
           })
       )
   }
+
+  SignUp = () => {
+    this.props.history.push("/")
+  }
   render() {
     return (
       <React.Fragment>
@@ -52,8 +58,10 @@ export default class LogIn extends React.Component {
         </Row>
 
         <Button onClick={this.handleLogin}>Log In</Button>
+        <Button onClick={this.SignUp} color="link">Don't have an account?</Button>
       </Form>
       </React.Fragment>
     );
   }
 }
+export default withRouter(LogIn)

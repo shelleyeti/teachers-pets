@@ -5,7 +5,7 @@ import Welcome from "./Welcome"
 import TimeOut from "./TimeOut"
 import LogIn from "./LogIn"
 import ReactDOM from 'react'
-import { Route , withRouter} from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 
 class SignIn extends React.Component {
 
