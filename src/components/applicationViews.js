@@ -39,7 +39,7 @@ class ApplicationViews extends Component {
   addMessage = message => {
     const newState = {};
     return Messages.postMessage(message)
-      .then(chatMessages => Messages.getAllMessages())
+      .then(() => Messages.getAllMessages())
       .then(chatMessages => (newState.messages = chatMessages))
       .then(chatMessages => {
         this.props.history.push("/messages");
@@ -95,7 +95,7 @@ class ApplicationViews extends Component {
       });
   };
 
-  deleteTask = id => {
+  deleteTasks = id => {
     const newState = {};
     Tasks.deleteTask(id)
       .then(Tasks.getAllTasks)
@@ -106,23 +106,10 @@ class ApplicationViews extends Component {
       });
   };
 
-  addTask = task => {
-    const newState = {};
-    return Tasks.postTask(task)
-      .then(() => Tasks.getAllTasks())
-      .then(tasks => (newState.tasks = tasks))
-      .then(tasks => {
-        this.props.history.push("/tasks");
-        this.setState(newState);
-        //return tasks so it can be used in the form
-        return tasks;
-      });
-  };
-
   addTasks = task => {
     const newState = {};
     return Tasks.postTask(task)
-      .then(tasks => Tasks.getAllTasks())
+      .then(() => Tasks.getAllTasks())
       .then(tasks => (newState.tasks = tasks))
       .then(tasks => {
         this.props.history.push("/tasks");
@@ -142,6 +129,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   addUser = event => {
     const newState = {};
     return Users.postUser(event)
@@ -154,6 +142,7 @@ class ApplicationViews extends Component {
         return users;
       });
   };
+
   updateUser = editedUser => {
     const newState = {};
     Users.editUser(editedUser)
@@ -161,17 +150,6 @@ class ApplicationViews extends Component {
       .then(Users => (newState.Users = Users))
       .then(() => {
         this.props.history.push("/users");
-        this.setState(newState);
-      });
-  };
-
-  deleteNews = id => {
-    const newState = {};
-    News.deleteNews(id)
-      .then(News.getAllNews)
-      .then(articles => (newState.news = articles))
-      .then(() => {
-        this.props.history.push("/news");
         this.setState(newState);
       });
   };

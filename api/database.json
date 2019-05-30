@@ -190,13 +190,6 @@
       "userName": "addam.joor",
       "id": 3,
       "dateTime": "5/13/2019"
-    },
-    {
-      "userId": 1,
-      "message": "Sweet",
-      "userName": "addam.joor",
-      "id": 4,
-      "dateTime": "5/13/2019"
     }
   ],
   "friends": [
@@ -263,12 +256,6 @@
       "body": "Work on stuff",
       "complete": false,
       "id": 6
-    },
-    {
-      "userId": 1,
-      "body": "Listen to the adults",
-      "complete": false,
-      "id": 7
     }
   ],
   "events": [

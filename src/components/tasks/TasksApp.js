@@ -107,7 +107,6 @@ class TodoEditForm extends React.Component {
     this.onClickEdit = this.onClickEdit.bind(this);
   }
   onClickEdit() {
-    
   }
   render () {
     var todoClass = this.props.item.complete ? 
