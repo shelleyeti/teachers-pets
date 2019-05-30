@@ -1,0 +1,39 @@
+.messageContainer {
+    border: 1px black solid;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardBody {
+    border: 1px solid grey;
+    border-radius: 10px;
+    /* padding: 10px;
+    margin: 10px; */
+    background-color: lightgreen;
+}
+
+.chatMessage {
+    font-size: 1.1rem;
+}
+
+.btn {
+    background-color: white;
+    margin-left: 10px;
+}
+
+.messageInput {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.messageInput input {
+    width: 900px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+}

@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-  getChatMessage(id) {
+  getMessage(id) {
     return fetch(`${remoteURL}/messages/${id}`).then(e => e.json())
   },
   getAllMessages() {
