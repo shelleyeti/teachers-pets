@@ -23,7 +23,7 @@ class LogIn extends React.Component {
 
       sessionStorage.setItem(
           "credentials",
-          JSON.stringify({
+            JSON.stringify({
               userName: this.state.userName,
               password: this.state.password
           })
