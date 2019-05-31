@@ -9,12 +9,12 @@
       "password": "123456"
     },
     {
-      "id": 2,
       "firstName": "Emily",
       "lastName": "Loggins",
-      "userName": "emily-loggins",
-      "email": "fishtea@mymail.com",
-      "password": "123456"
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "emily@climbnashville.com",
+      "id": 16
     },
     {
       "id": 3,
@@ -57,9 +57,9 @@
       "id": 7
     },
     {
-      "firstName": "newName",
-      "lastName": "newLast",
-      "userName": "newName1",
+      "firstName": "Eliot",
+      "lastName": "Clarke",
+      "userName": "dEliotC",
       "email": "newnew@new.com",
       "password": "123456",
       "id": 8
@@ -81,9 +81,9 @@
       "id": 10
     },
     {
-      "firstName": "12345",
-      "lastName": "12345",
-      "userName": "123456",
+      "firstName": "Addam",
+      "lastName": "Joor",
+      "userName": "MaddaJoor",
       "email": "12345@12345.com",
       "password": "123456",
       "id": 11
@@ -139,6 +139,16 @@
       "id": 1,
       "currentUserId": 1,
       "friendId": 1
+    },
+    {
+      "id": 2,
+      "currentUserId": 1,
+      "friendId": 2
+    },
+    {
+      "id": 6,
+      "currentUserId": 1,
+      "friendId": 6
     }
   ],
   "news": [
@@ -201,7 +211,7 @@
     {
       "id": 2,
       "userId": 2,
-      "body": "Beat up Shelley",
+      "body": "Beat up ShElLeY",
       "complete": false,
       "dueDate": "5/17/19"
     },
@@ -233,15 +243,9 @@
     },
     {
       "userId": 1,
-      "body": "do a thing",
-      "complete": true,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "body": "Go to the store",
+      "body": "Do a thing",
       "complete": false,
-      "id": 9
+      "id": 8
     }
   ],
   "events": [

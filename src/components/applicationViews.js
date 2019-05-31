@@ -14,8 +14,8 @@ import TaskApp from "./tasks/TasksApp";
 import MessageContainer from "./messages/messagesContainer";
 import NewsList from "./news/NewsList";
 import NewsForm from "./news/NewsForm";
-// import TaskModal from './tasks/taskModal'
-// import FriendsList from './friends/friendsList'
+import TaskModal from "./tasks/taskModal";
+import FriendsList from "./friends/friendsList";
 import EventForm from "./events/eventForm";
 import EventList from "./events/eventsList";
 import NewsEditForm from "./news/NewsEditForm";
@@ -191,7 +191,7 @@ class ApplicationViews extends Component {
         return article;
       });
   };
-  
+
   editNews = editedArticle => {
     const newState = {};
     News.editNews(editedArticle)
