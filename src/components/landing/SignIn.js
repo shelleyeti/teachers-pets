@@ -23,6 +23,10 @@ class SignIn extends React.Component {
     this.setState(stateToChange);
   };
 
+  renderDashboard= () => {
+    this.props.history.push("/dashboard")
+  }
+
   constructNewUser = evt => {
       const user = {
         firstName: this.state.firstName,
@@ -32,8 +36,8 @@ class SignIn extends React.Component {
         email: this.state.email
       };
       this.props.addUser(user)
-      // .then(() => this.props.history.push("/dashboard"));
-    
+      this.props.setUser(user)
+      this.renderDashboard();
     }
 
     renderLogIn = () => {

@@ -269,8 +269,9 @@ class ApplicationViews extends Component {
         return (
             <>
                 <Route exact path="/" render={(props) => {
-                    return <SignIn
-                        addUser={this.addUser} />
+                    return <SignIn {...props}
+                        addUser={this.addUser}
+                        setUser={this.props.setUser} />
                 }} />
                 <Route path="/login" render={(props) => {
                 return <LogIn setUser={this.props.setUser} {...props}  /> }}
@@ -363,7 +364,7 @@ class ApplicationViews extends Component {
                         return <TaskApp
                             initItems={this.state.tasks}
                             addTask={this.addTasks}
-                            TaskModal={TaskModal}
+                            // TaskModal={TaskModal}
                             deleteTask={this.deleteTasks}
                             markDone={this.updateTasks}
                             editTask={this.updateTasks} />
@@ -373,7 +374,7 @@ class ApplicationViews extends Component {
                 }} />
 
                 {/* Combine with Messages in ONE ROUTE */}
-                <Route exact path="/friends" render={(props) => {
+                {/* <Route exact path="/friends" render={(props) => {
                     if (this.isAuthenticated()) {
                         return <FriendsList
                             {...props}
@@ -386,7 +387,7 @@ class ApplicationViews extends Component {
                     } else {
                         return <Redirect to="/" />
                     }
-                }} />
+                }} /> */}
             </>
         );
     }
