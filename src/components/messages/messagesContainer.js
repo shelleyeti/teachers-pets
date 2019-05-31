@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import MessageList from "./messagesList";
-import Input from "./input";
+import MessageInput from "./input";
 import "./messages.css";
 
 export default class MessagesContainer extends React.Component {
   render() {
     return (
-      <section>
-        <div className="messageContainer">
-          <MessageList messages={this.props.messages} />
-        </div>
+      <section className="messagesSection">
         <div className="messageInput">
-          <Input onSendMessage={this.onSendMessage} />
+          <MessageInput {...this.props} addMessage={this.props.addMessage} />
+        </div>
+        <div className="messageContainer">
+          <MessageList {...this.props} messages={this.props.messages} />
         </div>
       </section>
     );

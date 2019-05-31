@@ -1,5 +1,5 @@
 import { Route, Redirect } from 'react-router-dom'
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import { withRouter } from 'react-router'
 import Messages from '../modules/messagesManager'
 import Events from '../modules/eventsManager'
@@ -11,13 +11,13 @@ import SignIn from '../components/landing/SignIn'
 import LogIn from '../components/auth/LogIn'
 import Dashboard from '../components/dashboard/Dashboard'
 import TaskApp from './tasks/TasksApp'
-import MessageContainer from "./messages/messagesContainer"
-import NewsList from "./news/NewsList"
-import NewsForm from "./news/NewsForm"
+import MessageContainer from './messages/messagesContainer'
+import NewsList from './news/NewsList'
+import NewsForm from './news/NewsForm'
 // import TaskModal from './tasks/taskModal'
 // import FriendsList from './friends/friendsList'
-// import EventForm from './events/eventForm'
-// import EventsList from './events/eventsList'
+import EventForm from './events/eventForm'
+import EventList from './events/eventsList'
 import NewsEditForm from './news/NewsEditForm'
 
 class ApplicationViews extends Component {
@@ -40,7 +40,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     addMessage = message => {
         const newState = {};
         return Messages.postMessage(message)
@@ -53,7 +52,6 @@ class ApplicationViews extends Component {
                 return chatMessages;
             });
     };
-
     updateMessage = editedMessageObject => {
         const newState = {};
         Messages.editMessage(editedMessageObject)
@@ -64,7 +62,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     deleteEvents = id => {
         const newState = {};
         Events.deleteEvent(id)
@@ -75,7 +72,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     addEvents = event => {
         const newState = {};
         return Events.postEvent(event)
@@ -88,7 +84,6 @@ class ApplicationViews extends Component {
                 return events;
             });
     };
-
     updateEvents = editedEventObject => {
         const newState = {};
         Events.editEvent(editedEventObject)
@@ -99,7 +94,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     deleteTasks = id => {
         const newState = {};
         Tasks.deleteTask(id)
@@ -110,7 +104,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     addTasks = task => {
         const newState = {};
         return Tasks.postTask(task)
@@ -123,7 +116,6 @@ class ApplicationViews extends Component {
                 return tasks;
             });
     };
-
     updateTasks = editedEventObject => {
         const newState = {};
         Tasks.editTask(editedEventObject)
@@ -134,7 +126,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     deleteUser = id => {
         const newState = {};
         Users.deleteUser(id)
@@ -145,7 +136,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     addUser = event => {
         const newState = {};
         return Users.postUser(event)
@@ -158,7 +148,6 @@ class ApplicationViews extends Component {
                 return users;
             });
     };
-
     updateUser = (editedUser) => {
         const newState = {};
         Users.editUser(editedUser)
@@ -169,7 +158,16 @@ class ApplicationViews extends Component {
                 this.setState(newState)
             });
     };
-
+    updateUser = editedUser => {
+        const newState = {};
+        Users.editUser(editedUser)
+            .then(() => Users.getAllUsers())
+            .then(Users => (newState.Users = Users))
+            .then(() => {
+                this.props.history.push("/users");
+                this.setState(newState);
+            });
+    };
     deleteNews = id => {
         const newState = {};
         News.deleteNews(id)
@@ -180,7 +178,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     addNews = article => {
         const newState = {};
         return News.postNews(article)
@@ -192,7 +189,6 @@ class ApplicationViews extends Component {
                 return article;
             });
     };
-
     editNews = editedArticle => {
         const newState = {};
         News.editNews(editedArticle)
@@ -203,7 +199,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     deleteFriends = id => {
         const newState = {};
         Friends.deleteFriend(id)
@@ -214,7 +209,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     addFriends = friend => {
         const newState = {};
         return Friends.postFriend(friend)
@@ -227,7 +221,6 @@ class ApplicationViews extends Component {
                 return friends;
             });
     };
-
     editFriends = editedFriend => {
         const newState = {};
         Friends.editFriend(editedFriend)
@@ -238,7 +231,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-
     componentDidMount() {
         const newState = {};
         Events.getAllEvents()
@@ -263,7 +255,8 @@ class ApplicationViews extends Component {
                 }} />
                 <Route path="/login" render={(props) => {
                     return <LogIn setUser={this.props.setUser} {...props} />
-                }} />
+                }}
+                />
                 <Route exact path="/dashboard" render={props => {
                     if (this.isAuthenticated()) {
                         return <Dashboard {...props}
@@ -294,13 +287,47 @@ class ApplicationViews extends Component {
                     exact
                     path="/messages"
                     render={props => {
-                        return (
-                            <MessageContainer
-                                messages={this.state.messages}
-                                {...props}
-                                deleteTask={this.deleteTask}
-                            />
-                        );
+                        if (this.isAuthenticated()) {
+                            return (
+                                <MessageContainer
+                                    messages={this.state.messages}
+                                    {...props}
+                                    deleteMessage={this.deleteMessage}
+                                    addMessage={this.addMessage}
+                                />
+                            );
+                        } else {
+                            return <Redirect to="/" />
+                        }
+                    }}
+                />
+
+                <Route
+                    exact
+                    path="/events"
+                    render={props => {
+                        if (this.isAuthenticated()) {
+                            return (
+                                <EventList
+                                    {...props}
+                                    events={this.state.events}
+                                    deleteEvents={this.deleteEvents}
+                                />
+                            );
+                        } else {
+                            return <Redirect to="/" />;
+                        }
+                    }}
+                />
+                <Route
+                    path="/events/new"
+                    render={props => {
+                        if (this.isAuthenticated()) {
+                            //route for add events form
+                            return <EventForm {...props} addEvent={this.addEvents} />;
+                        } else {
+                            return <Redirect to="/" />;
+                        }
                     }}
                 />
                 <Route exact path="/news" render={props => {
@@ -331,4 +358,4 @@ class ApplicationViews extends Component {
         );
     }
 }
-export default withRouter(ApplicationViews)
+export default withRouter(ApplicationViews);

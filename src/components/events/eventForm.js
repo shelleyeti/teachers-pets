@@ -10,14 +10,15 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export default class NewsForm extends Component {
+export default class EventForm extends Component {
 
   // Set initial state
   state = {
     title: "",
-    synopsis: "",
-    url: "",
-    dateTime: ""
+    summary: "",
+    location: "",
+    date: "",
+    userName: ""
   };
 
   // Update state whenever an input field is edited
@@ -28,30 +29,25 @@ export default class NewsForm extends Component {
     this.setState(stateToChange);
   };
 
-  constructNewNews = evt => {
-
-    let today = new Date();
-    let formatTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds());
-    let formattedTime = formatTime.toLocaleString("en-US", { hour12: true });
-
-    const article = {
+  constructNewEvent = evt => {
+    const event = {
       title: this.state.title,
-      synopsis: this.state.synopsis,
-      url: this.state.url,
-      dateTime: formattedTime
+      summary: this.state.summary,
+      location: this.state.location,
+      date: this.state.date,
+      userName: ""
     }
 
-    this.props.addNews(article);
+    this.props.addEvent(event);
   }
 
   render() {
     return (
       <React.Fragment>
-        <h1>Add Article</h1>
         <Form>
           <InputGroup className="m-2">
             <InputGroupAddon addonType="prepend">
-              <InputGroupText>Article Title</InputGroupText>
+              <InputGroupText>Event Title</InputGroupText>
             </InputGroupAddon>
             <Input type="text"
               required
@@ -62,26 +58,36 @@ export default class NewsForm extends Component {
 
           <InputGroup className="m-2">
             <InputGroupAddon addonType="prepend">
-              <InputGroupText>Synopsis</InputGroupText>
+              <InputGroupText>Summary</InputGroupText>
             </InputGroupAddon>
             <Input type="text"
               required
-              id="synopsis"
+              id="summary"
               onChange={this.handleFieldChange} />
           </InputGroup>
 
           <InputGroup className="m-2">
             <InputGroupAddon addonType="prepend">
-              <InputGroupText>url</InputGroupText>
+              <InputGroupText>Location</InputGroupText>
             </InputGroupAddon>
             <Input type="text"
               required
-              id="url"
+              id="location"
+              onChange={this.handleFieldChange} />
+          </InputGroup>
+
+          <InputGroup className="m-2">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>Date</InputGroupText>
+            </InputGroupAddon>
+            <Input type="text"
+              required
+              id="date"
               onChange={this.handleFieldChange} />
           </InputGroup>
 
           {/* //* maybe a checkbox that asks if youd like to favorite it and some sort of designation in your own news list? */}
-          <Button className="btn btn-outline-primary" size="sm" onClick={this.constructNewNews}>Submit</Button>
+          <Button className="btn btn-outline-primary" size="sm" onClick={this.constructNewEvent}>Submit</Button>
         </Form>
       </React.Fragment >
     );

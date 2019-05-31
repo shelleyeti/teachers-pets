@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import React, { Component } from "react";
+import { withRouter } from "react-router";
 import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody, Container
@@ -9,16 +9,15 @@ import './news.css'
 
 
 class NewsList extends Component {
-
   render() {
     return (
       <Container className="News">
         <Container className="AddNewsButton">
           <Button type="button" className="btn btn-outline-success"
             onClick={() => {
-              this.props.history.push("/news/new")
-            }
-            }>
+              this.props.history.push("/news/new");
+            }}
+          >
             Add Article
             </Button>
         </Container>
@@ -37,5 +36,4 @@ class NewsList extends Component {
   }
 }
 
-export default withRouter(NewsList)
-
+export default withRouter(NewsList);
