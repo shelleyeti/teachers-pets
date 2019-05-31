@@ -8,12 +8,6 @@ class FriendsList extends Component {
     render() {
         return (
             <section className="friends">
-                {/* <div className="animalButton">
-                    <button type="button" className="btn btn-outline-success"
-                            onClick={() => {
-                                this.props.history.push("/animals/new")}
-                            }>Hatmit Animal</button>
-                </div> */}
                 <h1>Public User List</h1>
                 <div>
                 {
@@ -22,7 +16,7 @@ class FriendsList extends Component {
                         let foundFriend = false;
                         let friendObj = {};
                         this.props.friend.forEach(friend => {
-                            //inside this if user.id == friend.currentUserId &&
+                            //make sure friend of current user logged in - inside this if user.id == friend.currentUserId &&
                             if(friend.friendId === item.id){
                                 foundFriend = true;
                                 friendObj = friend;
