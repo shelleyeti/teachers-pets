@@ -55,7 +55,7 @@ class NewsItem extends Component {
       //     </div>
       //   </div>
       // </div >
-      <Card className="NewsItem m-2">
+      <Card className="NewsItem">
         {/* <CardImg top width="100%" src="" alt="Card image cap" /> */}
         <CardBody>
           <CardTitle>{this.props.article.title}</CardTitle>
