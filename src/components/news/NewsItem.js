@@ -4,7 +4,6 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody, ButtonGroup
 } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 class NewsItem extends Component {
 
@@ -16,7 +15,7 @@ class NewsItem extends Component {
     this.setState({
       saveDisabled: true
     })
-    this.props.deleteNews(this.props.news.id);
+    this.props.deleteNews(this.props.article.id);
   }
 
   handleClickDetails = (event) => {
@@ -56,15 +55,23 @@ class NewsItem extends Component {
       //     </div>
       //   </div>
       // </div >
-      <Card className="NewsItem m-2">
+      <Card className="NewsItem">
         {/* <CardImg top width="100%" src="" alt="Card image cap" /> */}
         <CardBody>
           <CardTitle>{this.props.article.title}</CardTitle>
           <CardText>{this.props.article.synopsis}</CardText>
           <a className="nav-link" href={`${this.props.article.url}`} target="_blank" rel="noopener noreferrer" >Link to Article</a>
           <ButtonGroup className="btn-group ml-1" size="sm">
-            <Button className="btn btn-outline-success">Edit</Button>
-            <Button className="btn btn-outline-danger">Delete</Button>
+            <Button
+              className="btn btn-outline-success"
+              onClick={() => {
+                this.props.history.push(`/news/${this.props.article.id}/edit`);
+              }}>
+              Edit</Button>
+            <Button
+              className="btn btn-outline-danger"
+              onClick={this.handleClickDelete}>
+              Delete</Button>
           </ButtonGroup>
         </CardBody>
       </Card>
