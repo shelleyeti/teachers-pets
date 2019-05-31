@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
 import { withRouter } from 'react-router'
@@ -65,74 +64,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-=======
-import { Route, Redirect } from "react-router-dom";
-import React, { Component } from "react";
-import { withRouter } from "react-router";
-import Messages from "../modules/messagesManager";
-import Events from "../modules/eventsManager";
-import Friends from "../modules/friendsManager";
-import News from "../modules/newsManager";
-import Tasks from "../modules/tasksManager";
-import Users from "../modules/usersManager";
-import SignIn from "../components/landing/SignIn";
-import LogIn from "../components/auth/LogIn";
-import Dashboard from "../components/dashboard/Dashboard";
-import TaskApp from "./tasks/TasksApp";
-import MessageContainer from "./messages/messagesContainer";
-import NewsForm from "./news/NewsForm";
-import NewsList from "./news/NewsList";
-// import TaskModal from "./tasks/taskModal";
-// import FriendsList from "./friends/friendsList";
-import EventForm from "./events/eventForm";
-import EventList from "./events/eventsList";
-import NewsEditForm from "./news/NewsEditForm";
-
-class ApplicationViews extends Component {
-  state = {
-    messages: [],
-    events: [],
-    friends: [],
-    news: [],
-    tasks: [],
-    users: []
-  };
-  //calls
-  deleteMessage = id => {
-    const newState = {};
-    Messages.deleteMessage(id)
-      .then(Messages.getAllMessages)
-      .then(chatMessages => (newState.messages = chatMessages))
-      .then(() => {
-        this.props.history.push("/messages");
-        this.setState(newState);
-      });
-  };
-
-  addMessage = message => {
-    const newState = {};
-    return Messages.postMessage(message)
-      .then(() => Messages.getAllMessages())
-      .then(chatMessages => (newState.messages = chatMessages))
-      .then(chatMessages => {
-        this.props.history.push("/messages");
-        this.setState(newState);
-        //return chatMessagess so it can be used in the form
-        return chatMessages;
-      });
-  };
-
-  updateMessage = editedMessageObject => {
-    const newState = {};
-    Messages.editMessage(editedMessageObject)
-      .then(() => Messages.getAllMessages())
-      .then(chatMessages => (newState.chatMessages = chatMessages))
-      .then(() => {
-        this.props.history.push("/messages");
-        this.setState(newState);
-      });
-  };
->>>>>>> master
 
   deleteEvents = id => {
     const newState = {};
@@ -145,7 +76,6 @@ class ApplicationViews extends Component {
       });
   };
 
-<<<<<<< HEAD
     addEvents = event => {
         const newState = {};
         return Events.postEvent(event)
@@ -158,20 +88,6 @@ class ApplicationViews extends Component {
                 return events;
             });
     };
-=======
-  addEvents = event => {
-    const newState = {};
-    return Events.postEvent(event)
-      .then(() => Events.getAllEvents())
-      .then(events => (newState.events = events))
-      .then(events => {
-        this.props.history.push("/events");
-        this.setState(newState);
-        //return events so it can be used in the form
-        return events;
-      });
-  };
->>>>>>> master
 
   updateEvents = editedEventObject => {
     const newState = {};
@@ -195,7 +111,6 @@ class ApplicationViews extends Component {
       });
   };
 
-<<<<<<< HEAD
     addTasks = task => {
         const newState = {};
         return Tasks.postTask(task)
@@ -208,20 +123,6 @@ class ApplicationViews extends Component {
                 return tasks;
             });
     };
-=======
-  addTasks = task => {
-    const newState = {};
-    return Tasks.postTask(task)
-      .then(() => Tasks.getAllTasks())
-      .then(tasks => (newState.tasks = tasks))
-      .then(tasks => {
-        this.props.history.push("/tasks");
-        this.setState(newState);
-        //return tasks so it can be used in the form
-        return tasks;
-      });
-  };
->>>>>>> master
 
   updateTasks = editedEventObject => {
     const newState = {};
