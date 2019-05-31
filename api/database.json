@@ -246,27 +246,6 @@
       "url": "www.xtina4eva.org",
       "dateTime": "5/31/2019, 11:04:07 AM",
       "id": 8
-    },
-    {
-      "title": "jgfjhgf",
-      "synopsis": "hjgfj",
-      "url": "hgfhgf",
-      "dateTime": "5/30/2019, 6:39:47 PM",
-      "id": 9
-    },
-    {
-      "title": ";alksdjf",
-      "synopsis": "asdfasdf",
-      "url": "asdfasdf",
-      "dateTime": "5/31/2019, 11:36:13 AM",
-      "id": 10
-    },
-    {
-      "title": "addam",
-      "synopsis": "article",
-      "url": "new.com",
-      "dateTime": "5/31/2019, 11:36:36 AM",
-      "id": 11
     }
   ],
   "tasks": [
@@ -311,14 +290,6 @@
     }
   ],
   "events": [
-    {
-      "title": "new event",
-      "summary": "this is a new event",
-      "location": "NSS",
-      "date": "today",
-      "userName": "",
-      "id": 4
-    },
     {
       "title": "Presentation Day",
       "summary": "this is a new event",
