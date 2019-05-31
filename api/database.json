@@ -89,38 +89,6 @@
       "id": 11
     },
     {
-      "firstName": "newest",
-      "lastName": "newest",
-      "userName": "newnewest",
-      "email": "newnewest@yes.com",
-      "password": "123456",
-      "id": 12
-    },
-    {
-      "firstName": "123test",
-      "lastName": "4556test",
-      "userName": "lsdfkc",
-      "email": "slfgjh@sldkfjgh.com",
-      "password": "123456",
-      "id": 13
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "",
-      "id": 14
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "",
-      "id": 15
-    },
-    {
       "firstName": "Emily",
       "lastName": "Loggins",
       "userName": "emily@climbnashville.com",
@@ -129,116 +97,11 @@
       "id": 16
     },
     {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
+      "firstName": "Addam",
+      "lastName": "Joor",
+      "userName": "addam.joor@outlook.com",
+      "password": "123456",
       "id": 17
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 18
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 19
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 20
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 21
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 22
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 23
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 24
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 25
-    },
-    {
-      "firstName": "Ahelkdjfls",
-      "lastName": "fdsafs",
-      "userName": "fdsfaf",
-      "password": "KbGF123213TdcPwExhb6U",
-      "email": "sheelyy",
-      "id": 26
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 27
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 28
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "",
-      "id": 29
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 30
     }
   ],
   "messages": [
@@ -332,13 +195,6 @@
       "url": "www.womensday.org",
       "dateTime": "5/30/2019, 3:43:19 PM",
       "id": 8
-    },
-    {
-      "title": "jgfjhgf",
-      "synopsis": "hjgfj",
-      "url": "hgfhgf",
-      "dateTime": "5/30/2019, 6:39:47 PM",
-      "id": 9
     }
   ],
   "tasks": [
