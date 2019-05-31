@@ -56,6 +56,7 @@ export default class NewsEditFrom extends Component {
   render() {
     return (
       <React.Fragment>
+        <h1>Edit Article</h1>
         <Form>
           <InputGroup className="m-2">
             <InputGroupAddon addonType="prepend">

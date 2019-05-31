@@ -50,6 +50,7 @@ export default class NewsForm extends Component {
   render() {
     return (
       <React.Fragment>
+        <h1>Add Article</h1>
         <Form>
           <InputGroup className="m-2">
             <InputGroupAddon addonType="prepend">
