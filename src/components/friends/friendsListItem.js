@@ -1,31 +1,24 @@
 import React, {Component} from "react";
-// import { Link } from "react-router-dom";
-// import "./Animal.css"
+import { withRouter } from 'react-router'
+import './friends.css'
+import { FaUserPlus } from 'react-icons/fa';
+import { FaUserTimes } from 'react-icons/fa';
 
 class FriendsListItem extends Component {
-
     // state = {
-    //     saveDisabled: false
-    // }
-        
-    // handleClickDelete = (event) => {
-    //     this.setState({
-    //         saveDisabled: true
-    //     })
-    //     this.props.deleteAnimal(this.props.animal.id);
+    //     friends:[]
     // }
 
-    // handleClickDetails = (event) => {
-    //     this.setState({
-    //         saveDisabled: true
-    //     })
-    // }
+    handleClickDelete = (event) => {
+        this.props.deleteFriend(this.props.friend.id);
+        this.props.history.push("/friends");
+    }
 
     render() {
         return (
             <div>
-            <h1>@{this.props.user.firstName}</h1>
-            {this.props.isFriend ? "X" : "+"}
+                <h3>@{this.props.user.firstName}</h3>
+                {this.props.isFriend ? <span className="remove-friend" onClick={this.handleClickDelete}><FaUserTimes/></span> : <span className="add-friend"><FaUserPlus/></span>}
             </div>
             
             // <div className="card animal-card d-inline-flex col-md-2">
@@ -61,4 +54,4 @@ class FriendsListItem extends Component {
     }
 }
 
-export default FriendsListItem
+export default withRouter(FriendsListItem)

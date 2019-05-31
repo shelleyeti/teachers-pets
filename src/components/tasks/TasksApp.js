@@ -60,9 +60,7 @@ class TodoListItem extends React.Component {
   onClickClose() {
     this.setState({
       modalShow: true
-  })
-    //var id = parseInt(this.props.item.id);
-    //this.props.removeItem(id);
+    })
   }
 
   onClickDone() {
@@ -83,7 +81,7 @@ class TodoListItem extends React.Component {
     this.setState({editName: this.state.editName, body: e.target.value, modalShow: false
     })
 
-    if(e.keyCode == 13){
+    if(e.keyCode === 13){
         this.updateItem();
     }
   }
@@ -156,34 +154,6 @@ class TodoHeader extends React.Component {
     return <h1>Todo list</h1>;
   }
 }
-  
-// class TodoEditForm extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.onClickEdit = this.onClickEdit.bind(this);
-//   }
-//   onClickEdit() {
-//     const editedTask = {
-//       id: this.props.match.params.animalId,
-//       name: this.state.animalName,
-//       breed: this.state.breed,
-//       employeeId: parseInt(this.state.employeeId)
-//     };
-//     // this.props.editTask
-//   }
-//   render () {
-//     var todoClass = this.props.item.complete ? 
-//         "done" : "undone";
-//     return(
-//       <li className="list-group-item ">
-//         <div className={todoClass}>
-//           <input type="text" ref="itemName" id={this.props.item.id} className="form-control" value={this.props.item.body}/>
-//           <button type="button" className="close" id="close" onClick={this.onClickEdit}><FaCheckCircle/></button>
-//         </div>
-//       </li>     
-//     );
-//   }
-// }
 
 export default class TodoApp extends React.Component {
   constructor (props) {

@@ -57,9 +57,9 @@
       "id": 7
     },
     {
-      "firstName": "newName",
-      "lastName": "newLast",
-      "userName": "newName1",
+      "firstName": "Eliot",
+      "lastName": "Clarke",
+      "userName": "dEliotC",
       "email": "newnew@new.com",
       "password": "123456",
       "id": 8
@@ -81,28 +81,12 @@
       "id": 10
     },
     {
-      "firstName": "12345",
-      "lastName": "12345",
-      "userName": "123456",
+      "firstName": "Addam",
+      "lastName": "Joor",
+      "userName": "MaddaJoor",
       "email": "12345@12345.com",
       "password": "123456",
       "id": 11
-    },
-    {
-      "firstName": "newest",
-      "lastName": "newest",
-      "userName": "newnewest",
-      "email": "newnewest@yes.com",
-      "password": "123456",
-      "id": 12
-    },
-    {
-      "firstName": "123test",
-      "lastName": "4556test",
-      "userName": "lsdfkc",
-      "email": "slfgjh@sldkfjgh.com",
-      "password": "123456",
-      "id": 13
     }
   ],
   "messages": [
@@ -147,6 +131,36 @@
       "id": 1,
       "currentUserId": 1,
       "friendId": 1
+    },
+    {
+      "id": 2,
+      "currentUserId": 1,
+      "friendId": 2
+    },
+    {
+      "id": 3,
+      "currentUserId": 1,
+      "friendId": 3
+    },
+    {
+      "id": 4,
+      "currentUserId": 1,
+      "friendId": 4
+    },
+    {
+      "id": 5,
+      "currentUserId": 1,
+      "friendId": 5
+    },
+    {
+      "id": 6,
+      "currentUserId": 1,
+      "friendId": 6
+    },
+    {
+      "id": 7,
+      "currentUserId": 1,
+      "friendId": 7
     }
   ],
   "news": [
@@ -209,7 +223,7 @@
     {
       "id": 2,
       "userId": 2,
-      "body": "Beat up sHeLlEy",
+      "body": "Beat up ShElLeY",
       "complete": false,
       "dueDate": "5/17/19"
     },

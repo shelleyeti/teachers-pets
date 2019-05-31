@@ -286,6 +286,7 @@ class ApplicationViews extends Component {
                 {/* Combine with Messages in ONE ROUTE */}
                 <Route exact path="/friends" render={(props) => {
                     return <FriendsList
+                        {...props}
                         user={this.state.users}
                         friend={this.state.friends}
                         addFriend={this.addFriends}
