@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { FaTrashAlt } from 'react-icons/fa';
-import { FaEdit } from 'react-icons/fa';
+import { FaTrashAlt } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 
 class MessageItem extends Component {
   state = {
@@ -25,10 +25,17 @@ class MessageItem extends Component {
             </p>
             <p>{this.props.message.dateTime}</p>
           </div>
-          <div>
+          <div className="clearfix">
+            <button
+              className="btn btn-outline-danger btn-sm mx-2 float-right"
+              disabled={this.state.saveDisabled}
+              onClick={this.handleClickDelete}
+            >
+              <FaTrashAlt />
+            </button>
             <button
               type="button"
-              className="btn btn-outline-primary btn-sm"
+              className="btn btn-outline-primary btn-sm float-right"
               onClick={() => {
                 this.props.history.push(
                   `/messages/${this.props.message.id}/edit`
@@ -36,13 +43,6 @@ class MessageItem extends Component {
               }}
             >
               <FaEdit />
-            </button>
-            <button
-              className="btn btn-outline-danger btn-sm"
-              disabled={this.state.saveDisabled}
-              onClick={this.handleClickDelete}
-            >
-              <FaTrashAlt />
             </button>
           </div>
         </div>
