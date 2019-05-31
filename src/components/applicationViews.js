@@ -12,9 +12,10 @@ import LogIn from '../components/auth/LogIn'
 import Dashboard from '../components/dashboard/Dashboard'
 import TaskApp from './tasks/TasksApp'
 import MessageContainer from "./messages/messagesContainer";
-
-import NewsList from "./news/NewsList";
-import NewsForm from "./news/NewsForm";
+import NewsList from './news/NewsList';
+import NewsForm from './news/NewsForm';
+import TaskModal from './tasks/taskModal';
+import FriendsList from './friends/friendsList'
 
 class ApplicationViews extends Component {
     state = {
@@ -145,7 +146,7 @@ class ApplicationViews extends Component {
     addUser = event => {
         const newState = {};
         return Users.postUser(event)
-            .then(users => users.getAllUsers())
+            .then(users => Users.getAllUsers())
             .then(users => (newState.users = users))
             .then(users => {
                 this.props.history.push("/users");
@@ -200,6 +201,43 @@ class ApplicationViews extends Component {
             });
     };
 
+    deleteFriends = id => {
+        const newState = {};
+        Friends.deleteFriend(id)
+            .then(Friends.getAllFriends)
+            .then(friends => (newState.news = friends))
+            .then(() => {
+                this.props.history.push("/friends");
+                this.setState(newState);
+            });
+    };
+
+    addFriends = friend => {
+        const newState = {};
+        return Friends.postFriend(friend)
+            .then(friends => Friends.getAllFriends())
+            .then(friends => (newState.news = friends))
+            .then(friend => {
+                this.props.history.push("/friends");
+                this.setState(newState);
+
+                return friend;
+            });
+    };
+
+    editFriends = editedFriend => {
+        const newState = {};
+        Friends.editFriend(editedFriend)
+            .then(() => Friends.getAllFriends())
+            .then(friends => (newState.news = friends))
+            .then(() => {
+                this.props.history.push("/friends");
+                this.setState(newState);
+            });
+    };
+
+
+
 
     componentDidMount() {
         const newState = {};
@@ -238,8 +276,21 @@ class ApplicationViews extends Component {
                     return <TaskApp
                         initItems={this.state.tasks}
                         addTask={this.addTasks}
+                        TaskModal={TaskModal}
                         deleteTask={this.deleteTasks}
                         markDone={this.updateTasks}
+                        editTask={this.updateTasks}
+                    />
+                }} />
+
+                {/* Combine with Messages in ONE ROUTE */}
+                <Route exact path="/friends" render={(props) => {
+                    return <FriendsList
+                        user={this.state.users}
+                        friend={this.state.friends}
+                        addFriend={this.addFriends}
+                        deleteFriend={this.deleteFriends}
+                        editFriend={this.editFriends}
                     />
                 }} />
 

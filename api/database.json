@@ -103,70 +103,6 @@
       "email": "slfgjh@sldkfjgh.com",
       "password": "123456",
       "id": 13
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "",
-      "id": 14
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "",
-      "id": 15
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 16
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 17
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 18
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 19
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 20
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 21
     }
   ],
   "messages": [
@@ -273,7 +209,7 @@
     {
       "id": 2,
       "userId": 2,
-      "body": "Beat up Shelley",
+      "body": "Beat up sHeLlEy",
       "complete": false,
       "dueDate": "5/17/19"
     },
@@ -305,7 +241,7 @@
     },
     {
       "userId": 1,
-      "body": "do a thing",
+      "body": "Do a thing",
       "complete": false,
       "id": 8
     }
