@@ -15,6 +15,7 @@ import MessageContainer from "./messages/messagesContainer";
 
 import NewsList from "./news/NewsList";
 import NewsForm from "./news/NewsForm";
+import NewsEditForm from './news/NewsEditForm'
 
 class ApplicationViews extends Component {
     state = {
@@ -272,6 +273,11 @@ class ApplicationViews extends Component {
                     return <NewsForm {...props}
                         addNews={this.addNews} />
                 }} />
+                <Route
+                    path="/news/:articleId(\d+)/edit" render={props => {
+                        return <NewsEditForm {...props} editNews={this.editNews} />
+                    }}
+                />
             </>
         );
     }
