@@ -11,17 +11,17 @@ class App extends Component {
     setUser = (user) => {
         this.setState({
             activeUser: user
-        }) 
+        })
     }
 
-  render() {
-      return (
-          <React.Fragment>
-              <Navbar setUser={this.setUser} activeUser={this.state.activeUser}/>
-              <ApplicationViews setUser={this.setUser} activeUser={this.state.activeUser} />
-          </React.Fragment>
-      )
-  }
+    render() {
+        return (
+            <React.Fragment>
+                <Navbar setUser={this.setUser} activeUser={this.state.activeUser} />
+                <ApplicationViews setUser={this.setUser} activeUser={this.state.activeUser} />
+            </React.Fragment>
+        )
+    }
 }
 
 export default App
