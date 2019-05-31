@@ -14,8 +14,8 @@ import TaskApp from './tasks/TasksApp'
 import MessageContainer from './messages/messagesContainer'
 import NewsList from './news/NewsList'
 import NewsForm from './news/NewsForm'
-// import TaskModal from './tasks/taskModal'
-// import FriendsList from './friends/friendsList'
+import TaskModal from './tasks/taskModal'
+import FriendsList from './friends/friendsList'
 import EventForm from './events/eventForm'
 import EventList from './events/eventsList'
 import NewsEditForm from './news/NewsEditForm'
@@ -152,21 +152,10 @@ class ApplicationViews extends Component {
             .then(() => Users.getAllUsers())
             .then(users => (newState.users = users))
             .then(users => {
-                this.props.history.push("/users");
+                // this.props.history.push("/users");
                 this.setState(newState);
                 //return tasks so it can be used in the form
                 return users;
-            });
-    };
-
-    updateUser = (editedUser) => {
-        const newState = {};
-        Users.editUser(editedUser)
-            .then(() => Users.getAllUsers())
-            .then(Users => newState.Users = Users)
-            .then(() => {
-                this.props.history.push("/users")
-                this.setState(newState)
             });
     };
 
@@ -271,7 +260,8 @@ class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                     return <SignIn {...props}
                         addUser={this.addUser}
-                        setUser={this.props.setUser} />
+                        setUser={this.props.setUser}
+                        activeUser={this.props.activeUser} />
                 }} />
                 <Route path="/login" render={(props) => {
                 return <LogIn setUser={this.props.setUser} {...props}  /> }}

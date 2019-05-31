@@ -6,6 +6,8 @@ import TimeOut from "./TimeOut"
 import LogIn from "../auth/LogIn"
 import ReactDOM from 'react'
 import { withRouter} from 'react-router-dom';
+import Users from '../../modules/usersManager'
+import FormAlert from '../auth/Alert'
 
 class SignIn extends React.Component {
 
@@ -35,10 +37,22 @@ class SignIn extends React.Component {
         password: this.state.password,
         email: this.state.email
       };
-      this.props.addUser(user)
-      this.props.setUser(user)
-      this.renderDashboard();
+
+      if (!this.state.userName || !this.state.password || !this.state.firstName || !this.state.lastName || !this.state.email) {
+        return alert("Please fill out all fields.")
+    } else {
+          sessionStorage.setItem(
+              "credentials",
+                JSON.stringify(user)
+                )
+          this.props.addUser(user)
+          this.props.setUser(user)
+          this.renderDashboard()
+        }
+    
     }
+
+  
 
     renderLogIn = () => {
       this.props.history.push("/login")
@@ -91,3 +105,12 @@ class SignIn extends React.Component {
 }
 
 export default withRouter(SignIn)
+
+// {
+//   this.props.addUser(user)
+//   .then(singleUser => {
+//     Users.getUser(user.userName)
+//     this.props.setUser(singleUser)
+//     this.renderDashboard()
+//   })
+// }
