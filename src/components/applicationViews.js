@@ -23,13 +23,8 @@ class ApplicationViews extends Component {
         friends: [],
         news: [],
         tasks: [],
-<<<<<<< HEAD
-        users: [],
-    }
-=======
         users: []
     };
->>>>>>> master
     //calls
     deleteChatMessages = id => {
         const newState = {};
@@ -218,10 +213,7 @@ class ApplicationViews extends Component {
             .then(() =>
                 this.setState(newState))
     };
-<<<<<<< HEAD
     
-=======
->>>>>>> master
 
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
        
@@ -236,53 +228,70 @@ class ApplicationViews extends Component {
                         addUser={this.addUser} />
                 }} />
                 <Route path="/login" render={(props) => {
-                return <LogIn {...props} setUser={this.props.setUser} /> }}
+                return <LogIn setUser={this.props.setUser} {...props}  /> }}
                 />
                 <Route exact path="/dashboard" render={props => {
                     if (this.isAuthenticated()) {
                         return <Dashboard activeUser={this.props.activeUser} />
                     } else {
-                        return <Redirect to="/login" />
+                        return <Redirect to="/" />
                     }
                  }} />
                 
                 <Route exact path="/tasks" render={(props) => {
-                    return <TaskApp
+                    if (this.isAuthenticated()) {
+                        return <TaskApp
                         initItems={this.state.tasks}
                         addTask={this.addTasks}
                         deleteTask={this.deleteTasks}
                         markDone={this.updateTasks}
                     />
+                    } else {
+                        return <Redirect to="/" />
+                    }
+
                 }} />
 
                 <Route
                     exact
                     path="/messages"
                     render={props => {
-                        return (
-                            <MessageContainer
-                                messages={this.state.messages}
-                                {...props}
-                                deleteTask={this.deleteTask}
-                            />
-                        );
+                        if (this.isAuthenticated()) {
+                            return (
+                                <MessageContainer
+                                    messages={this.state.messages}
+                                    {...props}
+                                    deleteTask={this.deleteTask}
+                                />
+                            );
+                        } else {
+                            return <Redirect to="/" />
+                        }
                     }}
                 />
                 <Route
                     exact path="/news"
                     render={props => {
-                        return <NewsList
+                        if (this.isAuthenticated()) {
+                            return <NewsList
                             {...props}
                             news={this.state.news}
                             deleteNews={this.deleteNews}
                         />;
+                        } else {
+                            return <Redirect to="/" />
+                        }
                     }}
                 />
                 <Route path="/news/new" render={(props) => {
-
-                    //route for add news form
-                    return <NewsForm {...props}
+                    if (this.isAuthenticated()) {
+                        return <NewsForm {...props}
                         addNews={this.addNews} />
+                    } else {
+                        return <Redirect to="/" />
+
+                    }
+
                 }} />
             </>
         );

@@ -4,6 +4,7 @@ import Welcome from "../landing/Welcome"
 import "../landing/SignIn.css"
 import { withRouter} from 'react-router-dom';
 import UserManager from '../../modules/usersManager'
+import { browserHistory } from 'react-router';
 
 
 class LogIn extends React.Component {
@@ -17,6 +18,10 @@ class LogIn extends React.Component {
       const stateToChange = {}
       stateToChange[evt.target.id] = evt.target.value
       this.setState(stateToChange)
+  }
+
+  renderDashboard= () => {
+    this.props.history.push("/dashboard")
   }
 
   handleLogin = (e) => {
@@ -33,8 +38,8 @@ class LogIn extends React.Component {
                   JSON.stringify(user)
             )
             this.props.setUser(user)
+            this.renderDashboard()
         })
-        this.history.push("/dashboard")
   }
 
   SignUp = () => {
