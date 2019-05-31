@@ -12,7 +12,7 @@ export default class MessageDash extends Component {
         return(
             <div>
                 <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                <CardTitle>{this.props.tasks.body}</CardTitle>
+                <CardTitle></CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 </Card>
                 <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>

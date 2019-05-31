@@ -14,11 +14,11 @@ import TaskApp from './tasks/TasksApp'
 import MessageContainer from './messages/messagesContainer'
 import NewsList from './news/NewsList'
 import NewsForm from './news/NewsForm'
-import TaskModal from './tasks/taskModal'
-import FriendsList from './friends/friendsList'
+// import TaskModal from './tasks/taskModal'
+// import FriendsList from './friends/friendsList'
 import EventForm from './events/eventForm'
 import EventList from './events/eventsList'
-import NewsEditForm from './news/NewsEditForm'
+// import NewsEditForm from './news/NewsEditForm'
 
 class ApplicationViews extends Component {
     state = {
@@ -340,10 +340,36 @@ class ApplicationViews extends Component {
                         addNews={this.addNews} />
                     } else {
                         return <Redirect to="/" />
-
                     }
-
-                }} />
+                    }} />
+                            <Route
+          exact
+          path="/events"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <EventList
+                  {...props}
+                  events={this.state.events}
+                  deleteEvents={this.deleteEvents}
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+        <Route
+          path="/events/new"
+          render={props => {
+            if (this.isAuthenticated()) {
+              //route for add events form
+              return <EventForm {...props} addEvent={this.addEvents} />;
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
             </>
         );
     }

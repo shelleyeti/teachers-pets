@@ -62,7 +62,7 @@ export default class DashBody extends Component {
           </NavItem>
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
-          <TabPane tabId="1">
+          <TabPane tabId="2">
             <Row>
               <Col sm="12">
               <TaskDash activeUser={this.props.activeUser}
@@ -70,7 +70,31 @@ export default class DashBody extends Component {
               </Col>
             </Row>
           </TabPane>
+          <TabPane tabId="1">
+            <Row>
+              <Col sm="12">
+              <EventsDash activeUser={this.props.activeUser}
+                    events={this.props.events} /> 
+              </Col>
+            </Row>
+          </TabPane>
+          <TabPane tabId="3">
+            <Row>
+              <Col sm="12">
+              <NewsDash activeUser={this.props.activeUser}
+                    news={this.props.news} /> 
+              </Col>
+            </Row>
+          </TabPane>
         </TabContent>
+        <TabPane tabId="4">
+            <Row>
+              <Col sm="12">
+              <MessageDash activeUser={this.props.activeUser}
+                    messages={this.props.messages} /> 
+              </Col>
+            </Row>
+          </TabPane>
           </div>
         );
       }
