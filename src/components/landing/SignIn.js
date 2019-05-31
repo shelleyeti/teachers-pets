@@ -31,9 +31,8 @@ class SignIn extends React.Component {
         password: this.state.password,
         email: this.state.email
       };
-     
       this.props.addUser(user)
-      .then(() => this.props.history.push("/dashboard"));
+      // .then(() => this.props.history.push("/dashboard"));
     
     }
 
@@ -78,7 +77,7 @@ class SignIn extends React.Component {
           onChange={this.handleFieldChange}/>
         </FormGroup>
 
-        <Button className="landing-buttons" onClick={this.constructNewUser}>Sign up</Button>
+        <Button className="landing-buttons btn btn-outline-primary" onClick={this.constructNewUser}>Sign up</Button>
         <Button onClick={this.renderLogIn} color="link">Already have an account?</Button>
 
       </Form>

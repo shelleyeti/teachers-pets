@@ -3,13 +3,15 @@ import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'react
 import Welcome from "../landing/Welcome"
 import "../landing/SignIn.css"
 import { withRouter} from 'react-router-dom';
+import UserManager from '../../modules/usersManager'
+import { browserHistory } from 'react-router';
 
 
 class LogIn extends React.Component {
 
     state = {
       userName: "",
-      password: ""
+      password: "",
     };
   
   handleFieldChange = (evt) => {
@@ -18,17 +20,26 @@ class LogIn extends React.Component {
       this.setState(stateToChange)
   }
 
-  handleLogin = (e) => {
-      e.preventDefault()
+  renderDashboard= () => {
+    this.props.history.push("/dashboard")
+  }
 
-      sessionStorage.setItem(
-          "credentials",
-            JSON.stringify({
-              userName: this.state.userName,
-              password: this.state.password
-          })
-      )
-      .then(() => this.props.history.push("/dashboard"));
+  handleLogin = (e) => {
+    e.preventDefault()
+
+    if (!this.state.userName || !this.state.password) {
+        return alert("Please fill out required fields.")
+    }
+
+    UserManager.getUser(this.state.userName)
+        .then(user => {
+            sessionStorage.setItem(
+                "credentials",
+                  JSON.stringify(user)
+            )
+            this.props.setUser(user)
+            this.renderDashboard()
+        })
   }
 
   SignUp = () => {
@@ -55,7 +66,7 @@ class LogIn extends React.Component {
           </Col>
         </Row>
 
-        <Button onClick={this.handleLogin}>Log In</Button>
+        <Button className="btn btn-outline-primary" onClick={this.handleLogin}>Log In</Button>
         <Button onClick={this.SignUp} color="link">Don't have an account?</Button>
       </Form>
       </React.Fragment>

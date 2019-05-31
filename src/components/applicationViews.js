@@ -40,6 +40,7 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
+
     addMessage = message => {
         const newState = {};
         return Messages.postMessage(message)
@@ -52,6 +53,7 @@ class ApplicationViews extends Component {
                 return chatMessages;
             });
     };
+
     updateMessage = editedMessageObject => {
         const newState = {};
         Messages.editMessage(editedMessageObject)
@@ -62,16 +64,18 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
-    deleteEvents = id => {
-        const newState = {};
-        Events.deleteEvent(id)
-            .then(Events.getAllEvents)
-            .then(events => (newState.events = events))
-            .then(() => {
-                this.props.history.push("/events");
-                this.setState(newState);
-            });
-    };
+
+  deleteEvents = id => {
+    const newState = {};
+    Events.deleteEvent(id)
+      .then(Events.getAllEvents)
+      .then(events => (newState.events = events))
+      .then(() => {
+        this.props.history.push("/events");
+        this.setState(newState);
+      });
+  };
+
     addEvents = event => {
         const newState = {};
         return Events.postEvent(event)
@@ -84,26 +88,29 @@ class ApplicationViews extends Component {
                 return events;
             });
     };
-    updateEvents = editedEventObject => {
-        const newState = {};
-        Events.editEvent(editedEventObject)
-            .then(() => Events.getAllEvents())
-            .then(events => (newState.events = events))
-            .then(() => {
-                this.props.history.push("/events");
-                this.setState(newState);
-            });
-    };
-    deleteTasks = id => {
-        const newState = {};
-        Tasks.deleteTask(id)
-            .then(Tasks.getAllTasks)
-            .then(tasks => (newState.tasks = tasks))
-            .then(() => {
-                this.props.history.push("/tasks");
-                this.setState(newState);
-            });
-    };
+
+  updateEvents = editedEventObject => {
+    const newState = {};
+    Events.editEvent(editedEventObject)
+      .then(() => Events.getAllEvents())
+      .then(events => (newState.events = events))
+      .then(() => {
+        this.props.history.push("/events");
+        this.setState(newState);
+      });
+  };
+
+  deleteTasks = id => {
+    const newState = {};
+    Tasks.deleteTask(id)
+      .then(Tasks.getAllTasks)
+      .then(tasks => (newState.tasks = tasks))
+      .then(() => {
+        this.props.history.push("/tasks");
+        this.setState(newState);
+      });
+  };
+
     addTasks = task => {
         const newState = {};
         return Tasks.postTask(task)
@@ -116,26 +123,29 @@ class ApplicationViews extends Component {
                 return tasks;
             });
     };
-    updateTasks = editedEventObject => {
-        const newState = {};
-        Tasks.editTask(editedEventObject)
-            .then(() => Tasks.getAllTasks())
-            .then(tasks => (newState.tasks = tasks))
-            .then(() => {
-                this.props.history.push("/tasks");
-                this.setState(newState);
-            });
-    };
-    deleteUser = id => {
-        const newState = {};
-        Users.deleteUser(id)
-            .then(Users.getAllUsers)
-            .then(allUsers => (newState.users = allUsers))
-            .then(() => {
-                this.props.history.push("/users");
-                this.setState(newState);
-            });
-    };
+
+  updateTasks = editedEventObject => {
+    const newState = {};
+    Tasks.editTask(editedEventObject)
+      .then(() => Tasks.getAllTasks())
+      .then(tasks => (newState.tasks = tasks))
+      .then(() => {
+        this.props.history.push("/tasks");
+        this.setState(newState);
+      });
+  };
+
+  deleteUser = id => {
+    const newState = {};
+    Users.deleteUser(id)
+      .then(Users.getAllUsers)
+      .then(allUsers => (newState.users = allUsers))
+      .then(() => {
+        this.props.history.push("/users");
+        this.setState(newState);
+      });
+  };
+
     addUser = event => {
         const newState = {};
         return Users.postUser(event)
@@ -148,6 +158,7 @@ class ApplicationViews extends Component {
                 return users;
             });
     };
+
     updateUser = (editedUser) => {
         const newState = {};
         Users.editUser(editedUser)
@@ -158,47 +169,52 @@ class ApplicationViews extends Component {
                 this.setState(newState)
             });
     };
-    updateUser = editedUser => {
-        const newState = {};
-        Users.editUser(editedUser)
-            .then(() => Users.getAllUsers())
-            .then(Users => (newState.Users = Users))
-            .then(() => {
-                this.props.history.push("/users");
-                this.setState(newState);
-            });
-    };
-    deleteNews = id => {
-        const newState = {};
-        News.deleteNews(id)
-            .then(News.getAllNews)
-            .then(articles => (newState.news = articles))
-            .then(() => {
-                this.props.history.push("/news");
-                this.setState(newState);
-            });
-    };
-    addNews = article => {
-        const newState = {};
-        return News.postNews(article)
-            .then(() => News.getAllNews())
-            .then(articles => (newState.news = articles))
-            .then(article => {
-                this.props.history.push("/news");
-                this.setState(newState);
-                return article;
-            });
-    };
-    editNews = editedArticle => {
-        const newState = {};
-        News.editNews(editedArticle)
-            .then(() => News.getAllNews())
-            .then(articles => (newState.news = articles))
-            .then(() => {
-                this.props.history.push("/news");
-                this.setState(newState);
-            });
-    };
+
+  updateUser = editedUser => {
+    const newState = {};
+    Users.editUser(editedUser)
+      .then(() => Users.getAllUsers())
+      .then(Users => (newState.Users = Users))
+      .then(() => {
+        this.props.history.push("/users");
+        this.setState(newState);
+      });
+  };
+
+  deleteNews = id => {
+    const newState = {};
+    News.deleteNews(id)
+      .then(News.getAllNews)
+      .then(articles => (newState.news = articles))
+      .then(() => {
+        this.props.history.push("/news");
+        this.setState(newState);
+      });
+  };
+
+  addNews = article => {
+    const newState = {};
+    return News.postNews(article)
+      .then(() => News.getAllNews())
+      .then(articles => (newState.news = articles))
+      .then(article => {
+        this.props.history.push("/news");
+        this.setState(newState);
+        return article;
+      });
+  };
+
+  editNews = editedArticle => {
+    const newState = {};
+    News.editNews(editedArticle)
+      .then(() => News.getAllNews())
+      .then(articles => (newState.news = articles))
+      .then(() => {
+        this.props.history.push("/news");
+        this.setState(newState);
+      });
+  };
+
     deleteFriends = id => {
         const newState = {};
         Friends.deleteFriend(id)
@@ -209,6 +225,7 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
+
     addFriends = friend => {
         const newState = {};
         return Friends.postFriend(friend)
@@ -221,6 +238,7 @@ class ApplicationViews extends Component {
                 return friends;
             });
     };
+
     editFriends = editedFriend => {
         const newState = {};
         Friends.editFriend(editedFriend)
@@ -231,6 +249,7 @@ class ApplicationViews extends Component {
                 this.setState(newState);
             });
     };
+
     componentDidMount() {
         const newState = {};
         Events.getAllEvents()
@@ -243,9 +262,9 @@ class ApplicationViews extends Component {
             .then(() =>
                 this.setState(newState))
     };
-
+    
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
-
+       
     render() {
         return (
             <>
@@ -254,23 +273,91 @@ class ApplicationViews extends Component {
                         addUser={this.addUser} />
                 }} />
                 <Route path="/login" render={(props) => {
-                    return <LogIn setUser={this.props.setUser} {...props} />
-                }}
+                return <LogIn setUser={this.props.setUser} {...props}  /> }}
                 />
                 <Route exact path="/dashboard" render={props => {
                     if (this.isAuthenticated()) {
                         return <Dashboard {...props}
-                            activeUser={this.props.activeUser}
-                            tasks={this.state.tasks}
-                            events={this.state.events}
-                            news={this.state.news}
-                            friends={this.state.friends}
-                            messages={this.state.messages} />
+                        activeUser={this.props.activeUser}
+                        tasks={this.state.tasks}
+                        events={this.state.events}
+                        news={this.state.news}
+                        friends={this.state.friends}
+                        messages={this.state.messages} />
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                 }} />
+                <Route
+                    exact
+                    path="/messages"
+                    render={props => {
+                        if (this.isAuthenticated()) {
+                            return (
+                                <MessageContainer
+                                    messages={this.state.messages}
+                                    {...props}
+                                    deleteMessage={this.deleteMessage}
+                                    addMessage={this.addMessage}
+                                />
+                            );
+                        } else {
+                            return <Redirect to="/" />
+                        }
+                    }}
+                />
+                         <Route
+          exact
+          path="/events"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <EventList
+                  {...props}
+                  events={this.state.events}
+                  deleteEvents={this.deleteEvents}
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+        <Route
+          path="/events/new"
+          render={props => {
+            if (this.isAuthenticated()) {
+              //route for add events form
+              return <EventForm {...props} addEvent={this.addEvents} />;
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+        <Route exact path="/news" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <NewsList {...props} news={this.state.news} deleteNews={this.deleteNews} />;
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                }}
+                />
+                <Route path="/news/new" render={(props) => {
+                    if (this.isAuthenticated()) {
+                        //route for add news form
+                        return <NewsForm {...props} addNews={this.addNews} />
                     } else {
                         return <Redirect to="/" />
                     }
                 }} />
-
+                <Route path="/news/:articleId(\d+)/edit" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <NewsEditForm {...props} editNews={this.editNews} />
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                }}
+                />
                 <Route exact path="/tasks" render={(props) => {
                     if (this.isAuthenticated()) {
                         return <TaskApp
@@ -300,78 +387,6 @@ class ApplicationViews extends Component {
                         return <Redirect to="/" />
                     }
                 }} />
-
-                <Route
-                    exact
-                    path="/messages"
-                    render={props => {
-                        if (this.isAuthenticated()) {
-                            return (
-                                <MessageContainer
-                                    messages={this.state.messages}
-                                    {...props}
-                                    deleteMessage={this.deleteMessage}
-                                    addMessage={this.addMessage}
-                                />
-                            );
-                        } else {
-                            return <Redirect to="/" />
-                        }
-                    }}
-                />
-
-                <Route
-                    exact
-                    path="/events"
-                    render={props => {
-                        if (this.isAuthenticated()) {
-                            return (
-                                <EventList
-                                    {...props}
-                                    events={this.state.events}
-                                    deleteEvents={this.deleteEvents}
-                                />
-                            );
-                        } else {
-                            return <Redirect to="/" />;
-                        }
-                    }}
-                />
-                <Route
-                    path="/events/new"
-                    render={props => {
-                        if (this.isAuthenticated()) {
-                            //route for add events form
-                            return <EventForm {...props} addEvent={this.addEvents} />;
-                        } else {
-                            return <Redirect to="/" />;
-                        }
-                    }}
-                />
-                <Route exact path="/news" render={props => {
-                    if (this.isAuthenticated()) {
-                        return <NewsList {...props} news={this.state.news} deleteNews={this.deleteNews} />;
-                    } else {
-                        return <Redirect to="/" />
-                    }
-                }}
-                />
-                <Route path="/news/new" render={(props) => {
-                    if (this.isAuthenticated()) {
-                        //route for add news form
-                        return <NewsForm {...props} addNews={this.addNews} />
-                    } else {
-                        return <Redirect to="/" />
-                    }
-                }} />
-                <Route path="/news/:articleId(\d+)/edit" render={props => {
-                    if (this.isAuthenticated()) {
-                        return <NewsEditForm {...props} editNews={this.editNews} />
-                    } else {
-                        return <Redirect to="/" />
-                    }
-                }}
-                />
             </>
         );
     }

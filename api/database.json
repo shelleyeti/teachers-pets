@@ -152,19 +152,9 @@
       "friendId": 2
     },
     {
-      "id": 4,
-      "currentUserId": 1,
-      "friendId": 4
-    },
-    {
       "id": 6,
       "currentUserId": 1,
       "friendId": 6
-    },
-    {
-      "id": 7,
-      "currentUserId": 1,
-      "friendId": 7
     }
   ],
   "news": [
