@@ -1,37 +1,68 @@
-import {Component} from "react";
-import React from "react";
+import React, { Component } from "react";
+import { Form, Input, InputGroup, Button } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-class Input extends Component {
+export default class MessageInput extends Component {
+  // Set initial state
   state = {
-    body: ""
-  }
+    body: "",
+    userName: "addam.joor",
+    userId: "1",
+    dateTime: ""
+  };
 
-  onChange(e) {
-    this.setState({body: e.target.value});
-  }
+  // Update state whenever an input field is edited
+  handleFieldChange = evt => {
+    const stateToChange = {};
+    stateToChange[evt.target.id] = evt.target.value;
+    this.setState(stateToChange);
+  };
 
-  onSubmit(e) {
-    e.preventDefault();
-    this.setState({body: ""});
-    // this.props.onSendMessage(this.state.text);
-  }
+  constructNewMessage = evt => {
+    let today = new Date();
+    let formatTime = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate(),
+      today.getHours(),
+      today.getMinutes(),
+      today.getSeconds()
+    );
+    let formattedTime = formatTime.toLocaleString("en-US", { hour12: true });
+
+    const newMessage = {
+      body: this.state.body,
+      userName: this.state.userName,
+      userId: this.state.userId,
+      dateTime: formattedTime
+    };
+    this.props.addMessage(newMessage);
+    
+  };
 
   render() {
     return (
-      <div className="Input">
-        <form onSubmit={e => this.onSubmit(e)}>
-          <input
-            onChange={e => this.onChange(e)}
-            value={this.state.body}
-            type="text"
-            placeholder="Enter your message and press Submit"
-            autoFocus={true}
-          />
-          <button className="btn btn-outline-primary btn-sm">Submit</button>
-        </form>
-      </div>
+      <React.Fragment>
+        <Form className="inputDiv">
+          <InputGroup className="chatInput">
+            <Input
+              type="text"
+              ref="body"
+              id="body"
+              required
+              placeholder="Enter your message and push submit"
+              onChange={this.handleFieldChange}
+            />
+          </InputGroup>
+          <Button
+            className="btn btn-outline-primary"
+            size="sm"
+            onClick={this.constructNewMessage}
+          >
+            Submit
+          </Button>
+        </Form>
+      </React.Fragment>
     );
   }
 }
-
-export default Input;

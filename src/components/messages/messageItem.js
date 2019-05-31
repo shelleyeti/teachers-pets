@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { FaTrashAlt } from 'react-icons/fa';
+import { FaEdit } from 'react-icons/fa';
 
 class MessageItem extends Component {
   state = {
@@ -19,8 +21,9 @@ class MessageItem extends Component {
         <div className="cardBody">
           <div className="card-body">
             <p>
-              {this.props.message.userName}: {this.props.message.message}
+              {this.props.message.userName}: {this.props.message.body}
             </p>
+            <p>{this.props.message.dateTime}</p>
           </div>
           <div>
             <button
@@ -32,14 +35,14 @@ class MessageItem extends Component {
                 );
               }}
             >
-              Edit Message
+              <FaEdit />
             </button>
             <button
               className="btn btn-outline-danger btn-sm"
               disabled={this.state.saveDisabled}
               onClick={this.handleClickDelete}
             >
-              Delete Message
+              <FaTrashAlt />
             </button>
           </div>
         </div>

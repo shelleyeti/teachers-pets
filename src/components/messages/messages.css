@@ -9,6 +9,10 @@
     justify-content: center; */
 }
 
+.inputDiv {
+    display: flex;
+}
+
 .cardBody {
     border: 1px solid grey;
     width: auto;
@@ -31,15 +35,19 @@
 
 .btn {
     background-color: white;
-    margin-left: 10px;
 }
 
-.messageInput {
+.chatInput {
+    width: 80%;
+    margin: 15px;
+}
+
+/* .messageInput {
     margin: 10px;
     display: flex;
     justify-content: center;
     width: 100%;
-}
-.messageInput input {
+} */
+/* .messageInput input {
     width: 900px;
-}
+} */
