@@ -288,20 +288,6 @@ class ApplicationViews extends Component {
                         return <Redirect to="/" />
                     }
                  }} />
-                
-                <Route exact path="/tasks" render={(props) => {
-                    if (this.isAuthenticated()) {
-                        return <TaskApp
-                        initItems={this.state.tasks}
-                        addTask={this.addTasks}
-                        deleteTask={this.deleteTasks}
-                        markDone={this.updateTasks}
-                    />
-                    } else {
-                        return <Redirect to="/" />
-                    }
-
-                }} />
                 <Route
                     exact
                     path="/messages"
@@ -372,6 +358,35 @@ class ApplicationViews extends Component {
                     }
                 }}
                 />
+                <Route exact path="/tasks" render={(props) => {
+                    if (this.isAuthenticated()) {
+                        return <TaskApp
+                            initItems={this.state.tasks}
+                            addTask={this.addTasks}
+                            TaskModal={TaskModal}
+                            deleteTask={this.deleteTasks}
+                            markDone={this.updateTasks}
+                            editTask={this.updateTasks} />
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                }} />
+
+                {/* Combine with Messages in ONE ROUTE */}
+                <Route exact path="/friends" render={(props) => {
+                    if (this.isAuthenticated()) {
+                        return <FriendsList
+                            {...props}
+                            user={this.state.users}
+                            friend={this.state.friends}
+                            addFriend={this.addFriends}
+                            deleteFriend={this.deleteFriends}
+                            editFriend={this.editFriends}
+                        />
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                }} />
             </>
         );
     }
