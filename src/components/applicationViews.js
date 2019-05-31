@@ -14,8 +14,8 @@ import TaskApp from './tasks/TasksApp'
 import MessageContainer from './messages/messagesContainer'
 import NewsList from './news/NewsList'
 import NewsForm from './news/NewsForm'
-// import TaskModal from './tasks/taskModal'
-// import FriendsList from './friends/friendsList'
+import TaskModal from './tasks/taskModal'
+import FriendsList from './friends/friendsList'
 import EventForm from './events/eventForm'
 import EventList from './events/eventsList'
 import NewsEditForm from './news/NewsEditForm'
@@ -156,17 +156,6 @@ class ApplicationViews extends Component {
                 this.setState(newState);
                 //return tasks so it can be used in the form
                 return users;
-            });
-    };
-
-    updateUser = (editedUser) => {
-        const newState = {};
-        Users.editUser(editedUser)
-            .then(() => Users.getAllUsers())
-            .then(Users => newState.Users = Users)
-            .then(() => {
-                this.props.history.push("/users")
-                this.setState(newState)
             });
     };
 

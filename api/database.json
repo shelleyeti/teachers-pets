@@ -9,12 +9,12 @@
       "password": "123456"
     },
     {
-      "id": 2,
       "firstName": "Emily",
       "lastName": "Loggins",
-      "userName": "emily-loggins",
-      "email": "fishtea@mymail.com",
-      "password": "123456"
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "emily@climbnashville.com",
+      "id": 16
     },
     {
       "id": 3,
@@ -57,9 +57,9 @@
       "id": 7
     },
     {
-      "firstName": "newName",
-      "lastName": "newLast",
-      "userName": "newName1",
+      "firstName": "Eliot",
+      "lastName": "Clarke",
+      "userName": "dEliotC",
       "email": "newnew@new.com",
       "password": "123456",
       "id": 8
@@ -81,164 +81,12 @@
       "id": 10
     },
     {
-      "firstName": "12345",
-      "lastName": "12345",
-      "userName": "123456",
+      "firstName": "Addam",
+      "lastName": "Joor",
+      "userName": "MaddaJoor",
       "email": "12345@12345.com",
       "password": "123456",
       "id": 11
-    },
-    {
-      "firstName": "newest",
-      "lastName": "newest",
-      "userName": "newnewest",
-      "email": "newnewest@yes.com",
-      "password": "123456",
-      "id": 12
-    },
-    {
-      "firstName": "123test",
-      "lastName": "4556test",
-      "userName": "lsdfkc",
-      "email": "slfgjh@sldkfjgh.com",
-      "password": "123456",
-      "id": 13
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "",
-      "id": 14
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "",
-      "id": 15
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 16
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 17
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 18
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 19
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 20
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 21
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 22
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 23
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 24
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 25
-    },
-    {
-      "firstName": "Ahelkdjfls",
-      "lastName": "fdsafs",
-      "userName": "fdsfaf",
-      "password": "KbGF123213TdcPwExhb6U",
-      "email": "sheelyy",
-      "id": 26
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 27
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 28
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "",
-      "id": 29
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 30
     }
   ],
   "messages": [
@@ -276,6 +124,20 @@
       "userId": "1",
       "dateTime": "5/31/2019, 9:06:16 AM",
       "id": 7
+    },
+    {
+      "body": "ok",
+      "userName": "addam.joor",
+      "userId": "1",
+      "dateTime": "5/31/2019, 11:46:07 AM",
+      "id": 8
+    },
+    {
+      "body": "ok",
+      "userName": "addam.joor",
+      "userId": "1",
+      "dateTime": "5/31/2019, 11:46:10 AM",
+      "id": 9
     }
   ],
   "friends": [
@@ -283,6 +145,16 @@
       "id": 1,
       "currentUserId": 1,
       "friendId": 1
+    },
+    {
+      "id": 2,
+      "currentUserId": 1,
+      "friendId": 2
+    },
+    {
+      "id": 6,
+      "currentUserId": 1,
+      "friendId": 6
     }
   ],
   "news": [
@@ -352,7 +224,7 @@
     {
       "id": 2,
       "userId": 2,
-      "body": "Beat up Shelley",
+      "body": "Beat up ShElLeY",
       "complete": false,
       "dueDate": "5/17/19"
     },
@@ -384,15 +256,9 @@
     },
     {
       "userId": 1,
-      "body": "do a thing",
-      "complete": true,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "body": "Go to the store",
+      "body": "Do a thing",
       "complete": false,
-      "id": 9
+      "id": 8
     }
   ],
   "events": [
