@@ -1,0 +1,13 @@
+.remove-friend {
+    color: red;
+    font-size: 30px;
+}
+
+.add-friend {
+    color: green;
+    font-size: 30px;
+}
+
+.friends-list {
+    display: inline;
+}

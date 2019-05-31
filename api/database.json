@@ -9,12 +9,12 @@
       "password": "123456"
     },
     {
-      "id": 2,
       "firstName": "Emily",
       "lastName": "Loggins",
-      "userName": "emily-loggins",
-      "email": "fishtea@mymail.com",
-      "password": "123456"
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "emily@climbnashville.com",
+      "id": 16
     },
     {
       "id": 3,
@@ -39,6 +39,62 @@
       "password": "KbGFTdcPwExhb6U",
       "email": "emily@climbnashville.com",
       "id": 30
+    },
+    {
+      "firstName": "tester",
+      "lastName": "lastname",
+      "userName": "1234SH",
+      "email": "shell@DSG.COM",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "firstName": "Sister",
+      "lastName": "Last",
+      "userName": "username1",
+      "email": "email@email.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "firstName": "hood",
+      "lastName": "hood",
+      "userName": "hood",
+      "email": "hood@hood.com",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "firstName": "Eliot",
+      "lastName": "Clarke",
+      "userName": "YourBoy",
+      "email": "datboy@datboy.net",
+      "password": "password",
+      "id": 8
+    },
+    {
+      "firstName": "Corey",
+      "lastName": "Arnold",
+      "userName": "corey-arnold",
+      "email": "corey@corey.com",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "firstName": "Arnold",
+      "lastName": "Arnold",
+      "userName": "arnold-arnold",
+      "email": "arnold@arnold.com",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "firstName": "Addam",
+      "lastName": "Joor",
+      "userName": "MaddaJoor",
+      "email": "12345@12345.com",
+      "password": "123456",
+      "id": 11
     }
   ],
   "messages": [
@@ -76,6 +132,20 @@
       "userId": "1",
       "dateTime": "5/31/2019, 9:06:16 AM",
       "id": 7
+    },
+    {
+      "body": "ok",
+      "userName": "addam.joor",
+      "userId": "1",
+      "dateTime": "5/31/2019, 11:46:07 AM",
+      "id": 8
+    },
+    {
+      "body": "ok",
+      "userName": "addam.joor",
+      "userId": "1",
+      "dateTime": "5/31/2019, 11:46:10 AM",
+      "id": 9
     }
   ],
   "friends": [
@@ -83,6 +153,16 @@
       "id": 1,
       "currentUserId": 1,
       "friendId": 1
+    },
+    {
+      "id": 2,
+      "currentUserId": 1,
+      "friendId": 2
+    },
+    {
+      "id": 6,
+      "currentUserId": 1,
+      "friendId": 6
     }
   ],
   "news": [
@@ -129,20 +209,6 @@
   ],
   "tasks": [
     {
-      "id": 2,
-      "userId": 2,
-      "body": "Beat up Shelley",
-      "complete": false,
-      "dueDate": "5/17/19"
-    },
-    {
-      "body": "Adopt Eliot",
-      "dueDate": "end of the week",
-      "complete": false,
-      "userId": 2,
-      "id": 4
-    },
-    {
       "body": "Build the sister wife compound",
       "dueDate": "right now",
       "complete": false,
@@ -163,15 +229,9 @@
     },
     {
       "userId": 1,
-      "body": "do a thing",
-      "complete": true,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "body": "Go to the store",
+      "body": "Do a thing",
       "complete": false,
-      "id": 9
+      "id": 8
     }
   ],
   "events": [

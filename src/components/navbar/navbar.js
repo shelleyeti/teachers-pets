@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import './navbar.css'
