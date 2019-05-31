@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import TaskDash from './TaskDash'
+import EventsDash from './EventsDash'
+import NewsDash from './NewsDash'
+import MessageDash from './MessageDash'
 
 
 export default class DashBody extends Component {
@@ -55,14 +58,6 @@ export default class DashBody extends Component {
               onClick={() => { this.toggle('4'); }}
             >
               Messages
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({ active: this.state.activeTab === '5' })}
-              onClick={() => { this.toggle('5'); }}
-            >
-              Friends List
             </NavLink>
           </NavItem>
         </Nav>

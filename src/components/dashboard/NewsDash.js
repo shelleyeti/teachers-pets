@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Card, Button, CardTitle, CardText } from 'reactstrap';
 
-export default class TaskDash extends Component {
+export default class NewsDash extends Component {
 
     // arr.slice(Math.max(arr.length - 5, 1))
 

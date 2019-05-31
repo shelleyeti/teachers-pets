@@ -31,9 +31,8 @@ class SignIn extends React.Component {
         password: this.state.password,
         email: this.state.email
       };
-     
       this.props.addUser(user)
-      .then(() => this.props.history.push("/dashboard"));
+      // .then(() => this.props.history.push("/dashboard"));
     
     }
 
