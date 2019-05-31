@@ -66,7 +66,7 @@ class LogIn extends React.Component {
           </Col>
         </Row>
 
-        <Button onClick={this.handleLogin}>Log In</Button>
+        <Button className="btn btn-outline-primary" onClick={this.handleLogin}>Log In</Button>
         <Button onClick={this.SignUp} color="link">Don't have an account?</Button>
       </Form>
       </React.Fragment>

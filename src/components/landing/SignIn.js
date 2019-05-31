@@ -77,7 +77,7 @@ class SignIn extends React.Component {
           onChange={this.handleFieldChange}/>
         </FormGroup>
 
-        <Button className="landing-buttons" onClick={this.constructNewUser}>Sign up</Button>
+        <Button className="landing-buttons btn btn-outline-primary" onClick={this.constructNewUser}>Sign up</Button>
         <Button onClick={this.renderLogIn} color="link">Already have an account?</Button>
 
       </Form>
