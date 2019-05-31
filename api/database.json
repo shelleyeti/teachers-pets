@@ -243,39 +243,39 @@
   ],
   "messages": [
     {
-      "id": 1,
-      "userId": 1,
+      "body": "This is the first chat message",
       "userName": "addam.joor",
-      "message": "hello world",
-      "dateTime": "5/13/2019"
+      "userId": "1",
+      "dateTime": "5/30/2019, 7:26:52 PM",
+      "id": 1
     },
     {
-      "userId": 1,
-      "message": "This is a test",
+      "body": "this is the second message",
       "userName": "addam.joor",
-      "id": 2,
-      "dateTime": "5/13/2019"
+      "userId": "1",
+      "dateTime": "5/30/2019, 7:27:04 PM",
+      "id": 2
     },
     {
-      "userId": 2,
-      "message": "Now the box will clear",
+      "body": "This is the third message",
       "userName": "addam.joor",
-      "id": 3,
-      "dateTime": "5/13/2019"
+      "userId": "1",
+      "dateTime": "5/30/2019, 7:29:20 PM",
+      "id": 3
     },
     {
-      "userId": 1,
-      "message": "Sweet",
+      "body": "Hello World!",
       "userName": "addam.joor",
-      "id": 4,
-      "dateTime": "5/13/2019"
+      "userId": "1",
+      "dateTime": "5/30/2019, 7:44:21 PM",
+      "id": 6
     },
     {
-      "userId": 3,
-      "message": "Totes",
+      "body": "I hope this continues to work",
       "userName": "addam.joor",
-      "id": 5,
-      "dateTime": "5/13/2019"
+      "userId": "1",
+      "dateTime": "5/31/2019, 9:06:16 AM",
+      "id": 7
     }
   ],
   "friends": [
@@ -341,10 +341,10 @@
       "id": 8
     },
     {
-      "title": "Is god real",
-      "synopsis": "i don't know anymore",
-      "url": "help me.com",
-      "dateTime": "5/30/2019, 7:54:36 PM",
+      "title": "jgfjhgf",
+      "synopsis": "hjgfj",
+      "url": "hgfhgf",
+      "dateTime": "5/30/2019, 6:39:47 PM",
       "id": 9
     }
   ],
@@ -397,52 +397,35 @@
   ],
   "events": [
     {
-      "id": 1,
-      "userId": 1,
-      "title": "Working on Code 2",
-      "eventDate": "2019-05-09",
-      "description": "Group projects make us better coders."
+      "title": "new event",
+      "summary": "this is a new event",
+      "location": "NSS",
+      "date": "today",
+      "userName": "",
+      "id": 4
     },
     {
-      "id": 2,
-      "userId": 1,
-      "title": "Learning More About Flexbox",
-      "eventDate": "2019-05-16",
-      "description": "Making beautiful backgrounds with CSS."
-    },
-    {
-      "id": 3,
-      "userId": 3,
-      "title": "The darkside of Bootstrap",
-      "eventDate": "2019-06-01",
-      "description": "Learning about the ways Bootstrap doesn't always place nice."
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "title": "Put a Button on It and Call it Art",
-      "eventDate": "2019-06-08",
-      "description": "All the ways buttons and event listeners are best friends."
-    },
-    {
-      "title": "A Moment in Time",
-      "eventDate": "2019-05-24",
-      "userId": 1,
-      "description": "Using Moment Js to make your dates more attractive so you can throw away your beer goggles.",
+      "title": "Presentation Day",
+      "summary": "this is a new event",
+      "location": "NSS",
+      "date": "today",
+      "userName": "",
       "id": 5
     },
     {
-      "title": "Tester",
-      "eventDate": "2019-05-13",
-      "description": "I hit MVP",
-      "userId": 1,
+      "title": "Hello World!",
+      "summary": "this is a new event",
+      "location": "Nashville Software School",
+      "date": "Monday, June 3, 2019",
+      "userName": "",
       "id": 6
     },
     {
-      "title": "New Event",
-      "eventDate": "2019-05-14",
-      "description": "Here and Now",
-      "userId": 1,
+      "title": "We present monday!",
+      "summary": "this is a new event",
+      "location": "Nashville Software School",
+      "date": "today",
+      "userName": "",
       "id": 7
     }
   ]
