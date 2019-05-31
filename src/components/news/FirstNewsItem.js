@@ -5,7 +5,7 @@ import {
   CardSubtitle, CardBody, ButtonGroup
 } from 'reactstrap';
 
-class NewsItem extends Component {
+class FirstNewsItem extends Component {
 
   state = {
     saveDisabled: false
@@ -55,7 +55,7 @@ class NewsItem extends Component {
       //     </div>
       //   </div>
       // </div >
-      <Card className="NewsItem">
+      <Card Card body inverse color="info">
         <CardImg top width="100%" src={this.props.article.imgurl} />
         <CardBody>
           <CardTitle>{this.props.article.title}</CardTitle>
@@ -81,4 +81,4 @@ class NewsItem extends Component {
   }
 }
 
-export default NewsItem
+export default FirstNewsItem

@@ -326,7 +326,7 @@ class ApplicationViews extends Component {
         />
         <Route exact path="/news" render={props => {
           if (this.isAuthenticated()) {
-            return <NewsList {...props} news={this.state.news} deleteNews={this.deleteNews} />;
+            return <NewsList {...props} news={this.state.news} deleteNews={this.deleteNews} activeUser={this.props.activeUser} />;
           } else {
             return <Redirect to="/" />
           }
@@ -335,14 +335,14 @@ class ApplicationViews extends Component {
         <Route path="/news/new" render={(props) => {
           if (this.isAuthenticated()) {
             //route for add news form
-            return <NewsForm {...props} addNews={this.addNews} />
+            return <NewsForm {...props} addNews={this.addNews} activeUser={this.props.activeUser} />
           } else {
             return <Redirect to="/" />
           }
         }} />
         <Route path="/news/:articleId(\d+)/edit" render={props => {
           if (this.isAuthenticated()) {
-            return <NewsEditForm {...props} editNews={this.editNews} />
+            return <NewsEditForm {...props} editNews={this.editNews} activeUser={this.props.activeUser} />
           } else {
             return <Redirect to="/" />
           }

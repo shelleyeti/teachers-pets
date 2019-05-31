@@ -5,10 +5,19 @@ import {
   CardSubtitle, CardBody, Container
 } from 'reactstrap';
 import NewsItem from './NewsItem';
+import BlankCard from './BlankCard';
+import FirstNewsItem from './FirstNewsItem'
 import './news.css'
 
 
 class NewsList extends Component {
+
+  findFirst = () => {
+    let first = this.props.news.shift();
+
+    return first;
+  }
+
   render() {
     return (
       <Container className="News">
@@ -25,12 +34,20 @@ class NewsList extends Component {
         <CardColumns className="">
           {
             this.props.news.map(item => {
-              return <NewsItem key={item.id} article={item} {...this.props}
-                deleteNews={this.props.deleteNews} />
+              if (item.userId === this.props.activeUser.firstName) {
+                return (
+                  <>
+                    {/* <FirstNewsItem key={this.findFirst.id} article={this.findFirst} /> */}
+                    <NewsItem key={item.id} article={item} {...this.props}
+                      deleteNews={this.props.deleteNews} />
+                  </>
+                )
+              } else if (!item) {
+                return <BlankCard />
+              }
             })
           }
         </CardColumns>
-
       </Container>
     )
   }
