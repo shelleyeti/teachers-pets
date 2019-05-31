@@ -232,7 +232,13 @@ class ApplicationViews extends Component {
                 />
                 <Route exact path="/dashboard" render={props => {
                     if (this.isAuthenticated()) {
-                        return <Dashboard activeUser={this.props.activeUser} />
+                        return <Dashboard {...props}
+                        activeUser={this.props.activeUser}
+                        tasks={this.state.tasks}
+                        events={this.state.events}
+                        news={this.state.news}
+                        friends={this.state.friends}
+                        messages={this.state.messages} />
                     } else {
                         return <Redirect to="/" />
                     }
