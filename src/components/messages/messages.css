@@ -1,17 +1,32 @@
 .messageContainer {
-    border: 1px black solid;
+    border: 1px solid lightgrey;
     width: 80%;
-    display: flex;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding: 8px
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
+}
+
+.inputDiv {
+    display: flex;
 }
 
 .cardBody {
     border: 1px solid grey;
+    width: auto;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     background-color: lightgreen;
+}
+
+.messageSection {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-content: center;
 }
 
 .chatMessage {
@@ -20,20 +35,19 @@
 
 .btn {
     background-color: white;
-    margin-left: 10px;
 }
 
-.messageInput {
+.chatInput {
+    width: 80%;
+    margin: 15px;
+}
+
+/* .messageInput {
     margin: 10px;
     display: flex;
     justify-content: center;
     width: 100%;
-}
-.messageInput input {
+} */
+/* .messageInput input {
     width: 900px;
-}
-
-.section {
-    display: flex;
-    justify-content: center;
-}
+} */
