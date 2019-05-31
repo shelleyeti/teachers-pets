@@ -26,7 +26,7 @@ export default {
   },
   editNews(editedArticle) {
     return fetch(`${remoteURL}/news/${editedArticle.id}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },

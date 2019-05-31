@@ -18,7 +18,7 @@ import NewsForm from './news/NewsForm'
 // import FriendsList from './friends/friendsList'
 import EventForm from './events/eventForm'
 import EventList from './events/eventsList'
-// import NewsEditForm from './news/NewsEditForm'
+import NewsEditForm from './news/NewsEditForm'
 
 class ApplicationViews extends Component {
     state = {
@@ -320,29 +320,7 @@ class ApplicationViews extends Component {
                         }
                     }}
                 />
-                <Route
-                    exact path="/news"
-                    render={props => {
-                        if (this.isAuthenticated()) {
-                            return <NewsList
-                            {...props}
-                            news={this.state.news}
-                            deleteNews={this.deleteNews}
-                        />;
-                        } else {
-                            return <Redirect to="/" />
-                        }
-                    }}
-                />
-                <Route path="/news/new" render={(props) => {
-                    if (this.isAuthenticated()) {
-                        return <NewsForm {...props}
-                        addNews={this.addNews} />
-                    } else {
-                        return <Redirect to="/" />
-                    }
-                    }} />
-                            <Route
+                         <Route
           exact
           path="/events"
           render={props => {
@@ -370,9 +348,32 @@ class ApplicationViews extends Component {
             }
           }}
         />
+        <Route exact path="/news" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <NewsList {...props} news={this.state.news} deleteNews={this.deleteNews} />;
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                }}
+                />
+                <Route path="/news/new" render={(props) => {
+                    if (this.isAuthenticated()) {
+                        //route for add news form
+                        return <NewsForm {...props} addNews={this.addNews} />
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                }} />
+                <Route path="/news/:articleId(\d+)/edit" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <NewsEditForm {...props} editNews={this.editNews} />
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                }}
+                />
             </>
         );
     }
 }
-
 export default withRouter(ApplicationViews);
