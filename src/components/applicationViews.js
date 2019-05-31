@@ -315,7 +315,9 @@ class ApplicationViews extends Component {
                         <MessageContainer
                             messages={this.state.messages}
                             {...props}
-                            deleteTask={this.deleteTask}
+                            deleteMessage={this.deleteMessage}
+                            addMessage={this.addMessage}
+                            updateMessage={this.updateMessage}
                         />
                     );
                 }}
