@@ -159,17 +159,6 @@ class ApplicationViews extends Component {
             });
     };
 
-    updateUser = (editedUser) => {
-        const newState = {};
-        Users.editUser(editedUser)
-            .then(() => Users.getAllUsers())
-            .then(Users => newState.Users = Users)
-            .then(() => {
-                this.props.history.push("/users")
-                this.setState(newState)
-            });
-    };
-
   updateUser = editedUser => {
     const newState = {};
     Users.editUser(editedUser)
