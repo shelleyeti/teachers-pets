@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import './navbar.css'
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -17,7 +18,13 @@ export default class Example extends React.Component {
       collapsed: !this.state.collapsed
     });
   }
+
   render() {
+    // Handles Log Out onClick
+    let clearUser = () => {
+      sessionStorage.clear("credentials")
+    }
+
     return (
       <div>
         <Navbar color="faded" light>
@@ -42,6 +49,9 @@ export default class Example extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink href="/tasks/">Tasks</NavLink>
+              </NavItem>
+              <NavItem id="logout-item">
+                <NavLink id="logout-link" onClick={clearUser} href="/">Logout</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

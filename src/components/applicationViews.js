@@ -40,6 +40,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   addMessage = message => {
     const newState = {};
     return Messages.postMessage(message)
@@ -52,6 +53,7 @@ class ApplicationViews extends Component {
         return chatMessages;
       });
   };
+
   updateMessage = editedMessageObject => {
     const newState = {};
     Messages.editMessage(editedMessageObject)
@@ -62,6 +64,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   deleteEvents = id => {
     const newState = {};
     Events.deleteEvent(id)
@@ -72,6 +75,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   addEvents = event => {
     const newState = {};
     return Events.postEvent(event)
@@ -84,6 +88,7 @@ class ApplicationViews extends Component {
         return events;
       });
   };
+
   updateEvents = editedEventObject => {
     const newState = {};
     Events.editEvent(editedEventObject)
@@ -94,6 +99,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   deleteTasks = id => {
     const newState = {};
     Tasks.deleteTask(id)
@@ -104,6 +110,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   addTasks = task => {
     const newState = {};
     return Tasks.postTask(task)
@@ -116,6 +123,7 @@ class ApplicationViews extends Component {
         return tasks;
       });
   };
+
   updateTasks = editedEventObject => {
     const newState = {};
     Tasks.editTask(editedEventObject)
@@ -136,6 +144,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   addUser = event => {
     const newState = {};
     return Users.postUser(event)
@@ -148,6 +157,7 @@ class ApplicationViews extends Component {
         return users;
       });
   };
+
   updateUser = editedUser => {
     const newState = {};
     Users.editUser(editedUser)
@@ -158,16 +168,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
-  updateUser = editedUser => {
-    const newState = {};
-    Users.editUser(editedUser)
-      .then(() => Users.getAllUsers())
-      .then(Users => (newState.Users = Users))
-      .then(() => {
-        this.props.history.push("/users");
-        this.setState(newState);
-      });
-  };
+
   deleteNews = id => {
     const newState = {};
     News.deleteNews(id)
@@ -178,6 +179,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   addNews = article => {
     const newState = {};
     return News.postNews(article)
@@ -189,6 +191,7 @@ class ApplicationViews extends Component {
         return article;
       });
   };
+  
   editNews = editedArticle => {
     const newState = {};
     News.editNews(editedArticle)
@@ -199,6 +202,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   deleteFriends = id => {
     const newState = {};
     Friends.deleteFriend(id)
@@ -209,6 +213,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   addFriends = friend => {
     const newState = {};
     return Friends.postFriend(friend)
@@ -221,6 +226,7 @@ class ApplicationViews extends Component {
         return friends;
       });
   };
+
   editFriends = editedFriend => {
     const newState = {};
     Friends.editFriend(editedFriend)
@@ -231,6 +237,7 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
+
   componentDidMount() {
     const newState = {};
     Events.getAllEvents()
@@ -299,25 +306,6 @@ class ApplicationViews extends Component {
             }
           }}
         />
-
-        <Route
-          exact
-          path="/tasks"
-          render={props => {
-            if (this.isAuthenticated()) {
-              return (
-                <TaskApp
-                  initItems={this.state.tasks}
-                  addTask={this.addTasks}
-                  deleteTask={this.deleteTasks}
-                  markDone={this.updateTasks}
-                />
-              );
-            } else {
-              return <Redirect to="/" />;
-            }
-          }}
-        />
         <Route
           exact
           path="/messages"
@@ -336,7 +324,6 @@ class ApplicationViews extends Component {
             }
           }}
         />
-
         <Route
           exact
           path="/events"
@@ -403,6 +390,42 @@ class ApplicationViews extends Component {
             }
           }}
         />
+        <Route
+          exact
+          path="/tasks"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <TaskApp
+                  initItems={this.state.tasks}
+                  addTask={this.addTasks}
+                  // TaskModal={TaskModal}
+                  deleteTask={this.deleteTasks}
+                  markDone={this.updateTasks}
+                  editTask={this.updateTasks}
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+
+        {/* Combine with Messages in ONE ROUTE */}
+        {/* <Route exact path="/friends" render={(props) => {
+                if (this.isAuthenticated()) {
+                    return <FriendsList
+                        {...props}
+                        user={this.state.users}
+                        friend={this.state.friends}
+                        addFriend={this.addFriends}
+                        deleteFriend={this.deleteFriends}
+                        editFriend={this.editFriends}
+                    />
+                } else {
+                    return <Redirect to="/" />
+                }
+            }} /> */}
       </>
     );
   }
