@@ -138,19 +138,9 @@
       "friendId": 2
     },
     {
-      "id": 3,
-      "currentUserId": 1,
-      "friendId": 3
-    },
-    {
       "id": 4,
       "currentUserId": 1,
       "friendId": 4
-    },
-    {
-      "id": 5,
-      "currentUserId": 1,
-      "friendId": 5
     },
     {
       "id": 6,

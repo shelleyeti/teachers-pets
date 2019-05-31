@@ -108,7 +108,7 @@ class TodoListItem extends React.Component {
       <li className="list-group-item ">
         <div className={todoClass}>
           <span aria-hidden="true" onClick={this.onClickDone}><FaCheck/></span>
-          { (this.state.editName ? (<div className="input-div"><input type="text" onKeyUp={this.changeBody} defaultValue={this.props.item.body} /> 
+          { (this.state.editName ? (<div className="input-div"><input type="text" onKeyUp={this.changeBody} defaultValue={this.props.item.body} autoFocus/> 
            <button className="editTaskItem" onClick={this.updateItem}><FaCheckCircle/></button></div>)
            : this.props.item.body )}
           <button type="button" className="close" id="close" onClick={this.onClickClose}><FaTimes/></button>

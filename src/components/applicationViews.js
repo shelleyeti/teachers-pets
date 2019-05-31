@@ -155,10 +155,13 @@ class ApplicationViews extends Component {
                 return users;
             });
     };
+
+    //SEE NOTE
     updateUser = (editedUser) => {
         const newState = {};
         Users.editUser(editedUser)
             .then(() => Users.getAllUsers())
+            //newState.users <= users refers to state
             .then(Users => newState.Users = Users)
             .then(() => {
                 this.props.history.push("/users")
@@ -205,7 +208,7 @@ class ApplicationViews extends Component {
         const newState = {};
         Friends.deleteFriend(id)
             .then(Friends.getAllFriends)
-            .then(friends => (newState.news = friends))
+            .then(friends => (newState.friends = friends))
             .then(() => {
                 this.props.history.push("/friends");
                 this.setState(newState);
@@ -216,7 +219,7 @@ class ApplicationViews extends Component {
         const newState = {};
         return Friends.postFriend(friend)
             .then(friends => Friends.getAllFriends())
-            .then(friends => (newState.news = friends))
+            .then(friends => (newState.friends = friends))
             .then(friend => {
                 this.props.history.push("/friends");
                 this.setState(newState);
@@ -229,7 +232,7 @@ class ApplicationViews extends Component {
         const newState = {};
         Friends.editFriend(editedFriend)
             .then(() => Friends.getAllFriends())
-            .then(friends => (newState.news = friends))
+            .then(friends => (newState.friends = friends))
             .then(() => {
                 this.props.history.push("/friends");
                 this.setState(newState);

@@ -11,7 +11,7 @@ class FriendsListItem extends Component {
 
     handleClickDelete = (event) => {
         this.props.deleteFriend(this.props.friend.id);
-        this.props.history.push("/friends");
+        this.props.history.push("/friends")
     }
 
     render() {
