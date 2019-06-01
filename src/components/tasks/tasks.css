@@ -51,8 +51,24 @@
 .input-div {
   display: inline;
 }
-
-.task-section:last-child li {
+/*
+.task-section:last-child li > div:not(.done) {
   font-style: italic;
   font-weight: bold;
+}
+*/
+.task-lastUndone{
+  font-style: italic;
+  font-weight: bold;
+}
+
+.edit-check {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
 }

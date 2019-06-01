@@ -65,16 +65,16 @@ class ApplicationViews extends Component {
             });
     };
 
-  deleteEvents = id => {
-    const newState = {};
-    Events.deleteEvent(id)
-      .then(Events.getAllEvents)
-      .then(events => (newState.events = events))
-      .then(() => {
-        this.props.history.push("/events");
-        this.setState(newState);
-      });
-  };
+    deleteEvents = id => {
+        const newState = {};
+        Events.deleteEvent(id)
+            .then(Events.getAllEvents)
+            .then(events => (newState.events = events))
+            .then(() => {
+                this.props.history.push("/events");
+                this.setState(newState);
+            });
+    };
 
     addEvents = event => {
         const newState = {};
@@ -89,27 +89,27 @@ class ApplicationViews extends Component {
             });
     };
 
-  updateEvents = editedEventObject => {
-    const newState = {};
-    Events.editEvent(editedEventObject)
-      .then(() => Events.getAllEvents())
-      .then(events => (newState.events = events))
-      .then(() => {
-        this.props.history.push("/events");
-        this.setState(newState);
-      });
-  };
+    updateEvents = editedEventObject => {
+        const newState = {};
+        Events.editEvent(editedEventObject)
+            .then(() => Events.getAllEvents())
+            .then(events => (newState.events = events))
+            .then(() => {
+                this.props.history.push("/events");
+                this.setState(newState);
+            });
+    };
 
-  deleteTasks = id => {
-    const newState = {};
-    Tasks.deleteTask(id)
-      .then(Tasks.getAllTasks)
-      .then(tasks => (newState.tasks = tasks))
-      .then(() => {
-        this.props.history.push("/tasks");
-        this.setState(newState);
-      });
-  };
+    deleteTasks = id => {
+        const newState = {};
+        Tasks.deleteTask(id)
+            .then(Tasks.getAllTasks)
+            .then(tasks => (newState.tasks = tasks))
+            .then(() => {
+                this.props.history.push("/tasks");
+                this.setState(newState);
+            });
+    };
 
     addTasks = task => {
         const newState = {};
@@ -124,27 +124,27 @@ class ApplicationViews extends Component {
             });
     };
 
-  updateTasks = editedEventObject => {
-    const newState = {};
-    Tasks.editTask(editedEventObject)
-      .then(() => Tasks.getAllTasks())
-      .then(tasks => (newState.tasks = tasks))
-      .then(() => {
-        this.props.history.push("/tasks");
-        this.setState(newState);
-      });
-  };
+    updateTasks = editedEventObject => {
+        const newState = {};
+        Tasks.editTask(editedEventObject)
+            .then(() => Tasks.getAllTasks())
+            .then(tasks => (newState.tasks = tasks))
+            .then(() => {
+                this.props.history.push("/tasks");
+                this.setState(newState);
+            });
+    };
 
-  deleteUser = id => {
-    const newState = {};
-    Users.deleteUser(id)
-      .then(Users.getAllUsers)
-      .then(allUsers => (newState.users = allUsers))
-      .then(() => {
-        this.props.history.push("/users");
-        this.setState(newState);
-      });
-  };
+    deleteUser = id => {
+        const newState = {};
+        Users.deleteUser(id)
+            .then(Users.getAllUsers)
+            .then(allUsers => (newState.users = allUsers))
+            .then(() => {
+                this.props.history.push("/users");
+                this.setState(newState);
+            });
+    };
 
     addUser = event => {
         const newState = {};
@@ -159,50 +159,50 @@ class ApplicationViews extends Component {
             });
     };
 
-  updateUser = editedUser => {
-    const newState = {};
-    Users.editUser(editedUser)
-      .then(() => Users.getAllUsers())
-      .then(Users => (newState.Users = Users))
-      .then(() => {
-        this.props.history.push("/users");
-        this.setState(newState);
-      });
-  };
+    updateUser = editedUser => {
+        const newState = {};
+        Users.editUser(editedUser)
+            .then(() => Users.getAllUsers())
+            .then(Users => (newState.Users = Users))
+            .then(() => {
+                this.props.history.push("/users");
+                this.setState(newState);
+            });
+    };
 
-  deleteNews = id => {
-    const newState = {};
-    News.deleteNews(id)
-      .then(News.getAllNews)
-      .then(articles => (newState.news = articles))
-      .then(() => {
-        this.props.history.push("/news");
-        this.setState(newState);
-      });
-  };
+    deleteNews = id => {
+        const newState = {};
+        News.deleteNews(id)
+            .then(News.getAllNews)
+            .then(articles => (newState.news = articles))
+            .then(() => {
+                this.props.history.push("/news");
+                this.setState(newState);
+            });
+    };
 
-  addNews = article => {
-    const newState = {};
-    return News.postNews(article)
-      .then(() => News.getAllNews())
-      .then(articles => (newState.news = articles))
-      .then(article => {
-        this.props.history.push("/news");
-        this.setState(newState);
-        return article;
-      });
-  };
+    addNews = article => {
+        const newState = {};
+        return News.postNews(article)
+            .then(() => News.getAllNews())
+            .then(articles => (newState.news = articles))
+            .then(article => {
+                this.props.history.push("/news");
+                this.setState(newState);
+                return article;
+            });
+    };
 
-  editNews = editedArticle => {
-    const newState = {};
-    News.editNews(editedArticle)
-      .then(() => News.getAllNews())
-      .then(articles => (newState.news = articles))
-      .then(() => {
-        this.props.history.push("/news");
-        this.setState(newState);
-      });
-  };
+    editNews = editedArticle => {
+        const newState = {};
+        News.editNews(editedArticle)
+            .then(() => News.getAllNews())
+            .then(articles => (newState.news = articles))
+            .then(() => {
+                this.props.history.push("/news");
+                this.setState(newState);
+            });
+    };
 
     deleteFriends = id => {
         const newState = {};
@@ -251,9 +251,9 @@ class ApplicationViews extends Component {
             .then(() =>
                 this.setState(newState))
     };
-    
+
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
-       
+
     render() {
         return (
             <>
@@ -262,21 +262,22 @@ class ApplicationViews extends Component {
                         addUser={this.addUser} />
                 }} />
                 <Route path="/login" render={(props) => {
-                return <LogIn setUser={this.props.setUser} {...props}  /> }}
+                    return <LogIn setUser={this.props.setUser} {...props} />
+                }}
                 />
                 <Route exact path="/dashboard" render={props => {
                     if (this.isAuthenticated()) {
                         return <Dashboard {...props}
-                        activeUser={this.props.activeUser}
-                        tasks={this.state.tasks}
-                        events={this.state.events}
-                        news={this.state.news}
-                        friends={this.state.friends}
-                        messages={this.state.messages} />
+                            activeUser={this.props.activeUser}
+                            tasks={this.state.tasks}
+                            events={this.state.events}
+                            news={this.state.news}
+                            friends={this.state.friends}
+                            messages={this.state.messages} />
                     } else {
                         return <Redirect to="/" />
                     }
-                 }} />
+                }} />
                 <Route exact path="/messages" render={props => {
                     if (this.isAuthenticated()) {
                         return (

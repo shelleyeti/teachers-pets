@@ -1,7 +1,7 @@
 import React from 'react';
 import TaskModal from './taskModal'
 import './tasks.css'
-import { FaTimes } from 'react-icons/fa';
+import { FaTrashAlt } from 'react-icons/fa';
 import { FaCheck } from 'react-icons/fa';
 import { FaEdit } from 'react-icons/fa';
 import { FaPlus } from 'react-icons/fa';
@@ -24,11 +24,19 @@ TodoApp
 
 class TodoList extends React.Component {
   render () {
-    var items = this.props.items.map((item, index) => {
+    let lastUndoneItemLst = this.props.items.filter((item) =>{
+      if(item.complete === false)
+        return item;
+    });
+
+    let lastUndoneItem = lastUndoneItemLst[lastUndoneItemLst.length-1];
+
+    let items = this.props.items.map((item, index) => {
+      let isLastUndoneItem = false;
+      if(lastUndoneItem != null && item.id === lastUndoneItem.id)
+          isLastUndoneItem = true;
       return (
-        <TodoListItem key={index} item={item} index={index} editTask={this.props.editTask} removeItem={this.props.removeItem} markTodoDone={this.props.markTodoDone} />
-        // ,
-        // <TodoEditForm />
+        <TodoListItem key={index} isLastUnDone={isLastUndoneItem} item={item} index={index} editTask={this.props.editTask} removeItem={this.props.removeItem} markTodoDone={this.props.markTodoDone} />
       );
     });
     return (
@@ -89,7 +97,7 @@ class TodoListItem extends React.Component {
     if(this.state.editName) {
       return (<div className="input-div">
         <input type="text" onKeyUp={this.changeBody} defaultValue={this.props.item.body} autoFocus/> 
-        <button className="editTaskItem" onClick={this.updateItem}><FaCheckCircle/></button>
+        <span className="edit-check" onClick={this.updateItem}><FaCheckCircle/></span>
       </div>)
     }else{
       return this.props.item.body 
@@ -112,14 +120,16 @@ class TodoListItem extends React.Component {
     let todoClass = this.props.item.complete ? 
         "done" : "undone";
 
+    let liClasses = this.props.isLastUnDone ? "list-group-item task-lastUndone" : "list-group-item";
+
     return(
       <section className="task-section">
       <TaskModal header={"Delete Task?"} toggleModal={this.state.modalShow} handleClickYes={this.handleClickedDeleteYes} handleClickNo={this.handleClickedNo}/>          
-        <li className="list-group-item ">
+        <li className={liClasses}>
           <div className={todoClass}>
             <span aria-hidden="true" onClick={this.onClickDone}><FaCheck/></span>
             { this.displayConditions() }
-            <button type="button" className="close" id="close" onClick={this.onClickClose}><FaTimes/></button>
+            <button type="button" className="close" id="close" onClick={this.onClickClose}><FaTrashAlt/></button>
             <button type="button" className="close" id="edit" onClick={this.onClickEdit}><FaEdit/></button>
           </div>
         </li> 

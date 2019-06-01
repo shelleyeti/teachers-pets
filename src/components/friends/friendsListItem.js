@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { withRouter } from 'react-router'
 import './friends.css'
 import { FaUserPlus } from 'react-icons/fa';
@@ -9,10 +9,10 @@ class FriendsListItem extends Component {
     //     friends:[]
     // }
     handleDisplayCondition = () => {
-        if(this.props.isFriend) {
-            return <span className="remove-friend" onClick={this.handleClickDelete}><FaUserTimes/></span>
-        }else{
-            return <span className="add-friend" onClick={this.handleClickAdd}><FaUserPlus/></span>
+        if (this.props.isFriend) {
+            return <span className="remove-friend" onClick={this.handleClickDelete}><FaUserTimes /></span>
+        } else {
+            return <span className="add-friend" onClick={this.handleClickAdd}><FaUserPlus /></span>
         }
     }
 
@@ -33,7 +33,7 @@ class FriendsListItem extends Component {
         return (
             <div>
                 <h3>@{this.props.user.firstName}</h3>
-                { this.handleDisplayCondition() }
+                {this.handleDisplayCondition()}
             </div>
         )
     }

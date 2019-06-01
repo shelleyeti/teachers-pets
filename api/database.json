@@ -111,27 +111,6 @@
       "id": 6,
       "currentUserId": 2,
       "friendId": 6
-    },
-    {
-      "currentUserId": 1,
-      "id": 7
-    },
-    {
-      "currentUserId": 1,
-      "id": 8
-    },
-    {
-      "currentUserId": 1,
-      "id": 9
-    },
-    {
-      "currentUserId": 1,
-      "id": 10
-    },
-    {
-      "currentUserId": 1,
-      "friendId": 4,
-      "id": 12
     }
   ],
   "news": [
