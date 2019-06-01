@@ -5,9 +5,7 @@ import { FaUserPlus } from 'react-icons/fa';
 import { FaUserTimes } from 'react-icons/fa';
 
 class FriendsListItem extends Component {
-    // state = {
-    //     friends:[]
-    // }
+
     handleDisplayCondition = () => {
         if (this.props.isFriend) {
             return <span className="remove-friend" onClick={this.handleClickDelete}><FaUserTimes /></span>
