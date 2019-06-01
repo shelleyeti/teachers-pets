@@ -16,15 +16,20 @@ class FriendsList extends Component {
                         let foundFriend = false;
                         let friendObj = {};
                         this.props.friend.forEach(friend => {
-                            //make sure friend of current user logged in - inside this if user.id == friend.currentUserId &&
-                            if(friend.friendId === item.id){
+                            if(this.props.activeUser.id === friend.currentUserId && friend.friendId === item.id){
                                 foundFriend = true;
                                 friendObj = friend;
                             }
                         })
                         
-                        return <FriendsListItem key={item.id} user={item} //{...this.props}
-                            deleteFriend={this.props.deleteFriend} isFriend={foundFriend} friend={friendObj} />
+                        return <FriendsListItem 
+                            key={item.id} 
+                            user={item} 
+                            activeUser={this.props.activeUser}
+                            addFriend={this.props.addFriend}
+                            deleteFriend={this.props.deleteFriend} 
+                            isFriend={foundFriend} 
+                            friend={friendObj} />
                     })
                 }
                 </div>

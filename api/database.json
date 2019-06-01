@@ -14,47 +14,23 @@
       "userName": "emily@climbnashville.com",
       "password": "KbGFTdcPwExhb6U",
       "email": "emily@climbnashville.com",
-      "id": 16
+      "id": 2
     },
     {
-      "id": 3,
-      "firstName": "Ellie",
-      "lastName": "Ash",
-      "userName": "ellie-ash",
-      "email": "ellie.ash@mymail.com",
-      "password": "123456"
-    },
-    {
-      "id": 4,
-      "firstName": "Heather",
-      "lastName": "Cleland",
-      "userName": "heather-cleland",
-      "email": "i-love-dogs@mymail.com",
-      "password": "123456"
-    },
-    {
-      "firstName": "tester",
-      "lastName": "lastname",
-      "userName": "1234SH",
-      "email": "shell@DSG.COM",
-      "password": "123456",
-      "id": 5
-    },
-    {
-      "firstName": "Sister",
-      "lastName": "Last",
-      "userName": "username1",
+      "firstName": "Cerin",
+      "lastName": "StreeDog",
+      "userName": "cerin-streetdog",
       "email": "email@email.com",
       "password": "123456",
-      "id": 6
+      "id": 3
     },
     {
-      "firstName": "hood",
-      "lastName": "hood",
-      "userName": "hood",
+      "firstName": "Cavy",
+      "lastName": "Dog",
+      "userName": "cavy-dog",
       "email": "hood@hood.com",
       "password": "123456",
-      "id": 7
+      "id": 4
     },
     {
       "firstName": "Eliot",
@@ -62,23 +38,7 @@
       "userName": "dEliotC",
       "email": "newnew@new.com",
       "password": "123456",
-      "id": 8
-    },
-    {
-      "firstName": "Corey",
-      "lastName": "Arnold",
-      "userName": "corey-arnold",
-      "email": "corey@corey.com",
-      "password": "123456",
-      "id": 9
-    },
-    {
-      "firstName": "Arnold",
-      "lastName": "Arnold",
-      "userName": "arnold-arnold",
-      "email": "arnold@arnold.com",
-      "password": "123456",
-      "id": 10
+      "id": 5
     },
     {
       "firstName": "Addam",
@@ -86,7 +46,7 @@
       "userName": "MaddaJoor",
       "email": "12345@12345.com",
       "password": "123456",
-      "id": 11
+      "id": 6
     }
   ],
   "messages": [
@@ -124,20 +84,6 @@
       "userId": "1",
       "dateTime": "5/31/2019, 9:06:16 AM",
       "id": 7
-    },
-    {
-      "body": "ok",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/31/2019, 11:46:07 AM",
-      "id": 8
-    },
-    {
-      "body": "ok",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/31/2019, 11:46:10 AM",
-      "id": 9
     }
   ],
   "friends": [
@@ -152,9 +98,40 @@
       "friendId": 2
     },
     {
-      "id": 6,
+      "id": 3,
       "currentUserId": 1,
+      "friendId": 3
+    },
+    {
+      "id": 4,
+      "currentUserId": 2,
+      "friendId": 4
+    },
+    {
+      "id": 6,
+      "currentUserId": 2,
       "friendId": 6
+    },
+    {
+      "currentUserId": 1,
+      "id": 7
+    },
+    {
+      "currentUserId": 1,
+      "id": 8
+    },
+    {
+      "currentUserId": 1,
+      "id": 9
+    },
+    {
+      "currentUserId": 1,
+      "id": 10
+    },
+    {
+      "currentUserId": 1,
+      "friendId": 4,
+      "id": 12
     }
   ],
   "news": [
@@ -222,20 +199,6 @@
   ],
   "tasks": [
     {
-      "id": 2,
-      "userId": 2,
-      "body": "Beat up ShElLeY",
-      "complete": false,
-      "dueDate": "5/17/19"
-    },
-    {
-      "body": "Adopt Eliot",
-      "dueDate": "end of the week",
-      "complete": false,
-      "userId": 2,
-      "id": 4
-    },
-    {
       "body": "Build the sister wife compound",
       "dueDate": "right now",
       "complete": false,
@@ -259,6 +222,12 @@
       "body": "Do a thing",
       "complete": false,
       "id": 8
+    },
+    {
+      "userId": 1,
+      "body": "Adopt Eliot",
+      "complete": false,
+      "id": 9
     }
   ],
   "events": [

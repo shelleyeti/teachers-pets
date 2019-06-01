@@ -51,3 +51,8 @@
 .input-div {
   display: inline;
 }
+
+.task-section:last-child li {
+  font-style: italic;
+  font-weight: bold;
+}

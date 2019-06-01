@@ -80,9 +80,19 @@ class TodoListItem extends React.Component {
   changeBody(e){
     this.setState({editName: this.state.editName, body: e.target.value, modalShow: false
     })
-
     if(e.keyCode === 13){
         this.updateItem();
+    }
+  }
+
+  displayConditions = () => {
+    if(this.state.editName) {
+      return (<div className="input-div">
+        <input type="text" onKeyUp={this.changeBody} defaultValue={this.props.item.body} autoFocus/> 
+        <button className="editTaskItem" onClick={this.updateItem}><FaCheckCircle/></button>
+      </div>)
+    }else{
+      return this.props.item.body 
     }
   }
 
@@ -99,22 +109,20 @@ class TodoListItem extends React.Component {
   }
 
   render () {
-    var todoClass = this.props.item.complete ? 
+    let todoClass = this.props.item.complete ? 
         "done" : "undone";
+
     return(
-      <section>
-      <TaskModal header={"Delete Task?"} toggleModal={this.state.modalShow} handleClickYes={this.handleClickedDeleteYes} handleClickNo={this.handleClickedNo}/>
-                
-      <li className="list-group-item ">
-        <div className={todoClass}>
-          <span aria-hidden="true" onClick={this.onClickDone}><FaCheck/></span>
-          { (this.state.editName ? (<div className="input-div"><input type="text" onKeyUp={this.changeBody} defaultValue={this.props.item.body} autoFocus/> 
-           <button className="editTaskItem" onClick={this.updateItem}><FaCheckCircle/></button></div>)
-           : this.props.item.body )}
-          <button type="button" className="close" id="close" onClick={this.onClickClose}><FaTimes/></button>
-          <button type="button" className="close" id="edit" onClick={this.onClickEdit}><FaEdit/></button>
-        </div>
-      </li> 
+      <section className="task-section">
+      <TaskModal header={"Delete Task?"} toggleModal={this.state.modalShow} handleClickYes={this.handleClickedDeleteYes} handleClickNo={this.handleClickedNo}/>          
+        <li className="list-group-item ">
+          <div className={todoClass}>
+            <span aria-hidden="true" onClick={this.onClickDone}><FaCheck/></span>
+            { this.displayConditions() }
+            <button type="button" className="close" id="close" onClick={this.onClickClose}><FaTimes/></button>
+            <button type="button" className="close" id="edit" onClick={this.onClickEdit}><FaEdit/></button>
+          </div>
+        </li> 
       </section>    
     );
   }
@@ -165,7 +173,7 @@ export default class TodoApp extends React.Component {
   }
   addItem(todoItem) {
     let newItem = {
-      userId: 1,
+      userId: this.props.activeUser,
       body:  todoItem.newItemValue,
       complete: false
     };

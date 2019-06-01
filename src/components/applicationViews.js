@@ -217,7 +217,7 @@ class ApplicationViews extends Component {
 
     addFriends = friend => {
         const newState = {};
-        return Friends.postFriend(friend)
+        return Friends.addFriend(friend)
             .then(() => Friends.getAllFriends())
             .then(friends => (newState.friends = friends))
             .then(friends => {
@@ -277,53 +277,45 @@ class ApplicationViews extends Component {
                         return <Redirect to="/" />
                     }
                  }} />
-                <Route
-                    exact
-                    path="/messages"
-                    render={props => {
-                        if (this.isAuthenticated()) {
-                            return (
-                                <MessageContainer
-                                    messages={this.state.messages}
-                                    {...props}
-                                    deleteMessage={this.deleteMessage}
-                                    addMessage={this.addMessage}
-                                />
-                            );
-                        } else {
-                            return <Redirect to="/" />
-                        }
-                    }}
+                <Route exact path="/messages" render={props => {
+                    if (this.isAuthenticated()) {
+                        return (
+                            <MessageContainer
+                                messages={this.state.messages}
+                                {...props}
+                                deleteMessage={this.deleteMessage}
+                                addMessage={this.addMessage}
+                            />
+                        );
+                    } else {
+                        return <Redirect to="/" />
+                    }
+                }}
                 />
-                         <Route
-          exact
-          path="/events"
-          render={props => {
-            if (this.isAuthenticated()) {
-              return (
-                <EventList
-                  {...props}
-                  events={this.state.events}
-                  deleteEvents={this.deleteEvents}
+                <Route exact path="/events" render={props => {
+                    if (this.isAuthenticated()) {
+                        return (
+                            <EventList
+                                {...props}
+                                events={this.state.events}
+                                deleteEvents={this.deleteEvents}
+                            />
+                        );
+                    } else {
+                        return <Redirect to="/" />;
+                    }
+                }}
                 />
-              );
-            } else {
-              return <Redirect to="/" />;
-            }
-          }}
-        />
-        <Route
-          path="/events/new"
-          render={props => {
-            if (this.isAuthenticated()) {
-              //route for add events form
-              return <EventForm {...props} addEvent={this.addEvents} />;
-            } else {
-              return <Redirect to="/" />;
-            }
-          }}
-        />
-        <Route exact path="/news" render={props => {
+                <Route path="/events/new" render={props => {
+                    if (this.isAuthenticated()) {
+                        //route for add events form
+                        return <EventForm {...props} addEvent={this.addEvents} />;
+                    } else {
+                        return <Redirect to="/" />;
+                    }
+                }}
+                />
+                <Route exact path="/news" render={props => {
                     if (this.isAuthenticated()) {
                         return <NewsList {...props} news={this.state.news} deleteNews={this.deleteNews} />;
                     } else {
@@ -350,6 +342,7 @@ class ApplicationViews extends Component {
                 <Route exact path="/tasks" render={(props) => {
                     if (this.isAuthenticated()) {
                         return <TaskApp
+                            activeUser={this.props.activeUser}
                             initItems={this.state.tasks}
                             addTask={this.addTasks}
                             TaskModal={TaskModal}
@@ -366,6 +359,7 @@ class ApplicationViews extends Component {
                     if (this.isAuthenticated()) {
                         return <FriendsList
                             {...props}
+                            activeUser={this.props.activeUser}
                             user={this.state.users}
                             friend={this.state.friends}
                             addFriend={this.addFriends}
