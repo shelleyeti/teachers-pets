@@ -10,7 +10,7 @@ export default class TodoForm extends Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        var newItemValue = this.refs.itemName.value;
+        const newItemValue = this.refs.itemName.value;
 
         if (newItemValue) {
             this.props.addItem({ newItemValue });
