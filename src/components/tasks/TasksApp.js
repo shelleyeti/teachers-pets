@@ -16,7 +16,7 @@ TodoApp
 */
 
 class TodoHeader extends Component {
-  render() {
+  render () {
     return <h1>Todo list</h1>;
   }
 }
@@ -50,12 +50,12 @@ export default class TodoApp extends Component {
     this.props.editTask(item);
   }
 
-  render() {
+  render () {
     return (
       <div id="main">
         <TodoHeader />
-        <TodoList items={this.props.initItems} removeItem={this.removeItem} editTask={this.editTaskItem} markTodoDone={this.markTodoDone} />
-        <TodoForm addItem={this.addItem} />
+        <TodoList items={ this.props.initItems } removeItem={ this.removeItem } editTask={ this.editTaskItem } markTodoDone={ this.markTodoDone } />
+        <TodoForm addItem={ this.addItem } />
       </div>
     );
   }

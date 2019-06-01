@@ -1,13 +1,27 @@
 .remove-friend {
     color: red;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .add-friend {
     color: green;
-    font-size: 30px;
+    font-size: 25px;
 }
 
-.friends-list {
+.friend-option{
     display: inline;
+}
+
+/* friends and messages list */
+
+.messages-friends{
+    display:flex; 
+    flex-direction:row;
+}
+
+.friends-column {
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+    margin-left: 15px;
 }

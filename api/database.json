@@ -86,33 +86,7 @@
       "id": 7
     }
   ],
-  "friends": [
-    {
-      "id": 1,
-      "currentUserId": 1,
-      "friendId": 1
-    },
-    {
-      "id": 2,
-      "currentUserId": 1,
-      "friendId": 2
-    },
-    {
-      "id": 3,
-      "currentUserId": 1,
-      "friendId": 3
-    },
-    {
-      "id": 4,
-      "currentUserId": 2,
-      "friendId": 4
-    },
-    {
-      "id": 6,
-      "currentUserId": 2,
-      "friendId": 6
-    }
-  ],
+  "friends": [],
   "news": [
     {
       "title": "cjehfjefhc",

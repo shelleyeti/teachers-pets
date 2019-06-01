@@ -42,6 +42,9 @@
     margin: 15px;
 }
 
+.messagesSection {
+    width: 100%;
+}
 /* .messageInput {
     margin: 10px;
     display: flex;
