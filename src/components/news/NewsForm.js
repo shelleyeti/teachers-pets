@@ -14,9 +14,11 @@ export default class NewsForm extends Component {
 
   // Set initial state
   state = {
+    activeUser: "",
     title: "",
     synopsis: "",
     url: "",
+    imgurl: "",
     dateTime: ""
   };
 
@@ -35,9 +37,11 @@ export default class NewsForm extends Component {
     let formattedTime = formatTime.toLocaleString("en-US", { hour12: true });
 
     const article = {
+      userId: this.props.activeUser.firstName,
       title: this.state.title,
       synopsis: this.state.synopsis,
       url: this.state.url,
+      imgurl: this.state.imgurl,
       dateTime: formattedTime
     }
 
@@ -77,6 +81,16 @@ export default class NewsForm extends Component {
             <Input type="text"
               required
               id="url"
+              onChange={ this.handleFieldChange } />
+          </InputGroup>
+
+          <InputGroup className="m-2">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>img url</InputGroupText>
+            </InputGroupAddon>
+            <Input type="text"
+              required
+              id="imgurl"
               onChange={ this.handleFieldChange } />
           </InputGroup>
 

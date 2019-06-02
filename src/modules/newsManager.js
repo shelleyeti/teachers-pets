@@ -5,7 +5,7 @@ export default {
     return fetch(`${remoteURL}/news/${id}`).then(e => e.json())
   },
   getAllNews () {
-    return fetch(`${remoteURL}/news`).then(e => e.json())
+    return fetch(`${remoteURL}/news?_sort=id&_order=desc`).then(e => e.json())
   },
   deleteNews (id) {
     return fetch(`${remoteURL}/news/${id}`, {
