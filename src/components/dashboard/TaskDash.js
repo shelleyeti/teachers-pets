@@ -6,9 +6,7 @@ export default class TaskDash extends Component {
     // arr.slice(Math.max(arr.length - 5, 1))
 
     render () {
-        // {
-        //     this.props.tasks.slice(Math.max(tasks.length - 5, 1))
-        // }
+
         return(
             <div>
                 <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
