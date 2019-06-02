@@ -3,7 +3,7 @@ import MessageList from "./messagesList";
 import MessageInput from "./input";
 import "./messages.css";
 
-export default class MessagesContainer extends React.Component {
+export default class MessagesContainer extends Component {
   render() {
     return (
       <section className="messagesSection">

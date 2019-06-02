@@ -20,6 +20,7 @@ import EventForm from './events/eventForm'
 import EventList from './events/eventsList'
 import NewsEditForm from './news/NewsEditForm'
 import MessagesFriendsContainer from './friends/messagesFriendsContainer'
+import ProfileContainer from './users/profileContainer';
 
 class ApplicationViews extends Component {
   state = {
@@ -167,6 +168,19 @@ class ApplicationViews extends Component {
       .then(Users => (newState.Users = Users))
       .then(() => {
         this.props.history.push("/users");
+        this.setState(newState);
+      });
+  };
+
+  updateUserSettings = editedUser => {
+    const newState = {};
+    Users.editUser(editedUser)
+      .then(() => Users.getAllUsers())
+      .then(Users => (newState.Users = Users))
+      .then(() => {
+        //calls from setUser from App.js
+        this.props.setUser(editedUser);
+        this.props.history.push("/settings");
         this.setState(newState);
       });
   };
@@ -371,6 +385,16 @@ class ApplicationViews extends Component {
               messages={ this.state.messages }
               deleteMessage={ this.deleteMessage }
               addMessage={ this.addMessage }
+            />
+          } else {
+            return <Redirect to="/" />
+          }
+        } } />
+        <Route exact path="/settings" render={ (props) => {
+          if (this.isAuthenticated()) {
+            return <ProfileContainer
+              activeUser={ this.props.activeUser }
+              editUser={ this.updateUserSettings }
             />
           } else {
             return <Redirect to="/" />
