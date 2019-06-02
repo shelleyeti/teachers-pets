@@ -1,0 +1,12 @@
+.dash-card {
+    margin: .7em;
+}
+
+.dash-nav-item {
+    width: 50%;
+}
+
+.dash-nav-item:hover {
+    cursor: pointer;
+    font-weight: bold;
+}

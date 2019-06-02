@@ -5,6 +5,7 @@ import TaskDash from './TaskDash'
 import EventsDash from './EventsDash'
 import NewsDash from './NewsDash'
 import MessageDash from './MessageDash'
+import './Dashboard.css'
 
 
 export default class DashBody extends Component {
@@ -24,11 +25,16 @@ export default class DashBody extends Component {
           });
         }
       }
+
+      
       render() {
+        let reversed = this.props.events.reverse()
+        // console.log(reversed)
+
         return (
           <div>
         <Nav tabs>
-          <NavItem>
+          <NavItem className="dash-nav-item">
             <NavLink
               className={classnames({ active: this.state.activeTab === '1' })}
               onClick={() => { this.toggle('1'); }}
@@ -36,7 +42,7 @@ export default class DashBody extends Component {
               Events
             </NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem className="dash-nav-item">
             <NavLink
               className={classnames({ active: this.state.activeTab === '2' })}
               onClick={() => { this.toggle('2'); }}
@@ -44,7 +50,7 @@ export default class DashBody extends Component {
               Tasks 
             </NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem className="dash-nav-item">
             <NavLink
               className={classnames({ active: this.state.activeTab === '3' })}
               onClick={() => { this.toggle('3'); }}
@@ -52,7 +58,7 @@ export default class DashBody extends Component {
               News
             </NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem className="dash-nav-item">
             <NavLink
               className={classnames({ active: this.state.activeTab === '4' })}
               onClick={() => { this.toggle('4'); }}
@@ -86,7 +92,6 @@ export default class DashBody extends Component {
               </Col>
             </Row>
           </TabPane>
-        </TabContent>
         <TabPane tabId="4">
             <Row>
               <Col sm="12">
@@ -95,6 +100,7 @@ export default class DashBody extends Component {
               </Col>
             </Row>
           </TabPane>
+        </TabContent>
           </div>
         );
       }

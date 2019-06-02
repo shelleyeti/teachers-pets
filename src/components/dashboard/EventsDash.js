@@ -1,27 +1,43 @@
 import React, { Component } from 'react'
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
+import { Card, CardTitle, CardText } from 'reactstrap';
+import './Dashboard.css'
 
 export default class EventsDash extends Component {
 
-    // arr.slice(Math.max(arr.length - 5, 1))
+    constructor(props) {
+        super(props);
+    }
+    
+user = {
+    activeId: this.props.activeUser.id,
+}
+// check if this was a message
+// if it was, show something different based on that boolean
+// isMessages = (generic) => {
+//     return checkIfIGotMessageContent(generic)
+// }
 
     render () {
-        // {
-        //     this.props.tasks.slice(Math.max(tasks.length - 5, 1))
-        // }
+    // let titleArray = []
+    let reversed = this.props.events.reverse()
+    // titleArray.push(reversed[0].title)
+    // console.log(titleArray)
+    console.log("reversed array:", reversed)
+
         return(
             <div>
-                <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardTitle></CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 </Card>
-                <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardTitle>Special Title Treatment</CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 </Card>
-                <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardTitle>Special Title Treatment</CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                {/* isMessages() ? <differentContent> :  "" */}
                 </Card>
             </div>
         )

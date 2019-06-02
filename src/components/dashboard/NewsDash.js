@@ -11,15 +11,15 @@ export default class NewsDash extends Component {
         // }
         return(
             <div>
-                <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardTitle></CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 </Card>
-                <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardTitle>Special Title Treatment</CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 </Card>
-                <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                 <CardTitle>Special Title Treatment</CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 </Card>
