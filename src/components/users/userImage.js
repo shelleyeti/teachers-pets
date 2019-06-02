@@ -3,7 +3,7 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody, Container
 } from 'reactstrap'
-import "./profile.css"
+import './profile.css'
 
 export default class UserImage extends Component {
   state = {
@@ -23,9 +23,9 @@ export default class UserImage extends Component {
     } else {
       //edit mode false
       return <div>
-        <Card>
+        <Container>
           <img src={ this.props.activeUser.userImage } alt="user profile" className="user-image" />
-        </Card>
+        </Container>
       </div>
 
     }

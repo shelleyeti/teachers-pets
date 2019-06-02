@@ -3,7 +3,7 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody, Container
 } from 'reactstrap'
-import "./profile.css"
+import './profile.css'
 
 export default class InputSettings extends Component {
   state = {

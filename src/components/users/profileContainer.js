@@ -62,11 +62,9 @@ export default class ProfileContainer extends Component {
 
   render () {
     return (
-      <Container className="profile-section">
-        <div>
-          <h1>Weclome back { this.props.activeUser.firstName } { this.props.activeUser.lastName }</h1>
-        </div>
-        <div className="user-image">
+      <Container className="profile-container">
+        <h1>Weclome back { this.props.activeUser.firstName } { this.props.activeUser.lastName }</h1>
+        <div className="image-section">
           <UserImage { ...this.props }
             editMode={ this.state.editMode }
             activeUser={ this.props.activeUser }
