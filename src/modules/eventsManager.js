@@ -1,13 +1,13 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-  getEvent(id) {
+  getEvent (id) {
     return fetch(`${remoteURL}/events/${id}`).then(e => e.json())
   },
-  getAllEvents() {
+  getAllEvents () {
     return fetch(`${remoteURL}/events`).then(e => e.json())
   },
-  deleteEvent(id) {
+  deleteEvent (id) {
     return fetch(`${remoteURL}/events/${id}`, {
       method: "DELETE",
       headers: {
@@ -15,7 +15,7 @@ export default {
       }
     }).then(e => e.json())
   },
-  postEvent(obj) {
+  postEvent (obj) {
     return fetch(`${remoteURL}/events`, {
       method: "POST",
       headers: {
@@ -24,7 +24,7 @@ export default {
       body: JSON.stringify(obj)
     }).then(e => e.json())
   },
-  editEvent(editedEvent) {
+  editEvent (editedEvent) {
     return fetch(`${remoteURL}/events/${editedEvent.id}`, {
       method: "PATCH",
       headers: {

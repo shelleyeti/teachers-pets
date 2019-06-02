@@ -9,14 +9,14 @@ import './news.css'
 
 
 class NewsList extends Component {
-  render() {
+  render () {
     return (
       <Container className="News">
         <Container className="AddNewsButton">
           <Button type="button" className="btn btn-outline-success"
-            onClick={() => {
+            onClick={ () => {
               this.props.history.push("/news/new");
-            }}
+            } }
           >
             Add Article
             </Button>
@@ -25,8 +25,8 @@ class NewsList extends Component {
         <CardColumns className="">
           {
             this.props.news.map(item => {
-              return <NewsItem key={item.id} article={item} {...this.props}
-                deleteNews={this.props.deleteNews} />
+              return <NewsItem key={ item.id } article={ item } { ...this.props }
+                deleteNews={ this.props.deleteNews } />
             })
           }
         </CardColumns>

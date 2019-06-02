@@ -24,7 +24,7 @@ class NewsItem extends Component {
     })
   }
 
-  render() {
+  render () {
     return (
       // <div className="cardtask-card d-inline-flex col-md-2">
       //   <div className="card-body">
@@ -56,21 +56,21 @@ class NewsItem extends Component {
       //   </div>
       // </div >
       <Card className="NewsItem">
-        {/* <CardImg top width="100%" src="" alt="Card image cap" /> */}
+        {/* <CardImg top width="100%" src="" alt="Card image cap" /> */ }
         <CardBody>
-          <CardTitle>{this.props.article.title}</CardTitle>
-          <CardText>{this.props.article.synopsis}</CardText>
-          <a className="nav-link" href={`${this.props.article.url}`} target="_blank" rel="noopener noreferrer" >Link to Article</a>
+          <CardTitle>{ this.props.article.title }</CardTitle>
+          <CardText>{ this.props.article.synopsis }</CardText>
+          <a className="nav-link" href={ `${this.props.article.url}` } target="_blank" rel="noopener noreferrer" >Link to Article</a>
           <ButtonGroup className="btn-group ml-1" size="sm">
             <Button
               className="btn btn-outline-success"
-              onClick={() => {
+              onClick={ () => {
                 this.props.history.push(`/news/${this.props.article.id}/edit`);
-              }}>
+              } }>
               Edit</Button>
             <Button
               className="btn btn-outline-danger"
-              onClick={this.handleClickDelete}>
+              onClick={ this.handleClickDelete }>
               Delete</Button>
           </ButtonGroup>
         </CardBody>

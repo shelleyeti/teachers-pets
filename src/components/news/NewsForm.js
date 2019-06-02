@@ -44,7 +44,7 @@ export default class NewsForm extends Component {
     this.props.addNews(article);
   }
 
-  render() {
+  render () {
     return (
       <React.Fragment>
         <h1>Add Article</h1>
@@ -56,7 +56,7 @@ export default class NewsForm extends Component {
             <Input type="text"
               required
               id="title"
-              onChange={this.handleFieldChange}
+              onChange={ this.handleFieldChange }
             />
           </InputGroup>
 
@@ -67,7 +67,7 @@ export default class NewsForm extends Component {
             <Input type="text"
               required
               id="synopsis"
-              onChange={this.handleFieldChange} />
+              onChange={ this.handleFieldChange } />
           </InputGroup>
 
           <InputGroup className="m-2">
@@ -77,11 +77,11 @@ export default class NewsForm extends Component {
             <Input type="text"
               required
               id="url"
-              onChange={this.handleFieldChange} />
+              onChange={ this.handleFieldChange } />
           </InputGroup>
 
-          {/* //* maybe a checkbox that asks if youd like to favorite it and some sort of designation in your own news list? */}
-          <Button className="btn btn-outline-primary" size="sm" onClick={this.constructNewNews}>Submit</Button>
+          {/* //* maybe a checkbox that asks if youd like to favorite it and some sort of designation in your own news list? */ }
+          <Button className="btn btn-outline-primary" size="sm" onClick={ this.constructNewNews }>Submit</Button>
         </Form>
       </React.Fragment >
     );

@@ -15,32 +15,32 @@ class MessageItem extends Component {
     this.props.deleteMessage(this.props.message.id);
   };
 
-  render() {
+  render () {
     return (
       <div>
         <div className="cardBody">
           <div className="card-body">
             <p>
-              {this.props.message.userName}: {this.props.message.body}
+              { this.props.message.userName }: { this.props.message.body }
             </p>
-            <p>{this.props.message.dateTime}</p>
+            <p>{ this.props.message.dateTime }</p>
           </div>
           <div>
             <button
               type="button"
               className="btn btn-outline-primary btn-sm"
-              onClick={() => {
+              onClick={ () => {
                 this.props.history.push(
                   `/messages/${this.props.message.id}/edit`
                 );
-              }}
+              } }
             >
               <FaEdit />
             </button>
             <button
               className="btn btn-outline-danger btn-sm"
-              disabled={this.state.saveDisabled}
-              onClick={this.handleClickDelete}
+              disabled={ this.state.saveDisabled }
+              onClick={ this.handleClickDelete }
             >
               <FaTrashAlt />
             </button>

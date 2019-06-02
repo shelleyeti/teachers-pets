@@ -1,13 +1,13 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-  getMessage(id) {
+  getMessage (id) {
     return fetch(`${remoteURL}/messages/${id}`).then(e => e.json())
   },
-  getAllMessages() {
+  getAllMessages () {
     return fetch(`${remoteURL}/messages`).then(e => e.json())
   },
-  deleteMessage(id) {
+  deleteMessage (id) {
     return fetch(`${remoteURL}/messages/${id}`, {
       method: "DELETE",
       headers: {
@@ -15,7 +15,7 @@ export default {
       }
     }).then(e => e.json())
   },
-  postMessage(obj) {
+  postMessage (obj) {
     return fetch(`${remoteURL}/messages`, {
       method: "POST",
       headers: {
@@ -24,7 +24,7 @@ export default {
       body: JSON.stringify(obj)
     }).then(e => e.json())
   },
-  editMessage(editedMessage) {
+  editMessage (editedMessage) {
     return fetch(`${remoteURL}/messages/${editedMessage.id}`, {
       method: "PUT",
       headers: {

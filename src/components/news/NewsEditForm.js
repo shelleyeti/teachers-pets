@@ -20,7 +20,7 @@ export default class NewsEditFrom extends Component {
   }
 
 
-  componentDidMount() {
+  componentDidMount () {
     NewsManager.getNews(this.props.match.params.articleId)
       .then(article => {
         console.log(article);
@@ -53,7 +53,7 @@ export default class NewsEditFrom extends Component {
 
 
 
-  render() {
+  render () {
     return (
       <React.Fragment>
         <h1>Edit Article</h1>
@@ -65,8 +65,8 @@ export default class NewsEditFrom extends Component {
             <Input type="text"
               required
               id="title"
-              value={this.state.title}
-              onChange={this.handleFieldChange}
+              value={ this.state.title }
+              onChange={ this.handleFieldChange }
             />
           </InputGroup>
 
@@ -77,8 +77,8 @@ export default class NewsEditFrom extends Component {
             <Input type="text"
               required
               id="synopsis"
-              value={this.state.synopsis}
-              onChange={this.handleFieldChange} />
+              value={ this.state.synopsis }
+              onChange={ this.handleFieldChange } />
           </InputGroup>
 
           <InputGroup className="m-2">
@@ -88,11 +88,11 @@ export default class NewsEditFrom extends Component {
             <Input type="text"
               required
               id="url"
-              value={this.state.url}
-              onChange={this.handleFieldChange} />
+              value={ this.state.url }
+              onChange={ this.handleFieldChange } />
           </InputGroup>
 
-          <Button className="btn btn-outline-primary" size="sm" onClick={this.updateArticle}>Change It</Button>
+          <Button className="btn btn-outline-primary" size="sm" onClick={ this.updateArticle }>Change It</Button>
         </Form>
       </React.Fragment >
     );
