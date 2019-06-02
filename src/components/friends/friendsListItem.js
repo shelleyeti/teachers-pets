@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router'
 import './friends.css'
 import { FaUserPlus } from 'react-icons/fa';
-import { FaUserTimes } from 'react-icons/fa';
+import { FaUserTimes } from 'react-icons/fa'
+import NoImage from './no-profile-image.png'
 
 class FriendsListItem extends Component {
 
@@ -11,6 +12,14 @@ class FriendsListItem extends Component {
 			return <span className="remove-friend" onClick={ this.handleClickDelete }><FaUserTimes /></span>
 		} else {
 			return <span className="add-friend" onClick={ this.handleClickAdd }><FaUserPlus /></span>
+		}
+	}
+
+	handleImage = () => {
+		if (this.props.user.userImage != null) {
+			return <img src={ this.props.user.userImage } alt="user profile" className="user-image-friends" />
+		} else {
+			return <img src={ NoImage } alt="user profile" className="user-image-friends" />
 		}
 	}
 
@@ -29,8 +38,8 @@ class FriendsListItem extends Component {
 
 	render () {
 		return (
-			<div>
-				<h3 className="friend-option">@{ this.props.user.firstName }</h3>
+			<div className="user-card">
+				<h3 className="friend-option"> { this.handleImage() } @{ this.props.user.firstName }</h3>
 				{ this.handleDisplayCondition() }
 			</div>
 		)
