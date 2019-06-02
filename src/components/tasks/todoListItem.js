@@ -79,7 +79,7 @@ export default class TodoListItem extends Component {
         <TaskModal header={ "Delete Task?" } toggleModal={ this.state.modalShow } handleClickYes={ this.handleClickedDeleteYes } handleClickNo={ this.handleClickedNo } />
         <li className={ liClasses }>
           <div className={ todoClass }>
-            <span aria-hidden="true" onClick={ this.onClickDone }><FaCheck /></span>
+            <span aria-hidden="true" className="check-to-complete" onClick={ this.onClickDone }><FaCheck /></span>
             { this.displayConditions() }
             <button type="button" className="close" id="close" onClick={ this.onClickClose }><FaTrashAlt /></button>
             <button type="button" className="close" id="edit" onClick={ this.onClickEdit }><FaEdit /></button>

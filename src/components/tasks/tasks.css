@@ -23,13 +23,13 @@
     margin-left: 80px;
   }
   
-  .done {
-    color: red;
+  .done, #close {
+    color: #dc3545;
     text-decoration: line-through;
   }
   
-  .undone {
-    color: #61DAFB;
+  .undone, .add-task, .edit-check, #edit{
+    color: #007bff;
   }
   
   .icon {
@@ -68,7 +68,10 @@
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
-  color: #000;
   text-shadow: 0 1px 0 #fff;
   opacity: .5;
+}
+
+.check-to-complete {
+  cursor: pointer;
 }

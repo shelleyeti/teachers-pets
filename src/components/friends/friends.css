@@ -1,10 +1,10 @@
 .remove-friend {
-    color: red;
+    color: #dc3545;
     font-size: 25px;
 }
 
 .add-friend {
-    color: green;
+    color: #007bff;
     font-size: 25px;
 }
 

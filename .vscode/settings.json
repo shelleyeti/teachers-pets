@@ -1,0 +1,5 @@
+{
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "editor.tabSize": 2
+}

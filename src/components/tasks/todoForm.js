@@ -23,7 +23,7 @@ export default class TodoForm extends Component {
 			<form ref="form" onSubmit={ this.onSubmit } className="form-inline form-todo-container">
 				<div className="input-form-todo">
 					<input type="text" ref="itemName" className="form-control" placeholder="add a new todo..." />
-					<button type="submit" className="btn btn-default"><FaPlus /></button>
+					<button type="submit" className="btn btn-default add-task"><FaPlus /></button>
 				</div>
 			</form>
 		);
