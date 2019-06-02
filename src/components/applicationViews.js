@@ -20,7 +20,7 @@ import EventForm from './events/eventForm'
 import EventList from './events/eventsList'
 import NewsEditForm from './news/NewsEditForm'
 import MessagesFriendsContainer from './friends/messagesFriendsContainer'
-import ProfileContainer from './users/profileContainer';
+import ProfileContainer from './users/profileContainer'
 
 class ApplicationViews extends Component {
   state = {
@@ -274,7 +274,10 @@ class ApplicationViews extends Component {
       <>
         <Route exact path="/" render={ (props) => {
           return <SignIn
-            addUser={ this.addUser } />
+            addUser={ this.addUser }
+            setUser={ this.props.setUser }
+            activeUser={ this.props.activeUser }
+          />
         } } />
         <Route path="/login" render={ (props) => {
           return <LogIn setUser={ this.props.setUser } { ...props } />
@@ -333,7 +336,9 @@ class ApplicationViews extends Component {
         />
         <Route exact path="/news" render={ props => {
           if (this.isAuthenticated()) {
-            return <NewsList { ...props } news={ this.state.news } deleteNews={ this.deleteNews } />;
+            return <NewsList { ...props } news={ this.state.news } deleteNews={ this.deleteNews }
+              activeUser={ this.props.activeUser }
+            />;
           } else {
             return <Redirect to="/" />
           }
@@ -342,14 +347,14 @@ class ApplicationViews extends Component {
         <Route path="/news/new" render={ (props) => {
           if (this.isAuthenticated()) {
             //route for add news form
-            return <NewsForm { ...props } addNews={ this.addNews } />
+            return <NewsForm { ...props } addNews={ this.addNews } activeUser={ this.props.activeUser } />
           } else {
             return <Redirect to="/" />
           }
         } } />
         <Route path="/news/:articleId(\d+)/edit" render={ props => {
           if (this.isAuthenticated()) {
-            return <NewsEditForm { ...props } editNews={ this.editNews } />
+            return <NewsEditForm { ...props } editNews={ this.editNews } activeUser={ this.props.activeUser } />
           } else {
             return <Redirect to="/" />
           }
@@ -357,9 +362,13 @@ class ApplicationViews extends Component {
         />
         <Route exact path="/tasks" render={ (props) => {
           if (this.isAuthenticated()) {
+            let filteredData = this.state.tasks.filter((task) => {
+              if (task.userId === this.props.activeUser.id)
+                return task;
+            });
             return <TaskApp
               activeUser={ this.props.activeUser }
-              initItems={ this.state.tasks }
+              initItems={ filteredData }
               addTask={ this.addTasks }
               TaskModal={ TaskModal }
               deleteTask={ this.deleteTasks }

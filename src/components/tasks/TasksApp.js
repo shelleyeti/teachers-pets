@@ -30,7 +30,7 @@ export default class TodoApp extends Component {
 
   addItem = (todoItem) => {
     let newItem = {
-      userId: this.props.activeUser,
+      userId: this.props.activeUser.id,
       body: todoItem.newItemValue,
       complete: false
     };
@@ -54,7 +54,7 @@ export default class TodoApp extends Component {
     return (
       <div id="main">
         <TodoHeader />
-        <TodoList items={ this.props.initItems } removeItem={ this.removeItem } editTask={ this.editTaskItem } markTodoDone={ this.markTodoDone } />
+        <TodoList items={ this.props.initItems } removeItem={ this.removeItem } editTask={ this.editTaskItem } markTodoDone={ this.markTodoDone } activeUser={ this.props.activeUser } />
         <TodoForm addItem={ this.addItem } />
       </div>
     );
