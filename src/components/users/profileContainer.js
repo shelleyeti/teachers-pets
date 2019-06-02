@@ -9,7 +9,8 @@ import "./profile.css"
 
 export default class ProfileContainer extends Component {
   state = {
-    editMode: false
+    editMode: false,
+    editModeImage: false
   }
 
   handleEditState = () => {
@@ -20,7 +21,7 @@ export default class ProfileContainer extends Component {
 
   handleEditImage = () => {
     this.setState(
-      { editMode: true }
+      { editModeImage: true }
     )
   }
 
@@ -36,7 +37,7 @@ export default class ProfileContainer extends Component {
       userImage: userImage
     })
     this.setState(
-      { editMode: false }
+      { editModeImage: false }
     )
   }
 
@@ -66,11 +67,11 @@ export default class ProfileContainer extends Component {
         <h1>Weclome back { this.props.activeUser.firstName } { this.props.activeUser.lastName }</h1>
         <div className="image-section">
           <UserImage { ...this.props }
-            editMode={ this.state.editMode }
+            editMode={ this.state.editModeImage }
             activeUser={ this.props.activeUser }
             editUser={ this.props.updateUser }
           />
-          { this.state.editMode ? <button onClick={ this.handleSaveImage }>Save Image</button> : <button onClick={ this.handleEditImage }>Edit Image</button> }
+          { this.state.editModeImage ? <button onClick={ this.handleSaveImage }>Save Image</button> : <button onClick={ this.handleEditImage }>Edit Image</button> }
         </div>
         <div className="input-fields-section">
           <InputSettings  { ...this.props }
