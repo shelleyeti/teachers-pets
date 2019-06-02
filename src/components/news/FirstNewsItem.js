@@ -4,10 +4,8 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody, ButtonGroup
 } from 'reactstrap';
-import { FaTrashAlt } from 'react-icons/fa'
-import { FaEdit } from 'react-icons/fa'
 
-class NewsItem extends Component {
+class FirstNewsItem extends Component {
 
   state = {
     saveDisabled: false
@@ -57,7 +55,7 @@ class NewsItem extends Component {
       //     </div>
       //   </div>
       // </div >
-      <Card className="NewsItem">
+      <Card Card body inverse color="info">
         <CardImg top width="100%" src={this.props.article.imgurl} />
         <CardBody>
           <CardTitle>{this.props.article.title}</CardTitle>
@@ -66,15 +64,15 @@ class NewsItem extends Component {
           <a className="nav-link" href={`${this.props.article.url}`} target="_blank" rel="noopener noreferrer" >Link to Article</a>
           <ButtonGroup className="btn-group ml-1" size="sm">
             <Button
-              className="btn btn-outline-primary"
+              className="btn btn-outline-success"
               onClick={() => {
                 this.props.history.push(`/news/${this.props.article.id}/edit`);
               }}>
-              <FaEdit /></Button>
+              Edit</Button>
             <Button
               className="btn btn-outline-danger"
               onClick={this.handleClickDelete}>
-              <FaTrashAlt /></Button>
+              Delete</Button>
           </ButtonGroup>
         </CardBody>
       </Card>
@@ -83,4 +81,4 @@ class NewsItem extends Component {
   }
 }
 
-export default NewsItem
+export default FirstNewsItem

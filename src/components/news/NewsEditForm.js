@@ -7,10 +7,11 @@ import NewsManager from '../../modules/newsManager'
 export default class NewsEditFrom extends Component {
 
   state = {
+    userId: "",
     title: "",
     synopsis: "",
     url: "",
-    dateTime: ""
+    imgurl: ""
   }
 
   handleFieldChange = evt => {
@@ -25,26 +26,25 @@ export default class NewsEditFrom extends Component {
       .then(article => {
         console.log(article);
         this.setState({
+          userId: this.props.activeUser.firstName,
           title: article.title,
           synopsis: article.synopsis,
           url: article.url,
-          dateTime: article.dateTime
+          imgurl: article.imgurl
         });
       });
   }
 
-  updateArticle = evt => {
 
-    let today = new Date();
-    let formatTime = new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds());
-    let formattedTime = formatTime.toLocaleString("en-US", { hour12: true });
+  updateArticle = evt => {
 
     const article = {
       id: this.props.match.params.articleId,
+      userId: this.state.userId,
       title: this.state.title,
       synopsis: this.state.synopsis,
       url: this.state.url,
-      dateTime: formattedTime
+      imgurl: this.state.imgurl
     }
 
     this.props.editNews(article);
@@ -89,6 +89,16 @@ export default class NewsEditFrom extends Component {
               required
               id="url"
               value={this.state.url}
+              onChange={this.handleFieldChange} />
+          </InputGroup>
+
+          <InputGroup className="m-2">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>image url</InputGroupText>
+            </InputGroupAddon>
+            <Input type="text"
+              required
+              id="imgurl"
               onChange={this.handleFieldChange} />
           </InputGroup>
 

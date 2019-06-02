@@ -117,10 +117,10 @@ class ApplicationViews extends Component {
     const newState = {};
     return Tasks.postTask(task)
       .then(() => Tasks.getAllTasks())
-      .then(tasks => (newState.tasks = tasks))
-      .then(tasks => {
-        this.props.history.push("/tasks");
-        this.setState(newState);
+      .then(tasks => newState.tasks = tasks)
+      .then((tasks) => {
+        this.props.history.push("/tasks")
+        this.setState(newState)
         //return tasks so it can be used in the form
         return tasks;
       });
@@ -452,23 +452,7 @@ class ApplicationViews extends Component {
             }
           }}
         />
-
-        {/* Combine with Messages in ONE ROUTE */}
-        {/* <Route exact path="/friends" render={(props) => {
-                if (this.isAuthenticated()) {
-                    return <FriendsList
-                        {...props}
-                        user={this.state.users}
-                        friend={this.state.friends}
-                        addFriend={this.addFriends}
-                        deleteFriend={this.deleteFriends}
-                        editFriend={this.editFriends}
-                    />
-                } else {
-                    return <Redirect to="/" />
-                }
-            }} /> */}
-      </>
+        </>  
     );
   }
 }
