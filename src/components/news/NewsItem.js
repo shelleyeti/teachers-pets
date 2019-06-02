@@ -4,6 +4,8 @@ import {
   Card, Button, CardImg, CardTitle, CardText, CardColumns,
   CardSubtitle, CardBody, ButtonGroup
 } from 'reactstrap';
+import { FaTrashAlt } from 'react-icons/fa'
+import { FaEdit } from 'react-icons/fa'
 
 class NewsItem extends Component {
 
@@ -64,15 +66,15 @@ class NewsItem extends Component {
           <a className="nav-link" href={`${this.props.article.url}`} target="_blank" rel="noopener noreferrer" >Link to Article</a>
           <ButtonGroup className="btn-group ml-1" size="sm">
             <Button
-              className="btn btn-outline-success"
+              className="btn btn-outline-primary"
               onClick={() => {
                 this.props.history.push(`/news/${this.props.article.id}/edit`);
               }}>
-              Edit</Button>
+              <FaEdit /></Button>
             <Button
               className="btn btn-outline-danger"
               onClick={this.handleClickDelete}>
-              Delete</Button>
+              <FaTrashAlt /></Button>
           </ButtonGroup>
         </CardBody>
       </Card>

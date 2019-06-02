@@ -22,7 +22,7 @@ class NewsList extends Component {
     return (
       <Container className="News">
         <Container className="AddNewsButton">
-          <Button type="button" className="btn btn-outline-success"
+          <Button type="button" className="btn btn-outline-primary"
             onClick={() => {
               this.props.history.push("/news/new");
             }}
