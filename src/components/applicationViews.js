@@ -19,6 +19,8 @@ import FriendsList from "./friends/friendsList";
 import EventForm from "./events/eventForm";
 import EventList from "./events/eventsList";
 import NewsEditForm from "./news/NewsEditForm";
+import EventEditForm from "./events/eventEditForm";
+import MessageEditForm from "./messages/messageEditForm"
 
 class ApplicationViews extends Component {
   state = {
@@ -58,7 +60,7 @@ class ApplicationViews extends Component {
     const newState = {};
     Messages.editMessage(editedMessageObject)
       .then(() => Messages.getAllMessages())
-      .then(chatMessages => (newState.chatMessages = chatMessages))
+      .then(chatMessages => (newState.messages = chatMessages))
       .then(() => {
         this.props.history.push("/messages");
         this.setState(newState);
@@ -315,8 +317,25 @@ class ApplicationViews extends Component {
                 <MessageContainer
                   messages={this.state.messages}
                   {...props}
+                  activeUser={this.props.activeUser}
                   deleteMessage={this.deleteMessage}
                   addMessage={this.addMessage}
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+        <Route
+          path="/messages/:messageId(\d+)/edit"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <MessageEditForm
+                  {...props}
+                  activeUser={this.props.activeUser}
+                  editMessage={this.updateMessage}
                 />
               );
             } else {
@@ -333,6 +352,7 @@ class ApplicationViews extends Component {
                 <EventList
                   {...props}
                   events={this.state.events}
+                  activeUser={this.props.activeUser}
                   deleteEvents={this.deleteEvents}
                 />
               );
@@ -346,7 +366,29 @@ class ApplicationViews extends Component {
           render={props => {
             if (this.isAuthenticated()) {
               //route for add events form
-              return <EventForm {...props} addEvent={this.addEvents} />;
+              return (
+                <EventForm
+                  {...props}
+                  activeUser={this.props.activeUser}
+                  addEvent={this.addEvents}
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+        <Route
+          path="/events/:eventId(\d+)/edit"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <EventEditForm
+                  {...props}
+                  activeUser={this.props.activeUser}
+                  editEvent={this.updateEvents}
+                />
+              );
             } else {
               return <Redirect to="/" />;
             }

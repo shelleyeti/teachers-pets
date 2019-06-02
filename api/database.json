@@ -99,39 +99,44 @@
     {
       "firstName": "Addam",
       "lastName": "Joor",
-      "userName": "addam.joor@outlook.com",
+      "userName": "addam.joor",
       "password": "123456",
+      "email": "addam.joor@outlook.com",
       "id": 17
+    },
+    {
+      "firstName": "William",
+      "lastName": "Rooj",
+      "userName": "william.rooj",
+      "password": "123456",
+      "email": "william.rooj@aol.com",
+      "id": 18
     }
   ],
   "messages": [
     {
-      "body": "This is the first chat message",
+      "id": 14,
+      "body": "Hello world! The edit functionality is working properly!!!",
       "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:26:52 PM",
-      "id": 1
+      "dateTime": "6/2/2019, 1:11:13 PM"
     },
     {
-      "body": "this is the second message",
+      "id": 15,
+      "body": "I can post a message, and edit it too!!!",
       "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:27:04 PM",
-      "id": 2
+      "dateTime": "6/2/2019, 3:57:28 PM"
     },
     {
-      "body": "This is the third message",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:29:20 PM",
-      "id": 3
+      "body": "new message",
+      "userName": "william.rooj",
+      "dateTime": "6/2/2019, 4:14:34 PM",
+      "id": 16
     },
     {
-      "body": "Hello World!",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:44:21 PM",
-      "id": 6
+      "body": "another message",
+      "userName": "william.rooj",
+      "dateTime": "6/2/2019, 4:14:43 PM",
+      "id": 17
     }
   ],
   "friends": [
@@ -209,69 +214,56 @@
   ],
   "tasks": [
     {
-      "id": 2,
-      "userId": 2,
-      "body": "Beat up ShElLeY",
-      "complete": false,
-      "dueDate": "5/17/19"
-    },
-    {
-      "body": "Adopt Eliot",
-      "dueDate": "end of the week",
-      "complete": false,
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "body": "Build the sister wife compound",
-      "dueDate": "right now",
-      "complete": false,
-      "userId": 1,
-      "id": 5
-    },
-    {
       "userId": 1,
       "body": "Work on stuff",
-      "complete": false,
+      "complete": true,
       "id": 6
     },
     {
       "userId": 1,
       "body": "Listen to the adults",
-      "complete": false,
+      "complete": true,
       "id": 7
     },
     {
       "userId": 1,
-      "body": "Do a thing",
+      "body": "Do a newer thing",
       "complete": false,
       "id": 8
     }
   ],
   "events": [
     {
-      "title": "Presentation Day",
-      "summary": "this is a new event",
-      "location": "NSS",
-      "date": "today",
-      "userName": "",
-      "id": 5
+      "title": "Checking active user  stays same",
+      "summary": "check",
+      "location": "home",
+      "date": "1991-11-02",
+      "userName": "addam.joor",
+      "id": 13
     },
     {
-      "title": "Hello World!",
-      "summary": "this is a new event",
-      "location": "Nashville Software School",
-      "date": "Monday, June 3, 2019",
-      "userName": "",
-      "id": 6
+      "title": "Checking userName2",
+      "summary": "check",
+      "location": "home",
+      "date": "3125-05-02",
+      "userName": "william.rooj",
+      "id": 14
     },
     {
-      "title": "We present monday!",
-      "summary": "this is a new event",
-      "location": "Nashville Software School",
-      "date": "today",
-      "userName": "",
-      "id": 7
+      "title": "this is addam.joor",
+      "summary": "mine",
+      "location": "home",
+      "date": "2019-06-01",
+      "userName": "addam.joor",
+      "id": 15
+    },
+    {
+      "title": "Sit with Addam",
+      "summary": "yay",
+      "location": "home",
+      "date": "2019-06-01",
+      "userName": "susan.figert",
+      "id": 16
     }
   ]
 }
