@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Container, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import TaskDash from './TaskDash'
 import EventsDash from './EventsDash'
@@ -47,7 +47,7 @@ export default class DashBody extends Component {
               className={classnames({ active: this.state.activeTab === '2' })}
               onClick={() => { this.toggle('2'); }}
             >
-              Tasks 
+              Tasks
             </NavLink>
           </NavItem>
           <NavItem className="dash-nav-item">
@@ -95,8 +95,8 @@ export default class DashBody extends Component {
         <TabPane tabId="4">
             <Row>
               <Col sm="12">
-              <MessageDash activeUser={this.props.activeUser}
-                    messages={this.props.messages} /> 
+                <MessageDash activeUser={this.props.activeUser}
+                  messages={this.props.messages} />
               </Col>
             </Row>
           </TabPane>

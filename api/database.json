@@ -33,6 +33,14 @@
       "password": "123456"
     },
     {
+      "firstName": "Emily",
+      "lastName": "Loggins",
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "emily@climbnashville.com",
+      "id": 30
+    },
+    {
       "firstName": "tester",
       "lastName": "lastname",
       "userName": "1234SH",
@@ -59,9 +67,9 @@
     {
       "firstName": "Eliot",
       "lastName": "Clarke",
-      "userName": "dEliotC",
-      "email": "newnew@new.com",
-      "password": "123456",
+      "userName": "YourBoy",
+      "email": "datboy@datboy.net",
+      "password": "password",
       "id": 8
     },
     {
@@ -186,20 +194,24 @@
       "title": "The Worms Win",
       "synopsis": "Worms Win World War III.",
       "url": "www.worldwidewormnews.worg",
-      "id": 5
+      "id": 5,
+      "userId": "Eliot",
+      "imgurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCrPcSRlzPJqKDtuMp6NdH9iLq8FbCfch8blnWPrGtNYYxR8hUA"
     },
     {
       "title": "Prison Dogs Voted Best",
       "synopsis": "Prison dogs were voted best breed by the entire world. It should've been obvious, but now it's recorded history.",
       "url": "www.dogstuffnews.org",
-      "id": 6
+      "id": 6,
+      "userId": "Shelley"
     },
     {
       "title": "Stay On Brand",
       "synopsis": "If you're not on brand are you even really living? The answer is exactly what you'd expect: No.",
       "url": "www.onthatbrandlife.com",
       "dateTime": "5/30/2019, 2:57:44 PM",
-      "id": 7
+      "id": 7,
+      "userId": "Emily"
     },
     {
       "title": "What Women Want...",
