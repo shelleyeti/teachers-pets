@@ -14,8 +14,8 @@ export default class TaskModal extends Component {
           </p>
         </ModalBody>
         <ModalFooter>
-          <Button onClick={ this.props.handleClickYes }>Yes</Button>
-          <Button onClick={ this.props.handleClickNo }>No</Button>
+          <Button outline color="primary" onClick={ this.props.handleClickYes }>Yes</Button>
+          <Button outline color="danger" onClick={ this.props.handleClickNo }>No</Button>
         </ModalFooter>
       </Modal>
     );
