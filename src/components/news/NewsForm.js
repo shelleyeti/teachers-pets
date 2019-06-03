@@ -37,7 +37,7 @@ export default class NewsForm extends Component {
     let formattedTime = formatTime.toLocaleString("en-US", { hour12: true });
 
     const article = {
-      userId: this.props.activeUser.firstName,
+      userId: this.props.activeUser.id,
       title: this.state.title,
       synopsis: this.state.synopsis,
       url: this.state.url,

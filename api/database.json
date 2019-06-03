@@ -104,7 +104,26 @@
     }
   ],
   "friends": [],
-  "news": [],
+  "news": [
+    {
+      "userId": "4",
+      "title": "Learning to Catch a Ball",
+      "synopsis": "Use your mouth to catch a ball",
+      "url": "www.gooddogs.com/balls",
+      "imgurl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjLw8r0gsziAhWiSt8KHcg5CKwQjRx6BAgBEAU&url=https%3A%2F%2Fwww.stopthatdog.com%2Fheres-best-dog-balls-top-picks%2F&psig=AOvVaw10m8T9Fw1guy-CnCvw2rci&ust=1559606984192425",
+      "dateTime": "6/2/2019, 7:09:56 PM",
+      "id": 1
+    },
+    {
+      "userId": 9,
+      "title": "Loving You Wife",
+      "synopsis": "How to appreciate the finer things about your ball and chain",
+      "url": "www.marriage.com",
+      "imgurl": "https://partycity6.scene7.com/is/image/PartyCity/_pdp_sq_?$_1000x1000_$&$product=PartyCity/41554",
+      "dateTime": "6/2/2019, 7:17:01 PM",
+      "id": 2
+    }
+  ],
   "tasks": [
     {
       "body": "Build the sister wife compound",
@@ -160,6 +179,18 @@
       "body": "love mommy",
       "complete": false,
       "id": 15
+    },
+    {
+      "userId": 9,
+      "body": "more tasks",
+      "complete": false,
+      "id": 18
+    },
+    {
+      "userId": 9,
+      "body": "corey",
+      "complete": false,
+      "id": 19
     }
   ],
   "events": [

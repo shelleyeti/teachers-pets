@@ -34,7 +34,7 @@ class NewsList extends Component {
         <CardColumns className="">
           {
             this.props.news.map(item => {
-              if (item.userId === this.props.activeUser.firstName) {
+              if (item.userId === this.props.activeUser.id) {
                 return (
                   <>
                     {/* <FirstNewsItem key={this.findFirst.id} article={this.findFirst} /> */ }
