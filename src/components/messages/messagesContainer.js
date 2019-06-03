@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import MessageList from "./messagesList";
 import MessageInput from "./input";
-import MessageEditModal from "./messageEditForm"
+// import MessageEditModal from "./messageEditForm"
 import "./messages.css";
 
 export default class MessagesContainer extends Component {
   render () {
     return (
       <section className="messagesSection">
+        <h1 className="chatHeader">Nutshell Chat</h1>
 
         {/* <MessageEditModal header={"Edit Task?"} toggleModal={this.state.modalShow} handleClickYes={this.handleClickedEdit} handleClickNo={this.handleClickedNo}/> */ }
 

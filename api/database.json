@@ -82,11 +82,10 @@
   ],
   "messages": [
     {
-      "body": "I hope this continues to work",
+      "id": 7,
+      "body": "I hope this continues to work.",
       "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/31/2019, 9:06:16 AM",
-      "id": 7
+      "dateTime": "5/31/2019, 9:06:16 AM"
     },
     {
       "id": 15,
@@ -273,14 +272,6 @@
     }
   ],
   "events": [
-    {
-      "title": "Checking active user  stays same",
-      "summary": "check",
-      "location": "home",
-      "date": "1991-11-02",
-      "userName": "addam.joor",
-      "id": 13
-    },
     {
       "title": "Checking userName2",
       "summary": "check",

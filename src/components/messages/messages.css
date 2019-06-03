@@ -1,14 +1,12 @@
 .messageContainer {
   border: 1px solid lightgrey;
-  width: 80%;
+  width: 90%;
   height: 750px;
   margin-left: 20px;
   border-radius: 20px;
   padding: 8px;
+  box-shadow: 5px 5px 5px black;
   overflow-y: scroll;
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -18,23 +16,34 @@
   width: 80%
 }
 
+.chatHeader {
+  margin: 20px 20px 16px 50px;
+}
+
+.userNameChat {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
 .cardBodyUser {
   border: 1px solid grey;
-  width: 60%;
+  width: 90%;
   height: auto;
   border-radius: 30px;
+  box-shadow: 2px 2px 2px black;
   padding: 10px;
   margin: 10px;
-  background-color: rgba(63, 255, 74, 0.5);
+  background-color: #dee2e6;
 }
 .cardBodyOther {
   border: 1px solid grey;
-  width: 60%;
+  width: 90%;
   height: auto;
   border-radius: 30px;
+  box-shadow: 2px 2px 2px black;
   padding: 10px;
   margin: 10px;
-  background-color: rgba(255, 63, 213, 0.548);
+  background-color: #007bffa2;
 }
 
 .messageSection {
@@ -61,7 +70,7 @@
 }
 
 .inputDiv {
-  width: 84%;
+  width: 90%;
   display: flex;
   margin-top: 15px;
 }
