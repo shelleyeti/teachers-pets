@@ -130,46 +130,54 @@
       "id": 1
     },
     {
-      "body": "this is the second message",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:27:04 PM",
-      "id": 2
+      "firstName": "Emily",
+      "lastName": "Loggins",
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "emily@climbnashville.com",
+      "id": 16
     },
     {
-      "body": "This is the third message",
+      "firstName": "Addam",
+      "lastName": "Joor",
       "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:29:20 PM",
-      "id": 3
+      "password": "123456",
+      "email": "addam.joor@outlook.com",
+      "id": 17
     },
     {
-      "body": "Hello World!",
+      "firstName": "William",
+      "lastName": "Rooj",
+      "userName": "william.rooj",
+      "password": "123456",
+      "email": "william.rooj@aol.com",
+      "id": 18
+    }
+  ],
+  "messages": [
+    {
+      "id": 14,
+      "body": "Hello world! The edit functionality is working properly!!!!!",
       "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:44:21 PM",
-      "id": 6
+      "dateTime": "6/2/2019, 1:11:13 PM"
     },
     {
-      "body": "I hope this continues to work",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/31/2019, 9:06:16 AM",
-      "id": 7
+      "body": "new message",
+      "userName": "william.rooj",
+      "dateTime": "6/2/2019, 4:14:34 PM",
+      "id": 16
     },
     {
-      "body": "ok",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/31/2019, 11:46:07 AM",
-      "id": 8
+      "body": "another message",
+      "userName": "william.rooj",
+      "dateTime": "6/2/2019, 4:14:43 PM",
+      "id": 17
     },
     {
-      "body": "ok",
+      "body": "chat is back up and running",
       "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/31/2019, 11:46:10 AM",
-      "id": 9
+      "dateTime": "6/2/2019, 7:06:02 PM",
+      "id": 18
     }
   ],
   "friends": [
@@ -191,11 +199,13 @@
   ],
   "news": [
     {
-      "title": "What Women Want...",
-      "synopsis": "Your blood. They want your blood. For Blood Sacrifice. And bath bombs.",
-      "url": "www.womensday.org",
-      "dateTime": "5/30/2019, 3:43:19 PM",
-      "id": 8
+      "userId": "Addam",
+      "title": "something trumpy",
+      "synopsis": "trump did something that makes people mad again",
+      "url": "https://www.bbc.com/news/world-us-canada-48491602",
+      "imgurl": "https://ichef.bbci.co.uk/news/660/cpsprodpb/ED9E/production/_107203806_trump_duchess_getty.jpg",
+      "dateTime": "6/2/2019, 7:13:28 PM",
+      "id": 1
     }
   ],
   "tasks": [
@@ -209,72 +219,54 @@
     {
       "userId": 1,
       "body": "Work on stuff",
-      "complete": false,
+      "complete": true,
       "id": 6
     },
     {
       "userId": 1,
       "body": "Listen to the adults",
-      "complete": false,
+      "complete": true,
       "id": 7
     },
     {
       "userId": 1,
-      "body": "Do a thing",
+      "body": "Do a newer thing",
       "complete": false,
       "id": 8
     }
   ],
   "events": [
     {
-      "title": "new event",
-      "summary": "this is a new event",
-      "location": "NSS",
-      "date": "today",
-      "userName": "",
-      "id": 4
+      "title": "Checking active user  stays same",
+      "summary": "check",
+      "location": "home",
+      "date": "1991-11-02",
+      "userName": "addam.joor",
+      "id": 13
     },
     {
-      "title": "Presentation Day",
-      "summary": "this is a new event",
-      "location": "NSS",
-      "date": "today",
-      "userName": "",
-      "id": 5
+      "title": "Checking userName2",
+      "summary": "check",
+      "location": "home",
+      "date": "3125-05-02",
+      "userName": "william.rooj",
+      "id": 14
     },
     {
-      "title": "Hello World!",
-      "summary": "this is a new event",
-      "location": "Nashville Software School",
-      "date": "Monday, June 3, 2019",
-      "userName": "",
-      "id": 6
+      "title": "this is addam.joor",
+      "summary": "mine",
+      "location": "home",
+      "date": "2019-06-01",
+      "userName": "addam.joor",
+      "id": 15
     },
     {
-      "title": "We present monday!",
-      "summary": "this is a new event",
-      "location": "Nashville Software School",
-      "date": "today",
-      "userName": "",
-      "id": 7
-    },
-    {
-      "title": "Emily's Event 1",
-      "summary": "this is a new event",
-      "location": "NSS",
-      "date": "today",
-      "userName": "",
-      "id": 2,
-      "userId": 16
-    },
-    {
-      "title": "Emily's Event 2",
-      "summary": "this is a new event",
-      "location": "NSS",
-      "date": "today",
-      "userName": "",
-      "id": 1,
-      "userId": 16
+      "title": "Sit with Addam",
+      "summary": "yay",
+      "location": "home",
+      "date": "2019-06-01",
+      "userName": "susan.figert",
+      "id": 16
     }
   ]
 }

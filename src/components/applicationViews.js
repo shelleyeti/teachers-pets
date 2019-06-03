@@ -1,24 +1,26 @@
-import { Route, Redirect } from 'react-router-dom'
-import React, { Component } from "react"
-import { withRouter } from 'react-router'
-import Messages from '../modules/messagesManager'
-import Events from '../modules/eventsManager'
-import Friends from '../modules/friendsManager'
-import News from '../modules/newsManager'
-import Tasks from '../modules/tasksManager'
-import Users from '../modules/usersManager'
-import SignIn from '../components/landing/SignIn'
-import LogIn from '../components/auth/LogIn'
-import Dashboard from '../components/dashboard/Dashboard'
-import TaskApp from './tasks/TasksApp'
-import MessageContainer from './messages/messagesContainer'
-import NewsList from './news/NewsList'
-import NewsForm from './news/NewsForm'
-import TaskModal from './tasks/taskModal'
-import FriendsList from './friends/friendsList'
-import EventForm from './events/eventForm'
-import EventList from './events/eventsList'
-import NewsEditForm from './news/NewsEditForm'
+import { Route, Redirect } from "react-router-dom";
+import React, { Component } from "react";
+import { withRouter } from "react-router";
+import Messages from "../modules/messagesManager";
+import Events from "../modules/eventsManager";
+import Friends from "../modules/friendsManager";
+import News from "../modules/newsManager";
+import Tasks from "../modules/tasksManager";
+import Users from "../modules/usersManager";
+import SignIn from "../components/landing/SignIn";
+import LogIn from "../components/auth/LogIn";
+import Dashboard from "../components/dashboard/Dashboard";
+import TaskApp from "./tasks/TasksApp";
+import MessageContainer from "./messages/messagesContainer";
+import NewsList from "./news/NewsList";
+import NewsForm from "./news/NewsForm";
+import TaskModal from "./tasks/taskModal";
+import FriendsList from "./friends/friendsList";
+import EventForm from "./events/eventForm";
+import EventList from "./events/eventsList";
+import NewsEditForm from "./news/NewsEditForm";
+import EventEditForm from "./events/eventEditForm";
+import MessageEditForm from "./messages/messageEditForm"
 
 class ApplicationViews extends Component {
   state = {
@@ -58,7 +60,7 @@ class ApplicationViews extends Component {
     const newState = {};
     Messages.editMessage(editedMessageObject)
       .then(() => Messages.getAllMessages())
-      .then(chatMessages => (newState.chatMessages = chatMessages))
+      .then(chatMessages => (newState.messages = chatMessages))
       .then(() => {
         this.props.history.push("/messages");
         this.setState(newState);
@@ -134,7 +136,6 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
-
   deleteUser = id => {
     const newState = {};
     Users.deleteUser(id)
@@ -242,17 +243,33 @@ class ApplicationViews extends Component {
   componentDidMount() {
     const newState = {};
     Events.getAllEvents()
-      .then(events => { newState.events = events })
-      .then(Friends.getAllFriends).then(friends => { newState.friends = friends })
-      .then(News.getAllNews).then(news => { newState.news = news })
-      .then(Tasks.getAllTasks).then(tasks => { newState.tasks = tasks })
-      .then(Users.getAllUsers).then(users => { newState.users = users })
-      .then(Messages.getAllMessages).then(messages => { newState.messages = messages })
-      .then(() =>
-        this.setState(newState))
-  };
+      .then(events => {
+        newState.events = events;
+      })
+      .then(Friends.getAllFriends)
+      .then(friends => {
+        newState.friends = friends;
+      })
+      .then(News.getAllNews)
+      .then(news => {
+        newState.news = news;
+      })
+      .then(Tasks.getAllTasks)
+      .then(tasks => {
+        newState.tasks = tasks;
+      })
+      .then(Users.getAllUsers)
+      .then(users => {
+        newState.users = users;
+      })
+      .then(Messages.getAllMessages)
+      .then(messages => {
+        newState.messages = messages;
+      })
+      .then(() => this.setState(newState));
+  }
 
-  isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+  isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
   componentDidMount() {
     const newState = {};
@@ -282,19 +299,6 @@ class ApplicationViews extends Component {
           return <LogIn setUser={this.props.setUser} {...props} />
         }}
         />
-        <Route exact path="/dashboard" render={props => {
-          if (this.isAuthenticated()) {
-            return <Dashboard {...props}
-              activeUser={this.props.activeUser}
-              tasks={this.state.tasks}
-              events={this.state.events}
-              news={this.state.news}
-              friends={this.state.friends}
-              messages={this.state.messages} />
-          } else {
-            return <Redirect to="/" />
-          }
-        }} />
         <Route
           exact
           path="/messages"
@@ -304,12 +308,29 @@ class ApplicationViews extends Component {
                 <MessageContainer
                   messages={this.state.messages}
                   {...props}
+                  activeUser={this.props.activeUser}
                   deleteMessage={this.deleteMessage}
                   addMessage={this.addMessage}
                 />
               );
             } else {
-              return <Redirect to="/" />
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+        <Route
+          path="/messages/:messageId(\d+)/edit"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <MessageEditForm
+                  {...props}
+                  activeUser={this.props.activeUser}
+                  editMessage={this.updateMessage}
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
             }
           }}
         />
@@ -322,6 +343,7 @@ class ApplicationViews extends Component {
                 <EventList
                   {...props}
                   events={this.state.events}
+                  activeUser={this.props.activeUser}
                   deleteEvents={this.deleteEvents}
                 />
               );
@@ -335,67 +357,95 @@ class ApplicationViews extends Component {
           render={props => {
             if (this.isAuthenticated()) {
               //route for add events form
-              return <EventForm {...props} addEvent={this.addEvents} />;
+              return (
+                <EventForm
+                  {...props}
+                  activeUser={this.props.activeUser}
+                  addEvent={this.addEvents}
+                />
+              );
             } else {
               return <Redirect to="/" />;
             }
           }}
         />
-        <Route exact path="/news" render={props => {
-          if (this.isAuthenticated()) {
-            return <NewsList {...props} news={this.state.news} deleteNews={this.deleteNews} activeUser={this.props.activeUser} />;
-          } else {
-            return <Redirect to="/" />
-          }
-        }}
+        <Route
+          path="/events/:eventId(\d+)/edit"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <EventEditForm
+                  {...props}
+                  activeUser={this.props.activeUser}
+                  editEvent={this.updateEvents}
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
         />
-        <Route path="/news/new" render={(props) => {
-          if (this.isAuthenticated()) {
-            //route for add news form
-            return <NewsForm {...props} addNews={this.addNews} activeUser={this.props.activeUser} />
-          } else {
-            return <Redirect to="/" />
-          }
-        }} />
-        <Route path="/news/:articleId(\d+)/edit" render={props => {
-          if (this.isAuthenticated()) {
-            return <NewsEditForm {...props} editNews={this.editNews} activeUser={this.props.activeUser} />
-          } else {
-            return <Redirect to="/" />
-          }
-        }}
+        <Route
+          exact
+          path="/news"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <NewsList
+                  {...props}
+                  activeUser={this.props.activeUser}
+                  news={this.state.news}
+                  deleteNews={this.deleteNews}
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
         />
-        <Route exact path="/tasks" render={(props) => {
-          if (this.isAuthenticated()) {
-            return <TaskApp
-              initItems={this.state.tasks}
-              addTask={this.addTasks}
-              // TaskModal={TaskModal}
-              deleteTask={this.deleteTasks}
-              markDone={this.updateTasks}
-              editTask={this.updateTasks} />
-          } else {
-            return <Redirect to="/" />
-          }
-        }} />
-
-        {/* Combine with Messages in ONE ROUTE */}
-        {/* <Route exact path="/friends" render={(props) => {
-                    if (this.isAuthenticated()) {
-                        return <FriendsList
-                            {...props}
-                            user={this.state.users}
-                            friend={this.state.friends}
-                            addFriend={this.addFriends}
-                            deleteFriend={this.deleteFriends}
-                            editFriend={this.editFriends}
-                        />
-                    } else {
-                        return <Redirect to="/" />
-                    }
-                }} /> */}
-            </>
-        );
+        <Route
+          path="/news/new"
+          render={props => {
+            if (this.isAuthenticated()) {
+              //route for add news form
+              return <NewsForm {...props} activeUser={this.props.activeUser} addNews={this.addNews} />;
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+        <Route
+          path="/news/:articleId(\d+)/edit"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return <NewsEditForm {...props} editNews={this.editNews} />;
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/tasks"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return (
+                <TaskApp
+                  initItems={this.state.tasks}
+                  addTask={this.addTasks}
+                  // TaskModal={TaskModal}
+                  deleteTask={this.deleteTasks}
+                  markDone={this.updateTasks}
+                  editTask={this.updateTasks}
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
+            }
+          }}
+        />
+        </>  
+    );
   }
 }
 export default withRouter(ApplicationViews);
