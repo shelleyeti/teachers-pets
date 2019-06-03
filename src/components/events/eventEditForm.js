@@ -1,57 +1,67 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Form,
-  Input,
   InputGroup,
   InputGroupAddon,
   InputGroupText,
+  Input,
   Button
-} from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+} from "reactstrap";
+import EventsManager from "../../modules/eventsManager";
 
-
-export default class EventForm extends Component {
-
-  // Set initial state
+export default class EventEditForm extends Component {
   state = {
     title: "",
     summary: "",
     location: "",
-    date: "",
-    userName: ""
+    date: ""
   };
 
-  // Update state whenever an input field is edited
   handleFieldChange = evt => {
-
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   };
 
-  constructNewEvent = evt => {
-    const event = {
+  componentDidMount() {
+    EventsManager.getEvent(this.props.match.params.eventId).then(event => {
+      console.log(event)
+      this.setState({
+        title: event.title,
+        summary: event.summary,
+        location: event.location,
+        date: event.date
+      });
+    });
+  }
+
+  updateEvent = evt => {
+
+    const eventObj = {
+      id: this.props.match.params.eventId,
       title: this.state.title,
       summary: this.state.summary,
       location: this.state.location,
-      date: this.state.date,
-      userName: this.props.activeUser.userName
-    }
+      date: this.state.date
+    };
 
-    this.props.addEvent(event);
-  }
+    this.props.editEvent(eventObj);
+  };
 
   render() {
     return (
       <React.Fragment>
+        <h1>Edit Event</h1>
         <Form>
           <InputGroup className="m-2">
             <InputGroupAddon addonType="prepend">
               <InputGroupText>Event Title</InputGroupText>
             </InputGroupAddon>
-            <Input type="text"
+            <Input
+              type="text"
               required
               id="title"
+              value={this.state.title}
               onChange={this.handleFieldChange}
             />
           </InputGroup>
@@ -60,36 +70,50 @@ export default class EventForm extends Component {
             <InputGroupAddon addonType="prepend">
               <InputGroupText>Summary</InputGroupText>
             </InputGroupAddon>
-            <Input type="text"
+            <Input
+              type="text"
               required
               id="summary"
-              onChange={this.handleFieldChange} />
+              value={this.state.summary}
+              onChange={this.handleFieldChange}
+            />
           </InputGroup>
 
           <InputGroup className="m-2">
             <InputGroupAddon addonType="prepend">
               <InputGroupText>Location</InputGroupText>
             </InputGroupAddon>
-            <Input type="text"
+            <Input
+              type="text"
               required
               id="location"
-              onChange={this.handleFieldChange} />
+              value={this.state.location}
+              onChange={this.handleFieldChange}
+            />
           </InputGroup>
 
           <InputGroup className="m-2">
             <InputGroupAddon addonType="prepend">
               <InputGroupText>Date</InputGroupText>
             </InputGroupAddon>
-            <Input type="date"
+            <Input
+              type="date"
               required
               id="date"
-              onChange={this.handleFieldChange} />
+              value={this.state.date}
+              onChange={this.handleFieldChange}
+            />
           </InputGroup>
 
-          {/* //* maybe a checkbox that asks if youd like to favorite it and some sort of designation in your own news list? */}
-          <Button className="btn btn-outline-primary" size="sm" onClick={this.constructNewEvent}>Submit</Button>
+          <Button
+            className="btn btn-outline-primary"
+            size="sm"
+            onClick={this.updateEvent}
+          >
+            Edit
+          </Button>
         </Form>
-      </React.Fragment >
+      </React.Fragment>
     );
   }
 }

@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import { Jumbotron, Container } from 'reactstrap';
-
+import React, { Component } from "react";
+import { Jumbotron, Container } from "reactstrap";
 
 export default class DashHeader extends Component {
   render() {
