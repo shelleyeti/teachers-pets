@@ -39,7 +39,7 @@
       "userName": "YourBoy",
       "email": "datboy@datboy.net",
       "password": "password",
-      "id": 8
+      "id": 5
     },
     {
       "firstName": "Corey",
@@ -47,7 +47,7 @@
       "userName": "corey-arnold",
       "email": "corey@corey.com",
       "password": "123456",
-      "id": 9
+      "id": 6
     },
     {
       "firstName": "Arnold",
@@ -55,7 +55,7 @@
       "userName": "arnold-arnold",
       "email": "arnold@arnold.com",
       "password": "123456",
-      "id": 10
+      "id": 7
     },
     {
       "firstName": "Addam",
@@ -63,67 +63,86 @@
       "userName": "MaddaJoor",
       "email": "12345@12345.com",
       "password": "123456",
-      "id": 6
+      "id": 8
+    },
+    {
+      "firstName": "Emily",
+      "lastName": "Loggins",
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "emily@climbnashville.com",
+      "id": 9
+    },
+    {
+      "firstName": "Addam",
+      "lastName": "Joor",
+      "userName": "addam.joor",
+      "password": "123456",
+      "email": "addam.joor@outlook.com",
+      "id": 10
+    },
+    {
+      "firstName": "William",
+      "lastName": "Rooj",
+      "userName": "william.rooj",
+      "password": "123456",
+      "email": "william.rooj@aol.com",
+      "id": 11
     }
   ],
   "messages": [
-    {
-      "body": "This is the first chat message",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:26:52 PM",
-      "id": 1
-    },
-    {
-      "body": "this is the second message",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:27:04 PM",
-      "id": 2
-    },
-    {
-      "body": "This is the third message",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:29:20 PM",
-      "id": 3
-    },
-    {
-      "body": "Hello World!",
-      "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/30/2019, 7:44:21 PM",
-      "id": 6
-    },
     {
       "body": "I hope this continues to work",
       "userName": "addam.joor",
       "userId": "1",
       "dateTime": "5/31/2019, 9:06:16 AM",
       "id": 7
-    }
-  ],
-  "friends": [],
-  "news": [
-    {
-      "userId": "4",
-      "title": "Learning to Catch a Ball",
-      "synopsis": "Use your mouth to catch a ball",
-      "url": "www.gooddogs.com/balls",
-      "imgurl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjLw8r0gsziAhWiSt8KHcg5CKwQjRx6BAgBEAU&url=https%3A%2F%2Fwww.stopthatdog.com%2Fheres-best-dog-balls-top-picks%2F&psig=AOvVaw10m8T9Fw1guy-CnCvw2rci&ust=1559606984192425",
-      "dateTime": "6/2/2019, 7:09:56 PM",
-      "id": 1
     },
     {
-      "userId": 9,
-      "title": "Loving You Wife",
-      "synopsis": "How to appreciate the finer things about your ball and chain",
-      "url": "www.marriage.com",
-      "imgurl": "https://partycity6.scene7.com/is/image/PartyCity/_pdp_sq_?$_1000x1000_$&$product=PartyCity/41554",
-      "dateTime": "6/2/2019, 7:17:01 PM",
-      "id": 2
+      "id": 15,
+      "body": "test of a test",
+      "userName": "corey-arnold",
+      "dateTime": "6/2/2019, 7:41:44 PM"
     }
   ],
+  "friends": [
+    {
+      "currentUserId": 9,
+      "friendId": 3,
+      "id": 3
+    },
+    {
+      "currentUserId": 9,
+      "friendId": 4,
+      "id": 4
+    },
+    {
+      "currentUserId": 9,
+      "friendId": 5,
+      "id": 5
+    },
+    {
+      "currentUserId": 9,
+      "friendId": 7,
+      "id": 7
+    },
+    {
+      "currentUserId": 9,
+      "friendId": 8,
+      "id": 8
+    },
+    {
+      "currentUserId": 9,
+      "friendId": 9,
+      "id": 9
+    },
+    {
+      "currentUserId": 9,
+      "friendId": 10,
+      "id": 10
+    }
+  ],
+  "news": [],
   "tasks": [
     {
       "body": "Build the sister wife compound",
@@ -135,18 +154,18 @@
     {
       "userId": 2,
       "body": "Work on stuff",
-      "complete": false,
+      "complete": true,
       "id": 6
     },
     {
       "userId": 1,
       "body": "Listen to the adults",
-      "complete": false,
+      "complete": true,
       "id": 7
     },
     {
-      "userId": 3,
-      "body": "Do a thing",
+      "userId": 1,
+      "body": "Do a newer thing",
       "complete": false,
       "id": 8
     },
@@ -195,36 +214,36 @@
   ],
   "events": [
     {
-      "title": "new event",
-      "summary": "this is a new event",
-      "location": "NSS",
-      "date": "today",
-      "userName": "",
-      "id": 4
+      "title": "Checking active user  stays same",
+      "summary": "check",
+      "location": "home",
+      "date": "1991-11-02",
+      "userName": "addam.joor",
+      "id": 13
     },
     {
-      "title": "Presentation Day",
-      "summary": "this is a new event",
-      "location": "NSS",
-      "date": "today",
-      "userName": "",
-      "id": 5
+      "title": "Checking userName2",
+      "summary": "check",
+      "location": "home",
+      "date": "3125-05-02",
+      "userName": "william.rooj",
+      "id": 14
     },
     {
-      "title": "Hello World!",
-      "summary": "this is a new event",
-      "location": "Nashville Software School",
-      "date": "Monday, June 3, 2019",
-      "userName": "",
-      "id": 6
+      "title": "this is addam.joor",
+      "summary": "mine",
+      "location": "home",
+      "date": "2019-06-01",
+      "userName": "addam.joor",
+      "id": 15
     },
     {
-      "title": "We present monday!",
-      "summary": "this is a new event",
-      "location": "Nashville Software School",
-      "date": "today",
-      "userName": "",
-      "id": 7
+      "title": "Sit with Addam",
+      "summary": "yay",
+      "location": "home",
+      "date": "2019-06-01",
+      "userName": "susan.figert",
+      "id": 16
     }
   ]
 }

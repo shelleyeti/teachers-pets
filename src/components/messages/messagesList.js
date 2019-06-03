@@ -10,6 +10,7 @@ class MessageList extends Component {
           { this.props.messages.map(item => {
             return (
               <MessageItem
+                activeUser={ this.props.activeUser }
                 key={ item.id }
                 message={ item }
                 { ...this.props }

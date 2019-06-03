@@ -28,12 +28,12 @@ class FriendsListItem extends Component {
 			currentUserId: this.props.activeUser.id,
 			friendId: this.props.user.id
 		});
-		this.props.history.push("/friends")
+		this.props.history.push("/messages")
 	}
 
 	handleClickDelete = (event) => {
 		this.props.deleteFriend(this.props.friend.id);
-		this.props.history.push("/friends")
+		this.props.history.push("/messages")
 	}
 
 	render () {

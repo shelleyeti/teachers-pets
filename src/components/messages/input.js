@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Form, Input, InputGroup, Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import { restElement } from "@babel/types";
 
 export default class MessageInput extends Component {
   // Set initial state
   state = {
     body: "",
-    userName: "addam.joor",
-    userId: "1",
+    userName: "",
+    userId: "",
     dateTime: ""
   };
 
@@ -28,16 +29,16 @@ export default class MessageInput extends Component {
       today.getMinutes(),
       today.getSeconds()
     );
+
     let formattedTime = formatTime.toLocaleString("en-US", { hour12: true });
 
     const newMessage = {
       body: this.state.body,
-      userName: this.state.userName,
-      userId: this.state.userId,
+      userName: this.props.activeUser.userName,
+      userId: this.props.activeUser.userId,
       dateTime: formattedTime
     };
     this.props.addMessage(newMessage);
-
   };
 
   render () {
@@ -55,7 +56,7 @@ export default class MessageInput extends Component {
             />
           </InputGroup>
           <Button
-            className="btn btn-outline-primary"
+            className="btn btn-outline-primary submitMess"
             size="sm"
             onClick={ this.constructNewMessage }
           >

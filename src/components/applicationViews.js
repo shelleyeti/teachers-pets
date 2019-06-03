@@ -11,7 +11,7 @@ import SignIn from '../components/landing/SignIn'
 import LogIn from '../components/auth/LogIn'
 import Dashboard from '../components/dashboard/Dashboard'
 import TaskApp from './tasks/TasksApp'
-import MessageContainer from './messages/messagesContainer'
+// import MessageContainer from './messages/messagesContainer'
 import NewsList from './news/NewsList'
 import NewsForm from './news/NewsForm'
 import TaskModal from './tasks/taskModal'
@@ -21,6 +21,8 @@ import EventList from './events/eventsList'
 import NewsEditForm from './news/NewsEditForm'
 import MessagesFriendsContainer from './friends/messagesFriendsContainer'
 import ProfileContainer from './users/profileContainer'
+import EventEditForm from "./events/eventEditForm";
+import MessageEditForm from "./messages/messageEditForm"
 
 class ApplicationViews extends Component {
   state = {
@@ -60,7 +62,7 @@ class ApplicationViews extends Component {
     const newState = {};
     Messages.editMessage(editedMessageObject)
       .then(() => Messages.getAllMessages())
-      .then(chatMessages => (newState.chatMessages = chatMessages))
+      .then(chatMessages => (newState.messages = chatMessages))
       .then(() => {
         this.props.history.push("/messages");
         this.setState(newState);
@@ -136,7 +138,6 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
-
   deleteUser = id => {
     const newState = {};
     Users.deleteUser(id)
@@ -225,7 +226,7 @@ class ApplicationViews extends Component {
       .then(Friends.getAllFriends)
       .then(friends => (newState.friends = friends))
       .then(() => {
-        this.props.history.push("/friends");
+        this.props.history.push("/messages");
         this.setState(newState);
       });
   };
@@ -236,7 +237,7 @@ class ApplicationViews extends Component {
       .then(() => Friends.getAllFriends())
       .then(friends => (newState.friends = friends))
       .then(friends => {
-        this.props.history.push("/friends");
+        this.props.history.push("/messages");
         this.setState(newState);
         //return friends so it can be used in the form
         return friends;
@@ -249,7 +250,7 @@ class ApplicationViews extends Component {
       .then(() => Friends.getAllFriends())
       .then(friends => (newState.friends = friends))
       .then(() => {
-        this.props.history.push("/friends");
+        this.props.history.push("/messages");
         this.setState(newState);
       });
   };
@@ -258,16 +259,20 @@ class ApplicationViews extends Component {
     const newState = {};
     Events.getAllEvents()
       .then(events => { newState.events = events })
-      .then(Friends.getAllFriends).then(friends => { newState.friends = friends })
-      .then(News.getAllNews).then(news => { newState.news = news })
-      .then(Tasks.getAllTasks).then(tasks => { newState.tasks = tasks })
-      .then(Users.getAllUsers).then(users => { newState.users = users })
-      .then(Messages.getAllMessages).then(messages => { newState.messages = messages })
-      .then(() =>
-        this.setState(newState))
-  };
+      .then(Friends.getAllFriends)
+      .then(friends => { newState.friends = friends })
+      .then(News.getAllNews)
+      .then(news => { newState.news = news })
+      .then(Tasks.getAllTasks)
+      .then(tasks => { newState.tasks = tasks })
+      .then(Users.getAllUsers)
+      .then(users => { newState.users = users })
+      .then(Messages.getAllMessages)
+      .then(messages => { newState.messages = messages })
+      .then(() => this.setState(newState));
+  }
 
-  isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+  isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
   render () {
     return (
@@ -296,18 +301,33 @@ class ApplicationViews extends Component {
             return <Redirect to="/" />
           }
         } } />
-        <Route exact path="/messages" render={ props => {
+        {/* <Route exact path="/messages" render={ props => {
           if (this.isAuthenticated()) {
             return (
               <MessageContainer
                 messages={ this.state.messages }
                 { ...props }
+                activeUser={ this.props.activeUser }
                 deleteMessage={ this.deleteMessage }
                 addMessage={ this.addMessage }
               />
             );
           } else {
-            return <Redirect to="/" />
+            return <Redirect to="/" />;
+          }
+        } }
+        /> */}
+        <Route path="/messages/:messageId(\d+)/edit" render={ props => {
+          if (this.isAuthenticated()) {
+            return (
+              <MessageEditForm
+                { ...props }
+                activeUser={ this.props.activeUser }
+                editMessage={ this.updateMessage }
+              />
+            );
+          } else {
+            return <Redirect to="/" />;
           }
         } }
         />
@@ -317,6 +337,7 @@ class ApplicationViews extends Component {
               <EventList
                 { ...props }
                 events={ this.state.events }
+                activeUser={ this.props.activeUser }
                 deleteEvents={ this.deleteEvents }
               />
             );
@@ -328,11 +349,33 @@ class ApplicationViews extends Component {
         <Route path="/events/new" render={ props => {
           if (this.isAuthenticated()) {
             //route for add events form
-            return <EventForm { ...props } addEvent={ this.addEvents } />;
+            return (
+              <EventForm
+                { ...props }
+                activeUser={ this.props.activeUser }
+                addEvent={ this.addEvents }
+              />
+            );
           } else {
             return <Redirect to="/" />;
           }
         } }
+        />
+        <Route
+          path="/events/:eventId(\d+)/edit"
+          render={ props => {
+            if (this.isAuthenticated()) {
+              return (
+                <EventEditForm
+                  { ...props }
+                  activeUser={ this.props.activeUser }
+                  editEvent={ this.updateEvents }
+                />
+              );
+            } else {
+              return <Redirect to="/" />;
+            }
+          } }
         />
         <Route exact path="/news" render={ props => {
           if (this.isAuthenticated()) {
@@ -380,7 +423,7 @@ class ApplicationViews extends Component {
         } } />
 
         {/* Combine with Messages in ONE ROUTE */ }
-        <Route exact path="/friends" render={ (props) => {
+        <Route exact path="/messages" render={ (props) => {
           if (this.isAuthenticated()) {
             return <MessagesFriendsContainer
               { ...props }

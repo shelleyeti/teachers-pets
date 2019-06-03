@@ -1,45 +1,74 @@
 .messageContainer {
-    border: 1px solid lightgrey;
-    width: 80%;
-    margin-left: 20px;
-    border-radius: 5px;
-    padding: 8px
-    /* display: flex;
+  border: 1px solid lightgrey;
+  width: 80%;
+  height: 750px;
+  margin-left: 20px;
+  border-radius: 20px;
+  padding: 8px;
+  overflow-y: scroll;
+  /* display: flex;
     flex-direction: column;
     justify-content: center; */
 }
-
-.inputDiv {
-    display: flex;
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.editInput {
+  width: 80%
 }
 
-.cardBody {
-    border: 1px solid grey;
-    width: auto;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    background-color: lightgreen;
+.cardBodyUser {
+  border: 1px solid grey;
+  width: 60%;
+  height: auto;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(63, 255, 74, 0.5);
+}
+.cardBodyOther {
+  border: 1px solid grey;
+  width: 60%;
+  height: auto;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(255, 63, 213, 0.548);
 }
 
 .messageSection {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-content: center;
 }
 
 .chatMessage {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .btn {
-    background-color: white;
+  background-color: white;
+}
+.submitMess {
+  background-color: white;
+  width: 55px;
+  height: 35px;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+.inputDiv {
+  width: 84%;
+  display: flex;
+  margin-top: 15px;
 }
 
 .chatInput {
-    width: 80%;
-    margin: 15px;
+  width: 90%;
+  margin-left: 30px;
 }
 
 .messagesSection {

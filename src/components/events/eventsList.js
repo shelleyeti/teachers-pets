@@ -7,10 +7,10 @@ class EventList extends Component {
   render() {
     return (
       <section className="Events">
-        <div className="AddEventsButton">
+        <div className="addEventBtnDiv">
           <Button
             type="button"
-            className="btn btn-outline-success"
+            className="btn btn-outline-primary m-3"
             onClick={() => {
               this.props.history.push("/events/new");
             }}
@@ -18,17 +18,20 @@ class EventList extends Component {
             Add Event
           </Button>
         </div>
-        <h1>Your Events</h1>
+        <h1 className="mx-5">Your Events</h1>
         <CardColumns>
           {this.props.events.map(item => {
+            if (item.userName === this.props.activeUser.userName) {
             return (
               <EventItem
+                activeUser={this.props.activeUser}
                 key={item.id}
                 event={item}
                 {...this.props}
                 deleteEvents={this.props.deleteEvents}
               />
             );
+            }
           })}
         </CardColumns>
       </section>

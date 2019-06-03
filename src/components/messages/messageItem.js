@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { FaTrashAlt } from 'react-icons/fa';
-import { FaEdit } from 'react-icons/fa';
+import { FaTrashAlt } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 
 class MessageItem extends Component {
   state = {
@@ -9,45 +9,69 @@ class MessageItem extends Component {
   };
 
   handleClickDelete = event => {
+    // eslint-disable-next-line no-restricted-globals
+    let word = confirm("Are you sure you want to delete this message?");
     this.setState({
       saveDisabled: true
     });
-    this.props.deleteMessage(this.props.message.id);
+    if (word) {
+      this.props.deleteMessage(this.props.message.id);
+    }
+  };
+
+  alertMessage = () => {
+    alert("You wanna add this dude?");
   };
 
   render () {
-    return (
-      <div>
-        <div className="cardBody">
-          <div className="card-body">
-            <p>
-              { this.props.message.userName }: { this.props.message.body }
-            </p>
-            <p>{ this.props.message.dateTime }</p>
-          </div>
-          <div>
-            <button
-              type="button"
-              className="btn btn-outline-primary btn-sm"
-              onClick={ () => {
-                this.props.history.push(
-                  `/messages/${this.props.message.id}/edit`
-                );
-              } }
-            >
-              <FaEdit />
-            </button>
-            <button
-              className="btn btn-outline-danger btn-sm"
-              disabled={ this.state.saveDisabled }
-              onClick={ this.handleClickDelete }
-            >
-              <FaTrashAlt />
-            </button>
+    if (this.props.message.userName === this.props.activeUser.userName) {
+      return (
+        <div>
+          <div className="cardBodyUser clearfix">
+            <div className="card-body clearfix">
+              <p onClick={ this.alertMessage }>
+                { this.props.message.userName }: { this.props.message.body }
+              </p>
+              <p className="float-right">{ this.props.message.dateTime }</p>
+            </div>
+            <div className="clearfix">
+              <button
+                className="btn btn-outline-danger btn-sm mx-2 float-right"
+                disabled={ this.state.saveDisabled }
+                onClick={ this.handleClickDelete }
+              >
+                <FaTrashAlt />
+              </button>
+              <button
+                type="button"
+                className="btn btn-outline-primary btn-sm float-right"
+                onClick={ () => {
+                  this.props.history.push(
+                    `/messages/${this.props.message.id}/edit`
+                  );
+                } }
+              >
+                <FaEdit />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <div className="cardBodyOther">
+            <div className="card-body">
+              <p onClick={ this.alertMessage }>
+                { this.props.message.userName }: { this.props.message.body }
+              </p>
+              <p className="float-right">{ this.props.message.dateTime }</p>
+            </div>
+            <div className="clearfix" />
+          </div>
+        </div>
+      );
+    }
   }
 }
 
