@@ -13,13 +13,13 @@ export default class Example extends React.Component {
     };
   }
 
-  toggleNavbar() {
+  toggleNavbar () {
     this.setState({
       collapsed: !this.state.collapsed
     });
   }
 
-  render() {
+  render () {
     // Handles Log Out onClick
     let clearUser = () => {
       sessionStorage.clear("credentials")
@@ -29,8 +29,8 @@ export default class Example extends React.Component {
       <div>
         <Navbar color="faded" light>
           <NavbarBrand href="/" className="mr-auto">Nutshell 2.0</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          <Collapse isOpen={!this.state.collapsed} navbar>
+          <NavbarToggler onClick={ this.toggleNavbar } className="mr-2" />
+          <Collapse isOpen={ !this.state.collapsed } navbar>
             <Nav navbar>
               <NavItem>
                 <NavLink href="/dashboard/">Home</NavLink>
@@ -41,9 +41,9 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink href="/events/">Events</NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink href="/friends/">Friends</NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink href="/news/">News</NavLink>
               </NavItem>
@@ -51,7 +51,7 @@ export default class Example extends React.Component {
                 <NavLink href="/tasks/">Tasks</NavLink>
               </NavItem>
               <NavItem id="logout-item">
-                <NavLink id="logout-link" onClick={clearUser} href="/">Logout</NavLink>
+                <NavLink id="logout-link" onClick={ clearUser } href="/">Logout</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

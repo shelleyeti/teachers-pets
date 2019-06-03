@@ -1,14 +1,14 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-  getUser(userName) {
+  getUser (userName) {
     return fetch(`${remoteURL}/users?userName=${userName}`).then(e => e.json())
-    .then(r => r[0])
+      .then(r => r[0])
   },
-  getAllUsers() {
+  getAllUsers () {
     return fetch(`${remoteURL}/users`).then(e => e.json())
   },
-  deleteUser(id) {
+  deleteUser (id) {
     return fetch(`${remoteURL}/users/${id}`, {
       method: "DELETE",
       headers: {
@@ -16,7 +16,7 @@ export default {
       }
     }).then(e => e.json())
   },
-  postUser(obj) {
+  postUser (obj) {
     return fetch(`${remoteURL}/users`, {
       method: "POST",
       headers: {
@@ -25,7 +25,7 @@ export default {
       body: JSON.stringify(obj)
     }).then(e => e.json())
   },
-  editUser(editedUser) {
+  editUser (editedUser) {
     return fetch(`${remoteURL}/users/${editedUser.id}`, {
       method: "PUT",
       headers: {
