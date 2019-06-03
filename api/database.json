@@ -191,43 +191,11 @@
   ],
   "news": [
     {
-      "title": "The Worms Win",
-      "synopsis": "Worms Win World War III.",
-      "url": "www.worldwidewormnews.worg",
-      "id": 5,
-      "userId": "Eliot",
-      "imgurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCrPcSRlzPJqKDtuMp6NdH9iLq8FbCfch8blnWPrGtNYYxR8hUA"
-    },
-    {
-      "title": "Prison Dogs Voted Best",
-      "synopsis": "Prison dogs were voted best breed by the entire world. It should've been obvious, but now it's recorded history.",
-      "url": "www.dogstuffnews.org",
-      "id": 6,
-      "userId": "Shelley"
-    },
-    {
-      "title": "Stay On Brand",
-      "synopsis": "If you're not on brand are you even really living? The answer is exactly what you'd expect: No.",
-      "url": "www.onthatbrandlife.com",
-      "dateTime": "5/30/2019, 2:57:44 PM",
-      "id": 7,
-      "userId": "Emily"
-    },
-    {
       "title": "What Women Want...",
       "synopsis": "Your blood. They want your blood. For Blood Sacrifice. And bath bombs.",
       "url": "www.womensday.org",
       "dateTime": "5/30/2019, 3:43:19 PM",
       "id": 8
-    },
-    {
-      "userId": "Emily",
-      "title": "beep boop",
-      "synopsis": "ROBOTSSSSŠ hellur",
-      "url": "robot.com",
-      "imgurl": "",
-      "dateTime": "6/2/2019, 6:33:03 PM",
-      "id": 9
     }
   ],
   "tasks": [
