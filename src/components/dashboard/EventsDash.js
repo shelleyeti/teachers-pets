@@ -22,7 +22,7 @@ class EventsDash extends Component {
     //     return checkIfIGotMessageContent(generic)
     // }
 
-    render() {
+    render () {
         // let titleArray = []
         let reversed = this.props.events.reverse()
         // titleArray.push(reversed[0].title)
@@ -31,21 +31,21 @@ class EventsDash extends Component {
 
         return (
             <div>
-                <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                    <CardTitle></CardTitle>
-                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                <Card className="dash-card" body inverse style={ { backgroundColor: '#333', borderColor: '#333' } }>
+                    <CardTitle>4020-04-20: Go to the mall with the girls</CardTitle>
+                    <CardText><em>It's time get a new snake skin belt sweetie.</em></CardText>
                 </Card>
-                <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                    <CardTitle>Special Title Treatment</CardTitle>
-                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                <Card className="dash-card" body inverse style={ { backgroundColor: '#333', borderColor: '#333' } }>
+                    <CardTitle>2019-06-01: Sit with Addam</CardTitle>
+                    <CardText><em>Yay</em></CardText>
                 </Card>
-                <Card className="dash-card" body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                    <CardTitle>Special Title Treatment</CardTitle>
-                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    {/* isMessages() ? <differentContent> :  "" */}
+                <Card className="dash-card" body inverse style={ { backgroundColor: '#333', borderColor: '#333' } }>
+                    <CardTitle>2019-06-01: Game of Thrones watching party</CardTitle>
+                    <CardText><em>Don't forget to bring the spiced wolf shanks you froze last winter</em></CardText>
+                    {/* isMessages() ? <differentContent> :  "" */ }
                 </Card>
                 <React.Fragment>
-                    <Button className="redirect-dash-link" onClick={this.renderTaskPage} color="link">All events</Button>
+                    <Button className="redirect-dash-link" onClick={ this.renderTaskPage } color="link">All events</Button>
                 </React.Fragment>
             </div>
         )

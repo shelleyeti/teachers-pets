@@ -9,99 +9,97 @@ import './Dashboard.css'
 
 
 export default class DashBody extends Component {
-    constructor(props) {
-        super(props);
-    
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-          activeTab: '1'
-        };
-      }
-    
-      toggle(tab) {
-        if (this.state.activeTab !== tab) {
-          this.setState({
-            activeTab: tab
-          });
-        }
-      }
+  constructor(props) {
+    super(props);
 
-      
-      render() {
-        let reversed = this.props.events.reverse()
-        // console.log(reversed)
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      activeTab: '1'
+    };
+  }
 
-        return (
-          <div>
-        <Nav tabs>
+  toggle (tab) {
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab
+      });
+    }
+  }
+
+
+  render () {
+
+    return (
+      <div>
+        <Nav tabs className="main-nav-container">
           <NavItem className="dash-nav-item">
             <NavLink
-              className={classnames({ active: this.state.activeTab === '1' })}
-              onClick={() => { this.toggle('1'); }}
+              className={ classnames({ active: this.state.activeTab === '1' }) }
+              onClick={ () => { this.toggle('1'); } }
             >
               Events
             </NavLink>
           </NavItem>
           <NavItem className="dash-nav-item">
             <NavLink
-              className={classnames({ active: this.state.activeTab === '2' })}
-              onClick={() => { this.toggle('2'); }}
+              className={ classnames({ active: this.state.activeTab === '2' }) }
+              onClick={ () => { this.toggle('2'); } }
             >
               Tasks
             </NavLink>
           </NavItem>
           <NavItem className="dash-nav-item">
             <NavLink
-              className={classnames({ active: this.state.activeTab === '3' })}
-              onClick={() => { this.toggle('3'); }}
+              className={ classnames({ active: this.state.activeTab === '3' }) }
+              onClick={ () => { this.toggle('3'); } }
             >
               News
             </NavLink>
           </NavItem>
           <NavItem className="dash-nav-item">
             <NavLink
-              className={classnames({ active: this.state.activeTab === '4' })}
-              onClick={() => { this.toggle('4'); }}
+              className={ classnames({ active: this.state.activeTab === '4' }) }
+              onClick={ () => { this.toggle('4'); } }
             >
               Messages
             </NavLink>
           </NavItem>
         </Nav>
-        <TabContent activeTab={this.state.activeTab}>
+        <TabContent activeTab={ this.state.activeTab }>
           <TabPane tabId="2">
             <Row>
               <Col sm="12">
-              <TaskDash activeUser={this.props.activeUser}
-                    tasks={this.props.tasks} /> 
+                <TaskDash activeUser={ this.props.activeUser }
+                  tasks={ this.props.tasks } />
               </Col>
             </Row>
           </TabPane>
           <TabPane tabId="1">
             <Row>
               <Col sm="12">
-              <EventsDash activeUser={this.props.activeUser}
-                    events={this.props.events} /> 
+                <EventsDash activeUser={ this.props.activeUser }
+                  events={ this.props.events } />
               </Col>
             </Row>
           </TabPane>
           <TabPane tabId="3">
             <Row>
               <Col sm="12">
-              <NewsDash activeUser={this.props.activeUser}
-                    news={this.props.news} /> 
+                <NewsDash activeUser={ this.props.activeUser }
+                  news={ this.props.news } />
               </Col>
             </Row>
           </TabPane>
-        <TabPane tabId="4">
+          <TabPane tabId="4">
             <Row>
               <Col sm="12">
-                <MessageDash activeUser={this.props.activeUser}
-                  messages={this.props.messages} />
+                <MessageDash activeUser={ this.props.activeUser }
+                  messages={ this.props.messages } />
               </Col>
             </Row>
           </TabPane>
         </TabContent>
-          </div>
-        );
-      }
+      </div>
+    );
+  }
 }
