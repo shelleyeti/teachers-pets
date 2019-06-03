@@ -186,13 +186,13 @@
     {
       "userId": 1,
       "body": "Work on stuff",
-      "complete": true,
+      "complete": false,
       "id": 6
     },
     {
       "userId": 1,
       "body": "Listen to the adults",
-      "complete": true,
+      "complete": false,
       "id": 7
     },
     {
