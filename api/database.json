@@ -92,17 +92,22 @@
   ],
   "messages": [
     {
-      "body": "I hope this continues to work",
+      "id": 7,
+      "body": "I hope this continues to work.",
       "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/31/2019, 9:06:16 AM",
-      "id": 7
+      "dateTime": "5/31/2019, 9:06:16 AM"
     },
     {
       "id": 15,
       "body": "test of a test",
       "userName": "corey-arnold",
       "dateTime": "6/2/2019, 7:41:44 PM"
+    },
+    {
+      "body": "Everything seems to be in order.",
+      "userName": "addam.joor",
+      "dateTime": "6/2/2019, 10:21:17 PM",
+      "id": 16
     }
   ],
   "friends": [
@@ -172,14 +177,6 @@
       "userId": 1
     },
     {
-      "title": "Stay On Brand",
-      "synopsis": "If you're not on brand are you even really living? The answer is exactly what you'd expect: No.",
-      "url": "www.onthatbrandlife.com",
-      "dateTime": "5/30/2019, 2:57:44 PM",
-      "id": 7,
-      "userId": 16
-    },
-    {
       "title": "What Women Want...",
       "synopsis": "WHAT A GIRL WAAAANTS! WHAT A GIRL NEEEEEDS! WHATEVER MAKES YOU HAPPY AND SETS YOU FREEEEEE AND I'M THANKING YOU FOR GIVING THAT TO MEEE-EE-E!!",
       "url": "https://www.xtina4eva.org",
@@ -197,12 +194,12 @@
       "id": 9
     },
     {
-      "userId": "Addam",
-      "title": "something trumpy",
-      "synopsis": "trump did something that makes people mad again",
-      "url": "https://www.bbc.com/news/world-us-canada-48491602",
-      "imgurl": "https://ichef.bbci.co.uk/news/660/cpsprodpb/ED9E/production/_107203806_trump_duchess_getty.jpg",
-      "dateTime": "6/2/2019, 7:13:28 PM",
+      "userId": 10,
+      "title": "something facebook",
+      "synopsis": "facebook makes stuff",
+      "url": "https://newsroom.fb.com/news/2018/10/say-hello-to-the-new-messenger-introducing-messenger-4/",
+      "imgurl": "https://fbnewsroomus.files.wordpress.com/2018/10/press-asset-1600x1100-combo-2.png?w=960",
+      "dateTime": "6/2/2019, 11:31:01 PM",
       "id": 10
     }
   ],
@@ -277,14 +274,6 @@
   ],
   "events": [
     {
-      "title": "Checking active user  stays same",
-      "summary": "check",
-      "location": "home",
-      "date": "1991-11-02",
-      "userName": "addam.joor",
-      "id": 13
-    },
-    {
       "title": "Checking userName2",
       "summary": "check",
       "location": "home",
@@ -293,20 +282,21 @@
       "id": 14
     },
     {
-      "title": "this is addam.joor",
-      "summary": "mine",
-      "location": "home",
-      "date": "2019-06-01",
-      "userName": "addam.joor",
-      "id": 15
-    },
-    {
       "title": "Sit with Addam",
       "summary": "yay",
       "location": "home",
       "date": "2019-06-01",
       "userName": "susan.figert",
       "id": 16
+    },
+    {
+      "title": "The Zep",
+      "summary": "Jimmy Page is the man",
+      "imgUrl": "https://metalheadzone.com/wp-content/uploads/2019/06/jimm-page-2019-696x491.jpg",
+      "location": "Everywhere",
+      "date": "2019-06-03",
+      "userName": "addam.joor",
+      "id": 17
     }
   ]
 }

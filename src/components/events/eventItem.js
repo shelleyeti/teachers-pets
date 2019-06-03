@@ -32,24 +32,24 @@ class EventItem extends Component {
     });
   };
 
-  render() {
-      return (
-        <Card className="EventItem m-2">
-          {/* <CardImg top width="100%" src="" alt="Card image cap" /> */}
-          <CardBody>
-            <CardTitle>Title: {this.props.event.title}</CardTitle>
-            <CardText>Summary: {this.props.event.summary}</CardText>
-            <CardText>Location: {this.props.event.location}</CardText>
-            <CardText>Date: {this.props.event.date}</CardText>
-            <ButtonGroup className="btn-group ml-1" size="sm">
-              <Button onClick={() => {
-                  this.props.history.push(`/events/${this.props.event.id}/edit`);
-                }} className="btn btn-outline-primary eventBtn"><FaEdit /></Button>
-              <Button onClick={this.handleClickDelete} className="btn btn-outline-danger eventBtn"><FaTrashAlt /></Button>
-            </ButtonGroup>
-          </CardBody>
-        </Card>
-      );
+  render () {
+    return (
+      <Card className="EventItem m-2">
+        <CardImg top width="100%" src={ this.props.event.imgUrl } />
+        <CardBody>
+          <CardTitle>Title: { this.props.event.title }</CardTitle>
+          <CardText>Summary: { this.props.event.summary }</CardText>
+          <CardText>Location: { this.props.event.location }</CardText>
+          <CardText>Date: { this.props.event.date }</CardText>
+          <ButtonGroup className="btn-group ml-1" size="sm">
+            <Button onClick={ () => {
+              this.props.history.push(`/events/${this.props.event.id}/edit`);
+            } } className="btn btn-outline-primary eventBtn"><FaEdit /></Button>
+            <Button onClick={ this.handleClickDelete } className="btn btn-outline-danger eventBtn"><FaTrashAlt /></Button>
+          </ButtonGroup>
+        </CardBody>
+      </Card>
+    );
   }
 }
 
