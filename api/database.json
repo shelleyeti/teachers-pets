@@ -82,11 +82,10 @@
   ],
   "messages": [
     {
-      "body": "I hope this continues to work",
+      "id": 7,
+      "body": "I hope this continues to work.",
       "userName": "addam.joor",
-      "userId": "1",
-      "dateTime": "5/31/2019, 9:06:16 AM",
-      "id": 7
+      "dateTime": "5/31/2019, 9:06:16 AM"
     },
     {
       "id": 15,
@@ -134,14 +133,9 @@
       "id": 8
     },
     {
-      "currentUserId": 9,
-      "friendId": 9,
-      "id": 9
-    },
-    {
-      "currentUserId": 9,
-      "friendId": 10,
-      "id": 10
+      "id": 6,
+      "currentUserId": 1,
+      "friendId": 6
     }
   ],
   "news": [
@@ -268,14 +262,6 @@
   ],
   "events": [
     {
-      "title": "Checking active user  stays same",
-      "summary": "check",
-      "location": "home",
-      "date": "1991-11-02",
-      "userName": "addam.joor",
-      "id": 13
-    },
-    {
       "title": "Checking userName2",
       "summary": "check",
       "location": "home",
@@ -292,36 +278,13 @@
       "id": 15
     },
     {
-      "title": "Sit with Addam",
-      "summary": "yay",
-      "location": "home",
-      "date": "2019-06-01",
-      "userName": "susan.figert",
-      "id": 16
-    },
-    {
-      "title": "Go to the mall with the girls",
-      "summary": "It's time get a new snake skin belt sweetie",
-      "location": "da mall",
-      "date": "4020-04-20",
-      "userName": "emily@climbnashville.com",
-      "id": 17
-    },
-    {
-      "title": "Learn to Love Again",
-      "summary": "Life is Pain",
-      "location": "My heart",
-      "date": "2019-06-04",
-      "userName": "shelley-arnold",
-      "id": 18
-    },
-    {
-      "title": "Eat my Feelings ",
-      "summary": "Food is comfort",
-      "location": "The kitchen",
+      "title": "The Zep",
+      "summary": "Jimmy Page is the man",
+      "imgUrl": "https://metalheadzone.com/wp-content/uploads/2019/06/jimm-page-2019-696x491.jpg",
+      "location": "Everywhere",
       "date": "2019-06-03",
-      "userName": "shelley-arnold",
-      "id": 19
+      "userName": "addam.joor",
+      "id": 17
     }
   ]
 }

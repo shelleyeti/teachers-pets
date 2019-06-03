@@ -30,13 +30,13 @@ class MessageItem extends Component {
           <div className="cardBodyUser clearfix">
             <div className="card-body clearfix">
               <p onClick={ this.alertMessage }>
-                { this.props.message.userName }: { this.props.message.body }
+                <span className="userNameChat">{ this.props.message.userName }</span>: { this.props.message.body }
               </p>
-              <p className="float-right">{ this.props.message.dateTime }</p>
+              <small className="float-right text-muted">{ this.props.message.dateTime }</small>
             </div>
             <div className="clearfix">
               <button
-                className="btn btn-outline-danger btn-sm mx-2 float-right"
+                className="btn btn-outline-danger btn-sm mx-3 float-right"
                 disabled={ this.state.saveDisabled }
                 onClick={ this.handleClickDelete }
               >
@@ -63,9 +63,9 @@ class MessageItem extends Component {
           <div className="cardBodyOther">
             <div className="card-body">
               <p onClick={ this.alertMessage }>
-                { this.props.message.userName }: { this.props.message.body }
+                <span className="userNameChat">{ this.props.message.userName }</span>: { this.props.message.body }
               </p>
-              <p className="float-right">{ this.props.message.dateTime }</p>
+              <small className="float-right text-muted">{ this.props.message.dateTime }</small>
             </div>
             <div className="clearfix" />
           </div>
