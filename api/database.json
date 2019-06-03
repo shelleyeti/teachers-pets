@@ -220,14 +220,6 @@
       "currentUserId": 9,
       "friendId": 10,
       "id": 10
-    },
-    {
-      "friendId": 16,
-      "id": 11
-    },
-    {
-      "friendId": 1,
-      "id": 12
     }
   ],
   "news": [
@@ -291,12 +283,12 @@
     },
     {
       "userId": 2,
-      "title": "fdsaf",
-      "synopsis": "",
-      "url": "",
-      "imgurl": "",
-      "dateTime": "6/2/2019, 9:32:56 PM",
-      "id": 11
+      "title": "ROBOTS ARE ROBOTS",
+      "synopsis": "but how do we tell them apart from humans... ?",
+      "url": "https://zdnet3.cbsistatic.com/hub/i/r/2017/03/16/8cf51dbb-c4ff-4205-a4b9-d179dd8186b3/resize/770xauto/64baad4d33ff2073e3b6c0cc45b1740d/robot-boxer-boxing.jpg",
+      "imgurl": "https://zdnet3.cbsistatic.com/hub/i/r/2017/03/16/8cf51dbb-c4ff-4205-a4b9-d179dd8186b3/resize/770xauto/64baad4d33ff2073e3b6c0cc45b1740d/robot-boxer-boxing.jpg",
+      "dateTime": "6/3/2019, 8:53:26 AM",
+      "id": 10
     }
   ],
   "tasks": [
