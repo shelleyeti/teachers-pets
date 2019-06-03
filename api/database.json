@@ -6,63 +6,32 @@
       "lastName": "Arnold",
       "userName": "shelley-arnold",
       "email": "dogs4life@mymail.com",
-      "password": "123456"
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 16
-    },
-    {
-      "id": 3,
-      "firstName": "Ellie",
-      "lastName": "Ash",
-      "userName": "ellie-ash",
-      "email": "ellie.ash@mymail.com",
-      "password": "123456"
-    },
-    {
-      "id": 4,
-      "firstName": "Heather",
-      "lastName": "Cleland",
-      "userName": "heather-cleland",
-      "email": "i-love-dogs@mymail.com",
-      "password": "123456"
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 30
-    },
-    {
-      "firstName": "tester",
-      "lastName": "lastname",
-      "userName": "1234SH",
-      "email": "shell@DSG.COM",
       "password": "123456",
-      "id": 5
+      "userImage": "https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg"
     },
     {
-      "firstName": "Sister",
-      "lastName": "Last",
-      "userName": "username1",
+      "firstName": "Emily",
+      "lastName": "Loggins",
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "emily@climbnashville.com",
+      "id": 2
+    },
+    {
+      "firstName": "Cerin",
+      "lastName": "StreeDog",
+      "userName": "cerin-streetdog",
       "email": "email@email.com",
       "password": "123456",
-      "id": 6
+      "id": 3
     },
     {
-      "firstName": "hood",
-      "lastName": "hood",
-      "userName": "hood",
+      "firstName": "Cavy",
+      "lastName": "Dog",
+      "userName": "cavy-dog",
       "email": "hood@hood.com",
       "password": "123456",
-      "id": 7
+      "id": 4
     },
     {
       "firstName": "Eliot",
@@ -70,7 +39,7 @@
       "userName": "YourBoy",
       "email": "datboy@datboy.net",
       "password": "password",
-      "id": 8
+      "id": 5
     },
     {
       "firstName": "Corey",
@@ -78,7 +47,7 @@
       "userName": "corey-arnold",
       "email": "corey@corey.com",
       "password": "123456",
-      "id": 9
+      "id": 6
     },
     {
       "firstName": "Arnold",
@@ -86,7 +55,7 @@
       "userName": "arnold-arnold",
       "email": "arnold@arnold.com",
       "password": "123456",
-      "id": 10
+      "id": 7
     },
     {
       "firstName": "Addam",
@@ -94,7 +63,7 @@
       "userName": "MaddaJoor",
       "email": "12345@12345.com",
       "password": "123456",
-      "id": 11
+      "id": 8
     },
     {
       "firstName": "Emily",
@@ -102,7 +71,7 @@
       "userName": "emily@climbnashville.com",
       "password": "KbGFTdcPwExhb6U",
       "email": "emily@climbnashville.com",
-      "id": 16
+      "id": 9
     },
     {
       "firstName": "Addam",
@@ -110,7 +79,7 @@
       "userName": "addam.joor",
       "password": "123456",
       "email": "addam.joor@outlook.com",
-      "id": 17
+      "id": 10
     },
     {
       "firstName": "William",
@@ -118,63 +87,62 @@
       "userName": "william.rooj",
       "password": "123456",
       "email": "william.rooj@aol.com",
-      "id": 18
+      "id": 11
     }
   ],
   "messages": [
     {
-      "id": 14,
-      "body": "Hello world! The edit functionality is working properly!!!!!",
+      "body": "I hope this continues to work",
       "userName": "addam.joor",
-      "dateTime": "6/2/2019, 1:11:13 PM"
+      "userId": "1",
+      "dateTime": "5/31/2019, 9:06:16 AM",
+      "id": 7
     },
     {
-      "body": "new message",
-      "userName": "william.rooj",
-      "dateTime": "6/2/2019, 4:14:34 PM",
-      "id": 16
-    },
-    {
-      "body": "another message",
-      "userName": "william.rooj",
-      "dateTime": "6/2/2019, 4:14:43 PM",
-      "id": 17
-    },
-    {
-      "body": "chat is back up and running",
-      "userName": "addam.joor",
-      "dateTime": "6/2/2019, 7:06:02 PM",
-      "id": 18
+      "id": 15,
+      "body": "test of a test",
+      "userName": "corey-arnold",
+      "dateTime": "6/2/2019, 7:41:44 PM"
     }
   ],
   "friends": [
     {
-      "id": 1,
-      "currentUserId": 1,
-      "friendId": 1
+      "currentUserId": 9,
+      "friendId": 3,
+      "id": 3
     },
     {
-      "id": 2,
-      "currentUserId": 1,
-      "friendId": 2
+      "currentUserId": 9,
+      "friendId": 4,
+      "id": 4
     },
     {
-      "id": 6,
-      "currentUserId": 1,
-      "friendId": 6
-    }
-  ],
-  "news": [
+      "currentUserId": 9,
+      "friendId": 5,
+      "id": 5
+    },
     {
-      "userId": "Addam",
-      "title": "something trumpy",
-      "synopsis": "trump did something that makes people mad again",
-      "url": "https://www.bbc.com/news/world-us-canada-48491602",
-      "imgurl": "https://ichef.bbci.co.uk/news/660/cpsprodpb/ED9E/production/_107203806_trump_duchess_getty.jpg",
-      "dateTime": "6/2/2019, 7:13:28 PM",
-      "id": 1
+      "currentUserId": 9,
+      "friendId": 7,
+      "id": 7
+    },
+    {
+      "currentUserId": 9,
+      "friendId": 8,
+      "id": 8
+    },
+    {
+      "currentUserId": 9,
+      "friendId": 9,
+      "id": 9
+    },
+    {
+      "currentUserId": 9,
+      "friendId": 10,
+      "id": 10
     }
   ],
+  "news": [],
   "tasks": [
     {
       "body": "Build the sister wife compound",
@@ -184,7 +152,7 @@
       "id": 5
     },
     {
-      "userId": 1,
+      "userId": 2,
       "body": "Work on stuff",
       "complete": true,
       "id": 6
@@ -200,6 +168,48 @@
       "body": "Do a newer thing",
       "complete": false,
       "id": 8
+    },
+    {
+      "userId": 2,
+      "body": "Adopt Eliot",
+      "complete": false,
+      "id": 9
+    },
+    {
+      "userId": 4,
+      "body": "yes",
+      "complete": false,
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "body": "is good boy",
+      "complete": false,
+      "id": 13
+    },
+    {
+      "userId": 4,
+      "body": "eat peanut butter",
+      "complete": false,
+      "id": 14
+    },
+    {
+      "userId": 4,
+      "body": "love mommy",
+      "complete": false,
+      "id": 15
+    },
+    {
+      "userId": 9,
+      "body": "more tasks",
+      "complete": false,
+      "id": 18
+    },
+    {
+      "userId": 9,
+      "body": "corey",
+      "complete": false,
+      "id": 19
     }
   ],
   "events": [

@@ -23,33 +23,33 @@ class MessageItem extends Component {
     alert("You wanna add this dude?");
   };
 
-  render() {
+  render () {
     if (this.props.message.userName === this.props.activeUser.userName) {
       return (
         <div>
           <div className="cardBodyUser clearfix">
             <div className="card-body clearfix">
-              <p onClick={this.alertMessage}>
-                {this.props.message.userName}: {this.props.message.body}
+              <p onClick={ this.alertMessage }>
+                { this.props.message.userName }: { this.props.message.body }
               </p>
-              <p className="float-right">{this.props.message.dateTime}</p>
+              <p className="float-right">{ this.props.message.dateTime }</p>
             </div>
             <div className="clearfix">
               <button
                 className="btn btn-outline-danger btn-sm mx-2 float-right"
-                disabled={this.state.saveDisabled}
-                onClick={this.handleClickDelete}
+                disabled={ this.state.saveDisabled }
+                onClick={ this.handleClickDelete }
               >
                 <FaTrashAlt />
               </button>
               <button
                 type="button"
                 className="btn btn-outline-primary btn-sm float-right"
-                onClick={() => {
+                onClick={ () => {
                   this.props.history.push(
                     `/messages/${this.props.message.id}/edit`
                   );
-                }}
+                } }
               >
                 <FaEdit />
               </button>
@@ -62,10 +62,10 @@ class MessageItem extends Component {
         <div>
           <div className="cardBodyOther">
             <div className="card-body">
-              <p onClick={this.alertMessage}>
-                {this.props.message.userName}: {this.props.message.body}
+              <p onClick={ this.alertMessage }>
+                { this.props.message.userName }: { this.props.message.body }
               </p>
-              <p className="float-right">{this.props.message.dateTime}</p>
+              <p className="float-right">{ this.props.message.dateTime }</p>
             </div>
             <div className="clearfix" />
           </div>

@@ -41,7 +41,7 @@ export default class MessageInput extends Component {
     this.props.addMessage(newMessage);
   };
 
-  render() {
+  render () {
     return (
       <React.Fragment>
         <Form className="inputDiv">
@@ -52,13 +52,13 @@ export default class MessageInput extends Component {
               id="body"
               required
               placeholder="Enter your message and push submit"
-              onChange={this.handleFieldChange}
+              onChange={ this.handleFieldChange }
             />
           </InputGroup>
           <Button
             className="btn btn-outline-primary submitMess"
             size="sm"
-            onClick={this.constructNewMessage}
+            onClick={ this.constructNewMessage }
           >
             Submit
           </Button>

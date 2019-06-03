@@ -26,7 +26,7 @@ class NewsItem extends Component {
     })
   }
 
-  render() {
+  render () {
     return (
       // <div className="cardtask-card d-inline-flex col-md-2">
       //   <div className="card-body">
@@ -58,22 +58,22 @@ class NewsItem extends Component {
       //   </div>
       // </div >
       <Card className="NewsItem">
-        <CardImg top width="100%" src={this.props.article.imgurl} />
+        <CardImg top width="100%" src={ this.props.article.imgurl } />
         <CardBody>
-          <CardTitle>{this.props.article.title}</CardTitle>
-          <CardText>{this.props.article.synopsis}</CardText>
-          <small className="text-muted">{this.props.article.dateTime}</small>
-          <a className="nav-link" href={`${this.props.article.url}`} target="_blank" rel="noopener noreferrer" >Link to Article</a>
+          <CardTitle>{ this.props.article.title }</CardTitle>
+          <CardText>{ this.props.article.synopsis }</CardText>
+          <small className="text-muted">{ this.props.article.dateTime }</small>
+          <a className="nav-link" href={ `${this.props.article.url}` } target="_blank" rel="noopener noreferrer" >Link to Article</a>
           <ButtonGroup className="btn-group ml-1" size="sm">
             <Button
               className="btn btn-outline-primary"
-              onClick={() => {
+              onClick={ () => {
                 this.props.history.push(`/news/${this.props.article.id}/edit`);
-              }}>
+              } }>
               <FaEdit /></Button>
             <Button
               className="btn btn-outline-danger"
-              onClick={this.handleClickDelete}>
+              onClick={ this.handleClickDelete }>
               <FaTrashAlt /></Button>
           </ButtonGroup>
         </CardBody>
