@@ -1,4 +1,5 @@
 import React from 'react';
+import { Component } from 'react'
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import "./SignIn.css"
 import Welcome from "./Welcome"
@@ -9,7 +10,7 @@ import { withRouter } from 'react-router-dom';
 import Users from '../../modules/usersManager'
 import FormAlert from '../auth/Alert'
 
-class SignIn extends React.Component {
+class SignIn extends Component {
 
   state = {
     firstName: "",
@@ -26,7 +27,7 @@ class SignIn extends React.Component {
   };
 
   renderDashboard = () => {
-    this.props.history.push("/dashboard")
+    this.props.history.push("/dashboard/")
   }
 
   constructNewUser = evt => {
@@ -105,12 +106,3 @@ class SignIn extends React.Component {
 }
 
 export default withRouter(SignIn)
-
-// {
-//   this.props.addUser(user)
-//   .then(singleUser => {
-//     Users.getUser(user.userName)
-//     this.props.setUser(singleUser)
-//     this.renderDashboard()
-//   })
-// }
