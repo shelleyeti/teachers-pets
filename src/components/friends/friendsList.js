@@ -14,7 +14,7 @@ class FriendsList extends Component {
               let foundFriend = false;
               let friendObj = {};
               this.props.friend.forEach(friend => {
-                if (this.props.activeUser.id === friend.currentUserId && friend.friendId === item.id) {
+                if (this.props.activeUser.id === friend.currentUserId && friend.userId === item.id) {
                   foundFriend = true;
                   friendObj = friend;
                 }

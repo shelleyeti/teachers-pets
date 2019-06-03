@@ -155,7 +155,7 @@ class ApplicationViews extends Component {
       .then(() => Users.getAllUsers())
       .then(users => (newState.users = users))
       .then(users => {
-        this.props.history.push("/users");
+        this.props.history.push("/dashboard");
         this.setState(newState);
         //return tasks so it can be used in the form
         return users;

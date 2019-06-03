@@ -24,6 +24,11 @@ export default class TodoListItem extends Component {
 
   onClickDone = () => {
     this.props.markTodoDone(this.props.item);
+    this.setState({
+      editName: false,
+      body: this.state.body,
+      modalShow: false
+    })
   }
 
   updateItem = () => {
