@@ -65,6 +65,14 @@
     {
       "firstName": "Tom",
       "lastName": "Loggins",
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "emily.loggins@pop.blemont.edu",
+      "id": 18
+    },
+    {
+      "firstName": "Tom",
+      "lastName": "Loggins",
       "userName": "tom-loggins",
       "password": "password",
       "email": "tom@gmail.com",
@@ -77,6 +85,38 @@
       "password": "password",
       "email": "drew@gmail.com",
       "id": 20
+    },
+    {
+      "firstName": "Drew",
+      "lastName": "Miller",
+      "userName": "drewbins9",
+      "password": "passwrod",
+      "email": "drew.com",
+      "id": 21
+    },
+    {
+      "firstName": "Mabel",
+      "lastName": "MOhler",
+      "userName": "mabel",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "mabel.com",
+      "id": 22
+    },
+    {
+      "firstName": "beep",
+      "lastName": "Loggins",
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "emily.loggins@pop.blemont.edu",
+      "id": 23
+    },
+    {
+      "firstName": "Stephen",
+      "lastName": "Kdlksads",
+      "userName": "emily@climbnashville.com",
+      "password": "KbGFTdcPwExhb6U",
+      "email": "fdsafdsa",
+      "id": 24
     }
   ],
   "messages": [
@@ -105,10 +145,16 @@
       "id": 17
     },
     {
-      "body": "shelley",
-      "userName": "shelley-arnold",
-      "dateTime": "6/3/2019, 9:28:09 AM",
+      "body": "Hi!!!!!",
+      "userName": "emily-loggins",
+      "dateTime": "6/3/2019, 9:04:13 AM",
       "id": 18
+    },
+    {
+      "body": "Ignoring me again???",
+      "userName": "emily-loggins",
+      "dateTime": "6/3/2019, 9:11:37 AM",
+      "id": 19
     }
   ],
   "friends": [
@@ -194,6 +240,24 @@
       "imgurl": "https://i.kinja-img.com/gawker-media/image/upload/s--itMAC_-A--/c_scale,dpr_2.0,f_auto,fl_progressive,q_80,w_800/fwu9urcm9iqaunawyoe8.png",
       "dateTime": "5/31/2019, 3:25:25 PM",
       "id": 9
+    },
+    {
+      "userId": 2,
+      "title": "ROBOTS",
+      "synopsis": "Are they human? Can they feel???? Can they LOVE???",
+      "url": "",
+      "imgurl": "https://www.engineeredarts.co.uk/wp-content/uploads/2017/07/SquaryMcSquareFace-16-1.jpg",
+      "dateTime": "6/3/2019, 9:07:18 AM",
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "title": "Emo is the new goth",
+      "synopsis": "We all new it would happen. But we had no idea it would happen this soon. I LOVE GOTHS!",
+      "url": "",
+      "imgurl": "https://s7.orientaltrading.com/is/image/OrientalTrading/13637159?$PDP_VIEWER_IMAGE$",
+      "dateTime": "6/3/2019, 9:08:28 AM",
+      "id": 11
     }
   ],
   "tasks": [
@@ -203,12 +267,6 @@
       "complete": false,
       "userId": 1,
       "id": 5
-    },
-    {
-      "userId": 2,
-      "body": "Work on stuff",
-      "complete": true,
-      "id": 6
     },
     {
       "userId": 1,
@@ -248,9 +306,15 @@
     },
     {
       "userId": 2,
-      "body": "Grocery shop",
+      "body": "Cry",
       "complete": false,
-      "id": 20
+      "id": 22
+    },
+    {
+      "userId": 2,
+      "body": "unfriend my friends today",
+      "complete": true,
+      "id": 23
     },
     {
       "userId": 2,
@@ -263,6 +327,18 @@
       "body": "Cry",
       "complete": false,
       "id": 22
+    },
+    {
+      "userId": 2,
+      "body": "Cry some more",
+      "complete": false,
+      "id": 24
+    },
+    {
+      "userId": 2,
+      "body": "Still crying",
+      "complete": true,
+      "id": 25
     }
   ],
   "events": [
@@ -313,6 +389,23 @@
       "date": "2019-06-03",
       "userName": "shelley-arnold",
       "id": 19
+    },
+      {
+      "title": "The Zep",
+      "summary": "Jimmy Page is the man",
+      "imgUrl": "https://metalheadzone.com/wp-content/uploads/2019/06/jimm-page-2019-696x491.jpg",
+      "location": "Everywhere",
+      "date": "2019-06-03",
+      "userName": "shelley-arnold",
+      "id": 20
+    },
+    {
+      "title": "Game of thrones",
+      "summary": "Don't forget the spiced wolf shanks",
+      "location": "My house",
+      "date": "4020-04-20",
+      "userName": "emily-loggins",
+      "id": 21
     }
   ]
 }
