@@ -1,4 +1,5 @@
 import React from 'react';
+import { Component } from 'react'
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import "./SignIn.css"
 import Welcome from "./Welcome"
@@ -6,8 +7,10 @@ import TimeOut from "./TimeOut"
 import LogIn from "../auth/LogIn"
 import ReactDOM from 'react'
 import { withRouter } from 'react-router-dom';
+import Users from '../../modules/usersManager'
+import FormAlert from '../auth/Alert'
 
-class SignIn extends React.Component {
+class SignIn extends Component {
 
   state = {
     firstName: "",
@@ -23,6 +26,10 @@ class SignIn extends React.Component {
     this.setState(stateToChange);
   };
 
+  renderDashboard = () => {
+    this.props.history.push("/dashboard/")
+  }
+
   constructNewUser = evt => {
     const user = {
       firstName: this.state.firstName,
@@ -31,10 +38,22 @@ class SignIn extends React.Component {
       password: this.state.password,
       email: this.state.email
     };
-    this.props.addUser(user)
-    // .then(() => this.props.history.push("/dashboard"));
+
+    if (!this.state.userName || !this.state.password || !this.state.firstName || !this.state.lastName || !this.state.email) {
+      return alert("Please fill out all fields.")
+    } else {
+      sessionStorage.setItem(
+        "credentials",
+        JSON.stringify(user)
+      )
+      this.props.addUser(user)
+      this.props.setUser(user)
+      this.renderDashboard()
+    }
 
   }
+
+
 
   renderLogIn = () => {
     this.props.history.push("/login")

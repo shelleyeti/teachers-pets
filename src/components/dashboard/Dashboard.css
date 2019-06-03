@@ -1,0 +1,44 @@
+.main-nav-container {
+    padding-top: 3em;
+}
+
+.dash-header-container {
+    margin-bottom: 0;
+}
+
+.dash-card {
+    margin: .7em;
+}
+
+.dash-nav-item {
+    width: 50%;
+}
+
+.dash-nav-item:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.redirect-dash-link {
+    font-size: 100%;
+    float: right;
+    padding-right: 5%;
+    padding-top: 1em;
+}
+
+.redirect-dash-link:hover {
+    text-decoration: none;
+    font-size: 101%;
+}
+
+.settings-link {
+    font-size: 100%;
+    float: right;
+    padding-right: 5%;
+    padding-top: 1em;
+}
+
+.settings-link:hover {
+    text-decoration: none;
+    font-size: 101%;
+}
