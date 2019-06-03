@@ -6,8 +6,7 @@
       "lastName": "Arnold",
       "userName": "shelley-arnold",
       "email": "dogs4life@mymail.com",
-      "password": "123456",
-      "userImage": "https://lh3.googleusercontent.com/TPmdZOzdk53ir6lcJerqqv_szQVJOOTVbQoboBy6dVSgiG-4oz0kFZ3RHiKYPFm9SjyD9nbtotbEdlJ86qJvtFykRAjPhM-Adg3pm8JJbIwhC-KN3ZOmVq412dpS-lYdwGzx5XFAF9JwRq6vxwg8oDJcW8dZeq_9hx-5MA03SEmUxdc6irh3miUigETCMl-T-carrNgA_UQKhrWJ4qGxCh_IT7UqpCH03HHm3jqOTyvCdSWT4S_m4SZqlfBdmNAEpy_DzHahwcRNd77X35V_E0vcAG73qjwaarurthlxVU8k5ySpMcnTiygGdnSY-U50pKySxLcVW6TvDLMI4q5uwgRnbakttLoJfJ96lhZX22LyCflPSgkVrYG4_vSt0ShDwSL9yeSpKYYWumPHKZnLl47Uhgo8clj3VWH_CVPMv4SXVZd_WwlTD878PVbpWjs6Id0MWZla32Md8VMafdq1QUItOR_L53yaQmTcJAf4sEuZfGTn6BB7JHX2MXn2ra8UyxZJA1PBVVZhnfSVPsqe6qmCgPeCFqQVaEe0xM90Xn9AvuRZlPi5bZKgooAakLbsU2bQSI3zcmA7wlPkN3NTmHniQhOigy9oEPjoXCkFDY--eddK-j0cyztWpARsBPgq7QCAoij6IHIMKRo4gxWShgeXIQCoj9Ly=s1249-no"
+      "password": "123456"
     },
     {
       "id": 2,
@@ -139,14 +138,9 @@
       "id": 8
     },
     {
-      "currentUserId": 9,
-      "userId": 9,
-      "id": 9
-    },
-    {
-      "currentUserId": 9,
-      "userId": 10,
-      "id": 10
+      "id": 6,
+      "currentUserId": 1,
+      "userId": 6
     }
   ],
   "news": [
