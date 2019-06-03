@@ -124,15 +124,9 @@
   "messages": [
     {
       "id": 14,
-      "body": "Hello world! The edit functionality is working properly!!!",
+      "body": "Hello world! The edit functionality is working properly!!!!!",
       "userName": "addam.joor",
       "dateTime": "6/2/2019, 1:11:13 PM"
-    },
-    {
-      "id": 15,
-      "body": "I can post a message, and edit it too!!!",
-      "userName": "addam.joor",
-      "dateTime": "6/2/2019, 3:57:28 PM"
     },
     {
       "body": "new message",
@@ -145,6 +139,12 @@
       "userName": "william.rooj",
       "dateTime": "6/2/2019, 4:14:43 PM",
       "id": 17
+    },
+    {
+      "body": "chat is back up and running",
+      "userName": "addam.joor",
+      "dateTime": "6/2/2019, 7:06:02 PM",
+      "id": 18
     }
   ],
   "friends": [
@@ -166,62 +166,13 @@
   ],
   "news": [
     {
-      "title": "Berto Wins Olympics",
-      "synopsis": "First Black Pug to win in human olympics. 7 gold medals!!",
-      "url": "https://www.google.com",
-      "dateTime": "5/31/2019, 2:45:31 PM",
-      "id": 3,
-      "userId": "Eliot",
-      "imgurl": "http://dezinerbullz.co.uk/onewebstatic/7fa47637fc-BLACK-PUG-Fiji-owned-by-Miss-Hyde.jpg-for-web-normal.jpg"
-    },
-    {
-      "title": "Dolly Parton Out of This World",
-      "synopsis": "Dolly Parton revealed in interview Monday morning to be an actual alien. She's only visiting, folks, we thought she was an angel, but she's just from a different place in the sky.",
-      "url": "www.iwanttobelieve.com",
-      "dateTime": "5/31/2019, 9:01:57 AM",
-      "id": 4,
-      "userId": "Eliot",
-      "imgurl": "https://img.nbc.com/mpx-static/image/384/423/140208_2723607_Dolly_Parton_Monologue_anvver_1.jpg"
-    },
-    {
-      "title": "The Worms Win",
-      "synopsis": "Worms Win World War III.",
-      "url": "www.worldwidewormnews.worg",
-      "id": 5,
-      "userId": "Eliot",
-      "imgurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCrPcSRlzPJqKDtuMp6NdH9iLq8FbCfch8blnWPrGtNYYxR8hUA"
-    },
-    {
-      "title": "Prison Dogs Voted Best",
-      "synopsis": "Prison dogs were voted best breed by the entire world. It should've been obvious, but now it's recorded history.",
-      "url": "www.dogstuffnews.org",
-      "id": 6,
-      "userId": "Shelley"
-    },
-    {
-      "title": "Stay On Brand",
-      "synopsis": "If you're not on brand are you even really living? The answer is exactly what you'd expect: No.",
-      "url": "www.onthatbrandlife.com",
-      "dateTime": "5/30/2019, 2:57:44 PM",
-      "id": 7,
-      "userId": "Emily"
-    },
-    {
-      "title": "What Women Want...",
-      "synopsis": "WHAT A GIRL WAAAANTS! WHAT A GIRL NEEEEEDS! WHATEVER MAKES YOU HAPPY AND SETS YOU FREEEEEE AND I'M THANKING YOU FOR GIVING THAT TO MEEE-EE-E!!",
-      "url": "https://www.xtina4eva.org",
-      "dateTime": "5/31/2019, 11:04:07 AM",
-      "id": 8,
-      "userId": "Heather"
-    },
-    {
-      "userId": "Eliot",
-      "title": "The Internet Reacts To Whatever That Death Stranding Trailer Was",
-      "synopsis": "Turns out Hideo Kojima is still wild as hell",
-      "url": "https://kotaku.com/the-internet-reacts-to-whatever-that-death-stranding-tr-1835128620",
-      "imgurl": "https://i.kinja-img.com/gawker-media/image/upload/s--itMAC_-A--/c_scale,dpr_2.0,f_auto,fl_progressive,q_80,w_800/fwu9urcm9iqaunawyoe8.png",
-      "dateTime": "5/31/2019, 3:25:25 PM",
-      "id": 9
+      "userId": "Addam",
+      "title": "something trumpy",
+      "synopsis": "trump did something that makes people mad again",
+      "url": "https://www.bbc.com/news/world-us-canada-48491602",
+      "imgurl": "https://ichef.bbci.co.uk/news/660/cpsprodpb/ED9E/production/_107203806_trump_duchess_getty.jpg",
+      "dateTime": "6/2/2019, 7:13:28 PM",
+      "id": 1
     }
   ],
   "tasks": [

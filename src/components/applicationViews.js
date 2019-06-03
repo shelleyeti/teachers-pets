@@ -278,13 +278,13 @@ class ApplicationViews extends Component {
           exact
           path="/"
           render={props => {
-            return <SignIn addUser={this.addUser} />;
+            return <SignIn setUser={this.props.setUser} activeUser={this.props.activeUser} addUser={this.addUser} />;
           }}
         />
         <Route
           path="/login"
           render={props => {
-            return <LogIn setUser={this.props.setUser} {...props} />;
+            return <LogIn setUser={this.props.setUser} activeUser={this.props.activeUser} {...props} />;
           }}
         />
         <Route
@@ -402,6 +402,7 @@ class ApplicationViews extends Component {
               return (
                 <NewsList
                   {...props}
+                  activeUser={this.props.activeUser}
                   news={this.state.news}
                   deleteNews={this.deleteNews}
                 />
@@ -416,7 +417,7 @@ class ApplicationViews extends Component {
           render={props => {
             if (this.isAuthenticated()) {
               //route for add news form
-              return <NewsForm {...props} addNews={this.addNews} />;
+              return <NewsForm {...props} activeUser={this.props.activeUser} addNews={this.addNews} />;
             } else {
               return <Redirect to="/" />;
             }
