@@ -1,13 +1,11 @@
 # WELCOME TO NUTSHELL 2.0!!
 ​
 ***
-##### Nutshell is growing social media app that will continue to expand with it's users. It was built in React, styled with Reactstrap & utilizes a JSON database. Nutshell is a place for you to add your own News articles & Events, create a Task List, post Messages & make new Friends!
+### Nutshell is growing social media app that will continue to expand with it's users. It was built in React, styled with Reactstrap & utilizes a JSON database. Nutshell is a place for you to add your own News articles & Events, create a Task List, post Messages & make new Friends!
 ​
 ***
 ### How to Use: 
-​
 ###### Note: the creators of nutshell suggest using VSCode as your editor and Chrome as your browser for continuity.
-​
  1. Clone this repository to your local computer
  2. Spin up your JSON Server using the command ```json-server -p 5002 -w database.json```
  3. Run ``` npm install ``` in the root directory of the project
@@ -16,10 +14,10 @@
  6. At this point, you should be presented with the option to register as a user, fill out the form and get to Nutshelling!
 ​
 ![user gif](https://media.giphy.com/media/3JUUNTGzrCKhfYDLwy/giphy.gif)
- 
-### Nutshell Mobile is currently in development. Here's sneak peek at our landing page:
+
+#### Nutshell Mobile is currently in development. Here's sneak peek at our landing page:
 ​
-![alt text]()
+![alt text](https://github.com/shelleyeti/teachers-pets/blob/master/Screen%20Shot%202019-06-03%20at%209.32.40%20AM.png?raw=true)
 ​
 ### The Creators of Nutshell 2.0:
 ​
