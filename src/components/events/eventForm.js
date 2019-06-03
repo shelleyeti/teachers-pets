@@ -16,6 +16,7 @@ export default class EventForm extends Component {
   state = {
     title: "",
     summary: "",
+    imgUrl: "",
     location: "",
     date: "",
     userName: ""
@@ -33,6 +34,7 @@ export default class EventForm extends Component {
     const event = {
       title: this.state.title,
       summary: this.state.summary,
+      imgUrl: this.state.imgUrl,
       location: this.state.location,
       date: this.state.date,
       userName: this.props.activeUser.userName
@@ -41,7 +43,7 @@ export default class EventForm extends Component {
     this.props.addEvent(event);
   }
 
-  render() {
+  render () {
     return (
       <React.Fragment>
         <Form>
@@ -52,7 +54,7 @@ export default class EventForm extends Component {
             <Input type="text"
               required
               id="title"
-              onChange={this.handleFieldChange}
+              onChange={ this.handleFieldChange }
             />
           </InputGroup>
 
@@ -63,7 +65,7 @@ export default class EventForm extends Component {
             <Input type="text"
               required
               id="summary"
-              onChange={this.handleFieldChange} />
+              onChange={ this.handleFieldChange } />
           </InputGroup>
 
           <InputGroup className="m-2">
@@ -73,7 +75,17 @@ export default class EventForm extends Component {
             <Input type="text"
               required
               id="location"
-              onChange={this.handleFieldChange} />
+              onChange={ this.handleFieldChange } />
+          </InputGroup>
+
+          <InputGroup className="m-2">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>Image Address</InputGroupText>
+            </InputGroupAddon>
+            <Input type="text"
+              required
+              id="imgUrl"
+              onChange={ this.handleFieldChange } />
           </InputGroup>
 
           <InputGroup className="m-2">
@@ -83,11 +95,11 @@ export default class EventForm extends Component {
             <Input type="date"
               required
               id="date"
-              onChange={this.handleFieldChange} />
+              onChange={ this.handleFieldChange } />
           </InputGroup>
 
-          {/* //* maybe a checkbox that asks if youd like to favorite it and some sort of designation in your own news list? */}
-          <Button className="btn btn-outline-primary" size="sm" onClick={this.constructNewEvent}>Submit</Button>
+          {/* //* maybe a checkbox that asks if youd like to favorite it and some sort of designation in your own news list? */ }
+          <Button className="btn btn-outline-primary" size="sm" onClick={ this.constructNewEvent }>Submit</Button>
         </Form>
       </React.Fragment >
     );

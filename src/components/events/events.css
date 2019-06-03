@@ -6,3 +6,12 @@
 .eventBtn {
     width: 50px
 }
+
+.Events {
+    width: 50%
+}
+
+.mainEventsContainer {
+    display: flex;
+    justify-content: center;
+}
