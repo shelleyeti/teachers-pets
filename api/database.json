@@ -7,15 +7,16 @@
       "userName": "shelley-arnold",
       "email": "dogs4life@mymail.com",
       "password": "123456",
-      "userImage": "https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg"
+      "userImage": "https://lh3.googleusercontent.com/TPmdZOzdk53ir6lcJerqqv_szQVJOOTVbQoboBy6dVSgiG-4oz0kFZ3RHiKYPFm9SjyD9nbtotbEdlJ86qJvtFykRAjPhM-Adg3pm8JJbIwhC-KN3ZOmVq412dpS-lYdwGzx5XFAF9JwRq6vxwg8oDJcW8dZeq_9hx-5MA03SEmUxdc6irh3miUigETCMl-T-carrNgA_UQKhrWJ4qGxCh_IT7UqpCH03HHm3jqOTyvCdSWT4S_m4SZqlfBdmNAEpy_DzHahwcRNd77X35V_E0vcAG73qjwaarurthlxVU8k5ySpMcnTiygGdnSY-U50pKySxLcVW6TvDLMI4q5uwgRnbakttLoJfJ96lhZX22LyCflPSgkVrYG4_vSt0ShDwSL9yeSpKYYWumPHKZnLl47Uhgo8clj3VWH_CVPMv4SXVZd_WwlTD878PVbpWjs6Id0MWZla32Md8VMafdq1QUItOR_L53yaQmTcJAf4sEuZfGTn6BB7JHX2MXn2ra8UyxZJA1PBVVZhnfSVPsqe6qmCgPeCFqQVaEe0xM90Xn9AvuRZlPi5bZKgooAakLbsU2bQSI3zcmA7wlPkN3NTmHniQhOigy9oEPjoXCkFDY--eddK-j0cyztWpARsBPgq7QCAoij6IHIMKRo4gxWShgeXIQCoj9Ly=s1249-no"
     },
     {
+      "id": 2,
       "firstName": "Emily",
       "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
+      "userName": "emily-loggins",
       "email": "emily@climbnashville.com",
-      "id": 2
+      "password": "KbGFTdcPwExhb6U",
+      "userImage": "http://i.imgur.com/Qkp5VIk.jpg"
     },
     {
       "firstName": "Cerin",
@@ -23,7 +24,8 @@
       "userName": "cerin-streetdog",
       "email": "email@email.com",
       "password": "123456",
-      "id": 3
+      "id": 3,
+      "userImage": "https://lh3.googleusercontent.com/Jv1uZruUm6caGH5hM0ErAx1asTOKk9oIdy0TtILXwg8-sjehqiu9_auYfeY6VwRQ3e7EdzrD5Ccrs3DMW3PsKCLgx1VvSep0n7kxT7TE9S7Tc7oXr6iLt8r0r4xUOqu3npW3IZVIoK1RWgXzxpUewqHmADJTvc65SZs6sO0YwXdn-qJ3YxyBJ6o_aKWI44lff7_CFa-oevXCkowwS9K0QvQD_Ak1eLtmNo_v7rP_4BFren0grbzQfOxOptga-VTGIZTwaXkpgjnQY7Q4h_t44ukt6gPoomzZb3j3hoFrVcxFKhEHNnCvaa2vyECOf5GP95m2JcF7iwi75Ij22qs98g52Tl8H5tjxJmDRIzgiJD77veymCmqdptx1wzlpbMjr9Q-EI385HhXJu3a_5e4QdDMecKzcTeHAXDTjpgwpRwiobYHkIHTKtL8ZaA5d2WI8SiX2RSQrNBhxzn7-3CDBjH7PBLKH5WXSiHzwhkozl7Wo0lEUUcT6SNu6YToPFg9iHE11f91PEhk_-ByelPTBVcbGDo-Yd2t1JJnY9wTngXIkDn0EI9s4wTEeR_MhHIAmtHtUMq2FyMPnZmdqHRUA5hOe-66CIC3HByBbXDx1E-joex-o6g-EQhvBiqbahkSC1xktfnqLdeqMkQOoRGdmRydMVrUcU4FG=s1358-no"
     },
     {
       "firstName": "Cavy",
@@ -31,7 +33,8 @@
       "userName": "cavy-dog",
       "email": "hood@hood.com",
       "password": "123456",
-      "id": 4
+      "id": 4,
+      "userImage": "https://lh3.googleusercontent.com/CwyW5jgEtak88OO4vheZ2YcbmzZLpp7V1FhounJeh7A7Y57gygjUdQM4qubAQTw3CqADO4Eti3Iaw60dr09EhO3x5_Fb9C4IEBHK-jWod5orLSo-uBtzHq9Y0rcEDSkqN_CnX2uUnhu1VUo6E1sp_els7F-9ni7yZPFjolcTgZ7QqCEdcrzf9YEP0z83rL5Se4wHuObrNoTgAxOpItf1X04o-ee3CFKNjQx-MQusz9_5BMNGJ-FaquH0DhiX7_BczJV3P4EY1szaKopRK4mFQxpa6jFjHFlPIV6Rkzr8P0Ymf7M1DM3DtG7xfpZ2MwJhotv0DnZryMvWh9cqJYcY9PdV106Yxz0yC92HEG3G8u578RMWH-c7KUbns8vzqBgHWWytoEtgSDWv5qasE60APn1bDUxvdF8pVsGHVDShph_9EJeVytMnRVwFr6uKZlB6N199Kcl9kvN2CyMpA1UQW60HvtwclGjLOYni5SOHutVC3RfIVICnyVMpT-C1NBM63Px4SaWfbBEKETJ_W4BEja8gOr0Vp0udOK7Am5cZA2VAaA3Jw5ikgkZ_jKtt0XE7YrJVcXjZ94wcYBg_h7LqfOwLBYXg40OvaMrz9uPRUCl81W5_h2ye-n3KN9_fLtZVFIXHvmlAPV6NSZo01amjR4hzJx4NPKw3=s1358-no"
     },
     {
       "firstName": "Eliot",
@@ -39,7 +42,8 @@
       "userName": "YourBoy",
       "email": "datboy@datboy.net",
       "password": "password",
-      "id": 5
+      "id": 5,
+      "userImage": "https://scontent.faus1-1.fna.fbcdn.net/v/t1.0-9/17190762_10155843414704027_1715687911852209287_n.jpg?_nc_cat=107&_nc_oc=AQnZ5WD8K808ORqbPr2_ovdZxDa1Wg40beUKv1vId569mzxiIm7H9sIRHokbBu2xkGyuXVi512a2pBL9Wx4BfGpa&_nc_ht=scontent.faus1-1.fna&oh=0c4bc54198f7ed49d5e3e84554342108&oe=5D5188E4"
     },
     {
       "firstName": "Corey",
@@ -47,15 +51,8 @@
       "userName": "corey-arnold",
       "email": "corey@corey.com",
       "password": "123456",
-      "id": 6
-    },
-    {
-      "firstName": "Arnold",
-      "lastName": "Arnold",
-      "userName": "arnold-arnold",
-      "email": "arnold@arnold.com",
-      "password": "123456",
-      "id": 7
+      "id": 6,
+      "userImage": "https://lh3.googleusercontent.com/2mrn0tREwGMFaDLw-UfBZ5fwZ8QHWKHy0SQzWIkBLR7yF-x60_FLkWgCuzUUATDmHevkiBz4o7vkRisoQeQLV5ZnrJz6criout4LyeQnCXIC3G5pyo7qxGSXGeiag2_zeoPeQJdUKWHETbNmgOcmVKkhsvSWrhNaphak2wM8C-khu_JNq7eFJFvixb33TQGjsR2eBy_Il5lR3HUfbBgK5jv5o-YYNMPulZt3kUkf8ND_fAbFQgfYCMLKB981Eck6tmgEg8sthA0X3CmrfcKRnniDXK21U0MNCOdKJxvrdnGkTM8dubiwxk6cfn2LKM03R9WUtrfs6mX_lC8cIM2l1tl_MZ8p5WikvrTNL3xsSQCnaU8YRiq_nOts_Uc80324IsGGqs7TuJNF4Q7qBW1QzzaDxbJ6ufNCB-SyouWVq1ieIReHYk037xjsNGQ4F45BCv1fUqT4Q2DGc2LZOG6J_0ZaGwauQxsf72eR_T1_flnRGJ6MvV1l1WZE2OxIuCjCHmWDm2_W16rWawcAp3kaM2gOGSt4yFlfIYdVHQ7WlBn5ONVc-o1G_J6HOFZz7f7-A06laYdpP5zYIA33RGvqKNCl35pkfdqIlnZ0xo7_ldRq4MMgklQvEvG8b3RnUoenuc_-kWA7atGZNp8DaRCkqODu3rt7P3d7=s714-no"
     },
     {
       "firstName": "Addam",
@@ -63,31 +60,24 @@
       "userName": "MaddaJoor",
       "email": "12345@12345.com",
       "password": "123456",
-      "id": 8
+      "id": 8,
+      "userImage": "https://scontent.faus1-1.fna.fbcdn.net/v/t1.0-9/993988_705598516120714_64977027_n.jpg?_nc_cat=100&_nc_oc=AQkRI5lIK3e8EmyPW1iQALtNbmBMPiIN-WLfRYPGyjwUCGpiNRbPnbAQEmnmZ0AZ1qpCjLbRK0Ae_ix6bE3jmE44&_nc_ht=scontent.faus1-1.fna&oh=0c9f79f1970c3694327fa24fc527c44e&oe=5D9444B4"
     },
     {
-      "firstName": "Emily",
+      "firstName": "Tom",
       "lastName": "Loggins",
-      "userName": "emily@climbnashville.com",
-      "password": "KbGFTdcPwExhb6U",
-      "email": "emily@climbnashville.com",
-      "id": 9
+      "userName": "tom-loggins",
+      "password": "password",
+      "email": "tom@gmail.com",
+      "id": 19
     },
     {
-      "firstName": "Addam",
-      "lastName": "Joor",
-      "userName": "addam.joor",
-      "password": "123456",
-      "email": "addam.joor@outlook.com",
-      "id": 10
-    },
-    {
-      "firstName": "William",
-      "lastName": "Rooj",
-      "userName": "william.rooj",
-      "password": "123456",
-      "email": "william.rooj@aol.com",
-      "id": 11
+      "firstName": "Drew",
+      "lastName": "Miller",
+      "userName": "drewbble09",
+      "password": "password",
+      "email": "drew@gmail.com",
+      "id": 20
     }
   ],
   "messages": [
@@ -103,6 +93,18 @@
       "body": "test of a test",
       "userName": "corey-arnold",
       "dateTime": "6/2/2019, 7:41:44 PM"
+    },
+    {
+      "body": "Hey kiddos ;)",
+      "userName": "emily-loggins",
+      "dateTime": "6/2/2019, 8:43:53 PM",
+      "id": 16
+    },
+    {
+      "body": "Mamas home",
+      "userName": "emily-loggins",
+      "dateTime": "6/2/2019, 8:44:02 PM",
+      "id": 17
     }
   ],
   "friends": [
@@ -142,7 +144,59 @@
       "id": 10
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "title": "Berto Wins Olympics",
+      "synopsis": "First Black Pug to win in human olympics. 7 gold medals!!",
+      "url": "https://www.google.com",
+      "dateTime": "5/31/2019, 2:45:31 PM",
+      "id": 3,
+      "userId": 8,
+      "imgurl": "http://dezinerbullz.co.uk/onewebstatic/7fa47637fc-BLACK-PUG-Fiji-owned-by-Miss-Hyde.jpg-for-web-normal.jpg"
+    },
+    {
+      "title": "Dolly Parton Out of This World",
+      "synopsis": "Dolly Parton revealed in interview Monday morning to be an actual alien. She's only visiting, folks, we thought she was an angel, but she's just from a different place in the sky.",
+      "url": "www.iwanttobelieve.com",
+      "dateTime": "5/31/2019, 9:01:57 AM",
+      "id": 4,
+      "userId": 8,
+      "imgurl": "https://img.nbc.com/mpx-static/image/384/423/140208_2723607_Dolly_Parton_Monologue_anvver_1.jpg"
+    },
+    {
+      "title": "The Worms Win",
+      "synopsis": "Worms Win World War III.",
+      "url": "www.worldwidewormnews.worg",
+      "id": 5,
+      "userId": 8,
+      "imgurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCrPcSRlzPJqKDtuMp6NdH9iLq8FbCfch8blnWPrGtNYYxR8hUA"
+    },
+    {
+      "title": "Prison Dogs Voted Best",
+      "synopsis": "Prison dogs were voted best breed by the entire world. It should've been obvious, but now it's recorded history.",
+      "url": "www.dogstuffnews.org",
+      "id": 6,
+      "userId": 1,
+      "imgurl": "https://images-na.ssl-images-amazon.com/images/I/91JFI%2BJ-7ML._SX425_.jpg"
+    },
+    {
+      "title": "What Women Want...",
+      "synopsis": "WHAT A GIRL WAAAANTS! WHAT A GIRL NEEEEEDS! WHATEVER MAKES YOU HAPPY AND SETS YOU FREEEEEE AND I'M THANKING YOU FOR GIVING THAT TO MEEE-EE-E!!",
+      "url": "https://www.xtina4eva.org",
+      "dateTime": "5/31/2019, 11:04:07 AM",
+      "id": 8,
+      "userId": 4
+    },
+    {
+      "userId": 8,
+      "title": "The Internet Reacts To Whatever That Death Stranding Trailer Was",
+      "synopsis": "Turns out Hideo Kojima is still wild as hell",
+      "url": "https://kotaku.com/the-internet-reacts-to-whatever-that-death-stranding-tr-1835128620",
+      "imgurl": "https://i.kinja-img.com/gawker-media/image/upload/s--itMAC_-A--/c_scale,dpr_2.0,f_auto,fl_progressive,q_80,w_800/fwu9urcm9iqaunawyoe8.png",
+      "dateTime": "5/31/2019, 3:25:25 PM",
+      "id": 9
+    }
+  ],
   "tasks": [
     {
       "body": "Build the sister wife compound",
@@ -160,14 +214,8 @@
     {
       "userId": 1,
       "body": "Listen to the adults",
-      "complete": true,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "body": "Do a newer thing",
       "complete": false,
-      "id": 8
+      "id": 7
     },
     {
       "userId": 2,
@@ -200,16 +248,22 @@
       "id": 15
     },
     {
-      "userId": 9,
-      "body": "more tasks",
+      "userId": 2,
+      "body": "Grocery shop",
       "complete": false,
-      "id": 18
+      "id": 20
     },
     {
-      "userId": 9,
-      "body": "corey",
+      "userId": 2,
+      "body": "Work on the sister wife compound",
       "complete": false,
-      "id": 19
+      "id": 21
+    },
+    {
+      "userId": 2,
+      "body": "Cry",
+      "complete": false,
+      "id": 22
     }
   ],
   "events": [
@@ -230,8 +284,8 @@
       "id": 14
     },
     {
-      "title": "this is addam.joor",
-      "summary": "mine",
+      "title": "Game of Thrones watching party",
+      "summary": "Don't forget to bring the spiced wolf shanks you froze last winter",
       "location": "home",
       "date": "2019-06-01",
       "userName": "addam.joor",
@@ -244,6 +298,30 @@
       "date": "2019-06-01",
       "userName": "susan.figert",
       "id": 16
+    },
+    {
+      "title": "Go to the mall with the girls",
+      "summary": "It's time get a new snake skin belt sweetie",
+      "location": "da mall",
+      "date": "4020-04-20",
+      "userName": "emily@climbnashville.com",
+      "id": 17
+    },
+    {
+      "title": "Learn to Love Again",
+      "summary": "Life is Pain",
+      "location": "My heart",
+      "date": "2019-06-04",
+      "userName": "shelley-arnold",
+      "id": 18
+    },
+    {
+      "title": "Eat my Feelings",
+      "summary": "Food is comfort",
+      "location": "The kitchen",
+      "date": "2019-06-03",
+      "userName": "shelley-arnold",
+      "id": 19
     }
   ]
 }
