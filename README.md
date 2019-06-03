@@ -1,6 +1,5 @@
 # WELCOME TO NUTSHELL 2.0!!
 ​
-***
 ### Nutshell is growing social media app that will continue to expand with it's users. It was built in React, styled with Reactstrap & utilizes a JSON database. Nutshell is a place for you to add your own News articles & Events, create a Task List, post Messages & make new Friends!
 ​
 ***
@@ -15,12 +14,11 @@
 ​
 ![user gif](https://media.giphy.com/media/3JUUNTGzrCKhfYDLwy/giphy.gif)
 
-#### Nutshell Mobile is currently in development. Here's sneak peek at our landing page:
+### Nutshell Mobile is currently in development. Here's sneak peek at our landing page:
 ​
 ![alt text](https://github.com/shelleyeti/teachers-pets/blob/master/Screen%20Shot%202019-06-03%20at%209.32.40%20AM.png?raw=true)
 ​
 ### The Creators of Nutshell 2.0:
-​
  - Shelley Arnold - GitHub: [shelleyeti](https://github.com/shelleyeti)
  - Addam Joor - GitHub: [MaddaRooj](https://github.com/MaddaRooj)
  - Emily Loggins - GitHub: [emilyloggins](https://github.com/emilyloggins)
