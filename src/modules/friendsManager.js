@@ -1,13 +1,13 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-getFriend(id) {
+  getFriend (id) {
     return fetch(`${remoteURL}/friends/${id}`).then(e => e.json())
   },
-  getAllFriends() {
+  getAllFriends () {
     return fetch(`${remoteURL}/friends`).then(e => e.json())
   },
-  deleteFriend(id) {
+  deleteFriend (id) {
     return fetch(`${remoteURL}/friends/${id}`, {
       method: "DELETE",
       headers: {
@@ -15,7 +15,7 @@ getFriend(id) {
       }
     }).then(e => e.json())
   },
-  addFriend(obj) {
+  addFriend (obj) {
     return fetch(`${remoteURL}/friends`, {
       method: "POST",
       headers: {

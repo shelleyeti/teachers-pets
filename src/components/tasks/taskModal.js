@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 export default class TaskModal extends Component {
-  render() {
+  render () {
     return (
-      <Modal isOpen={this.props.toggleModal} toggle={this.props.handleClickNo}>
+      <Modal isOpen={ this.props.toggleModal } toggle={ this.props.handleClickNo }>
         <ModalHeader>
-        {this.props.header}
+          { this.props.header }
         </ModalHeader>
         <ModalBody>
           <p>
@@ -14,8 +14,8 @@ export default class TaskModal extends Component {
           </p>
         </ModalBody>
         <ModalFooter>
-          <Button onClick={this.props.handleClickYes}>Yes</Button> 
-          <Button onClick={this.props.handleClickNo}>No</Button>
+          <Button onClick={ this.props.handleClickYes }>Yes</Button>
+          <Button onClick={ this.props.handleClickNo }>No</Button>
         </ModalFooter>
       </Modal>
     );
