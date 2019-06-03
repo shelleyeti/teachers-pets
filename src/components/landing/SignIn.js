@@ -106,3 +106,12 @@ class SignIn extends Component {
 }
 
 export default withRouter(SignIn)
+// {
+//   this.props.addUser(user)
+//   .then(singleUser => {
+//     Users.getUser(user.userName)
+//     this.props.setUser(singleUser)
+//     this.renderDashboard()
+//   })
+// }
+

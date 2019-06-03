@@ -26,7 +26,7 @@ class FriendsListItem extends Component {
 	handleClickAdd = (event) => {
 		this.props.addFriend({
 			currentUserId: this.props.activeUser.id,
-			friendId: this.props.user.id
+			userId: this.props.user.id
 		});
 		this.props.history.push("/messages")
 	}

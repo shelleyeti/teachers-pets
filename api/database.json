@@ -6,8 +6,7 @@
       "lastName": "Arnold",
       "userName": "shelley-arnold",
       "email": "dogs4life@mymail.com",
-      "password": "123456",
-      "userImage": "https://lh3.googleusercontent.com/TPmdZOzdk53ir6lcJerqqv_szQVJOOTVbQoboBy6dVSgiG-4oz0kFZ3RHiKYPFm9SjyD9nbtotbEdlJ86qJvtFykRAjPhM-Adg3pm8JJbIwhC-KN3ZOmVq412dpS-lYdwGzx5XFAF9JwRq6vxwg8oDJcW8dZeq_9hx-5MA03SEmUxdc6irh3miUigETCMl-T-carrNgA_UQKhrWJ4qGxCh_IT7UqpCH03HHm3jqOTyvCdSWT4S_m4SZqlfBdmNAEpy_DzHahwcRNd77X35V_E0vcAG73qjwaarurthlxVU8k5ySpMcnTiygGdnSY-U50pKySxLcVW6TvDLMI4q5uwgRnbakttLoJfJ96lhZX22LyCflPSgkVrYG4_vSt0ShDwSL9yeSpKYYWumPHKZnLl47Uhgo8clj3VWH_CVPMv4SXVZd_WwlTD878PVbpWjs6Id0MWZla32Md8VMafdq1QUItOR_L53yaQmTcJAf4sEuZfGTn6BB7JHX2MXn2ra8UyxZJA1PBVVZhnfSVPsqe6qmCgPeCFqQVaEe0xM90Xn9AvuRZlPi5bZKgooAakLbsU2bQSI3zcmA7wlPkN3NTmHniQhOigy9oEPjoXCkFDY--eddK-j0cyztWpARsBPgq7QCAoij6IHIMKRo4gxWShgeXIQCoj9Ly=s1249-no"
+      "password": "123456"
     },
     {
       "id": 2,
@@ -161,33 +160,33 @@
   "friends": [
     {
       "currentUserId": 9,
-      "friendId": 3,
+      "userId": 3,
       "id": 3
     },
     {
       "currentUserId": 9,
-      "friendId": 4,
+      "userId": 4,
       "id": 4
     },
     {
       "currentUserId": 9,
-      "friendId": 5,
+      "userId": 5,
       "id": 5
     },
     {
       "currentUserId": 9,
-      "friendId": 7,
+      "userId": 7,
       "id": 7
     },
     {
       "currentUserId": 9,
-      "friendId": 8,
+      "userId": 8,
       "id": 8
     },
     {
       "id": 6,
       "currentUserId": 1,
-      "friendId": 6
+      "userId": 6
     }
   ],
   "news": [
@@ -218,7 +217,7 @@
       "imgurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCrPcSRlzPJqKDtuMp6NdH9iLq8FbCfch8blnWPrGtNYYxR8hUA"
     },
     {
-      "title": "Prison Dogs Voted Best",
+      "title": "Prison Dogs Voted Best AGAIN",
       "synopsis": "Prison dogs were voted best breed by the entire world. It should've been obvious, but now it's recorded history.",
       "url": "www.dogstuffnews.org",
       "id": 6,
@@ -360,13 +359,45 @@
       "id": 15
     },
     {
+      "title": "Sit with Addam",
+      "summary": "yay",
+      "location": "home",
+      "date": "2019-06-01",
+      "userName": "susan.figert",
+      "id": 16
+    },
+    {
+      "title": "Go to the mall with the girls",
+      "summary": "It's time get a new snake skin belt sweetie",
+      "location": "da mall",
+      "date": "4020-04-20",
+      "userName": "emily@climbnashville.com",
+      "id": 17
+    },
+    {
+      "title": "Learn to Love Again",
+      "summary": "Life is Pain",
+      "location": "My heart",
+      "date": "2019-06-04",
+      "userName": "shelley-arnold",
+      "id": 18
+    },
+    {
+      "title": "Eat my Feelings",
+      "summary": "Food is comfort",
+      "location": "The kitchen",
+      "date": "2019-06-03",
+      "userName": "shelley-arnold",
+      "id": 19
+    },
+      {
       "title": "The Zep",
       "summary": "Jimmy Page is the man",
       "imgUrl": "https://metalheadzone.com/wp-content/uploads/2019/06/jimm-page-2019-696x491.jpg",
       "location": "Everywhere",
       "date": "2019-06-03",
       "userName": "shelley-arnold",
-      "id": 19
+      "id": 20
     },
     {
       "title": "Game of thrones",
@@ -374,7 +405,7 @@
       "location": "My house",
       "date": "4020-04-20",
       "userName": "emily-loggins",
-      "id": 20
+      "id": 21
     }
   ]
 }

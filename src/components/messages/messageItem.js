@@ -27,7 +27,7 @@ class MessageItem extends Component {
     if (this.props.message.userName === this.props.activeUser.userName) {
       return (
         <div>
-          <div className="cardBodyUser clearfix">
+          <div className="cardBodyUser float-left clearfix">
             <div className="card-body clearfix">
               <p onClick={ this.alertMessage }>
                 <span className="userNameChat">{ this.props.message.userName }</span>: { this.props.message.body }
@@ -60,7 +60,7 @@ class MessageItem extends Component {
     } else {
       return (
         <div>
-          <div className="cardBodyOther">
+          <div className="cardBodyOther clearfix float-right">
             <div className="card-body">
               <p onClick={ this.alertMessage }>
                 <span className="userNameChat">{ this.props.message.userName }</span>: { this.props.message.body }
