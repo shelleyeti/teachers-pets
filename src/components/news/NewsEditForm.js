@@ -26,7 +26,7 @@ export default class NewsEditFrom extends Component {
       .then(article => {
         console.log(article);
         this.setState({
-          userId: this.props.activeUser.firstName,
+          userId: this.props.activeUser.id,
           title: article.title,
           synopsis: article.synopsis,
           url: article.url,

@@ -39,7 +39,7 @@ class FriendsListItem extends Component {
 	render () {
 		return (
 			<div className="user-card">
-				<h3 className="friend-option"> { this.handleImage() } @{ this.props.user.firstName }</h3>
+				<h3 className="friend-option"> { this.handleImage() } @{ this.props.user.userName }</h3>
 				{ this.handleDisplayCondition() }
 			</div>
 		)
