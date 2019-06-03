@@ -26,7 +26,7 @@ class FriendsListItem extends Component {
 	handleClickAdd = (event) => {
 		this.props.addFriend({
 			currentUserId: this.props.activeUser.id,
-			friendId: this.props.user.id
+			userId: this.props.user.id
 		});
 		this.props.history.push("/messages")
 	}
@@ -39,7 +39,7 @@ class FriendsListItem extends Component {
 	render () {
 		return (
 			<div className="user-card">
-				<h3 className="friend-option"> { this.handleImage() } @{ this.props.user.firstName }</h3>
+				<h3 className="friend-option"> { this.handleImage() } @{ this.props.user.userName }</h3>
 				{ this.handleDisplayCondition() }
 			</div>
 		)
