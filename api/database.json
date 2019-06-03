@@ -170,67 +170,6 @@
       "synopsis": "Prison dogs were voted best breed by the entire world. It should've been obvious, but now it's recorded history.",
       "url": "www.dogstuffnews.org",
       "id": 6,
-      "userId": 1
-    },
-    {
-      "title": "What Women Want...",
-      "synopsis": "WHAT A GIRL WAAAANTS! WHAT A GIRL NEEEEEDS! WHATEVER MAKES YOU HAPPY AND SETS YOU FREEEEEE AND I'M THANKING YOU FOR GIVING THAT TO MEEE-EE-E!!",
-      "url": "https://www.xtina4eva.org",
-      "dateTime": "5/31/2019, 11:04:07 AM",
-      "id": 8,
-      "userId": 4
-    },
-    {
-      "userId": 8,
-      "title": "The Internet Reacts To Whatever That Death Stranding Trailer Was",
-      "synopsis": "Turns out Hideo Kojima is still wild as hell",
-      "url": "https://kotaku.com/the-internet-reacts-to-whatever-that-death-stranding-tr-1835128620",
-      "imgurl": "https://i.kinja-img.com/gawker-media/image/upload/s--itMAC_-A--/c_scale,dpr_2.0,f_auto,fl_progressive,q_80,w_800/fwu9urcm9iqaunawyoe8.png",
-      "dateTime": "5/31/2019, 3:25:25 PM",
-      "id": 9
-    },
-    {
-      "userId": 10,
-      "title": "something facebook",
-      "synopsis": "facebook makes stuff",
-      "url": "https://newsroom.fb.com/news/2018/10/say-hello-to-the-new-messenger-introducing-messenger-4/",
-      "imgurl": "https://fbnewsroomus.files.wordpress.com/2018/10/press-asset-1600x1100-combo-2.png?w=960",
-      "dateTime": "6/2/2019, 11:31:01 PM",
-      "id": 10
-    }
-  ],
-  "news": [
-    {
-      "title": "Berto Wins Olympics",
-      "synopsis": "First Black Pug to win in human olympics. 7 gold medals!!",
-      "url": "https://www.google.com",
-      "dateTime": "5/31/2019, 2:45:31 PM",
-      "id": 3,
-      "userId": 8,
-      "imgurl": "http://dezinerbullz.co.uk/onewebstatic/7fa47637fc-BLACK-PUG-Fiji-owned-by-Miss-Hyde.jpg-for-web-normal.jpg"
-    },
-    {
-      "title": "Dolly Parton Out of This World",
-      "synopsis": "Dolly Parton revealed in interview Monday morning to be an actual alien. She's only visiting, folks, we thought she was an angel, but she's just from a different place in the sky.",
-      "url": "www.iwanttobelieve.com",
-      "dateTime": "5/31/2019, 9:01:57 AM",
-      "id": 4,
-      "userId": 8,
-      "imgurl": "https://img.nbc.com/mpx-static/image/384/423/140208_2723607_Dolly_Parton_Monologue_anvver_1.jpg"
-    },
-    {
-      "title": "The Worms Win",
-      "synopsis": "Worms Win World War III.",
-      "url": "www.worldwidewormnews.worg",
-      "id": 5,
-      "userId": 8,
-      "imgurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCrPcSRlzPJqKDtuMp6NdH9iLq8FbCfch8blnWPrGtNYYxR8hUA"
-    },
-    {
-      "title": "Prison Dogs Voted Best",
-      "synopsis": "Prison dogs were voted best breed by the entire world. It should've been obvious, but now it's recorded history.",
-      "url": "www.dogstuffnews.org",
-      "id": 6,
       "userId": 1,
       "imgurl": "https://images-na.ssl-images-amazon.com/images/I/91JFI%2BJ-7ML._SX425_.jpg"
     },
